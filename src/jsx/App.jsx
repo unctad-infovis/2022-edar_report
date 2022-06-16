@@ -20,16 +20,14 @@ import IsVisible from 'react-is-visible'
 import formatNr from './helpers/formatNr.js';
 import roundNr from './helpers/roundNr.js';
 
-
 const App = () => {
   // Data states.
-  const sectionsRefs = [useRef(null), useRef(null), useRef(null)];
+  const sectionRefs = [useRef(null), useRef(null), useRef(null)];
   const [y, setY] = useState(window.scrollY);
   const [anchorClicked, setAnchorClicked] = useState(false);
   const [data, setData] = useState(false);
   
   useEffect(() => {
-    document.addEventListener('scroll', console.log('scroll'));
     const data_file = (window.location.href.includes('unctad.org')) ? '/sites/default/files/data-file/2022-edar_report.json' : './data/data2020.json';
     try {
       d3.json(data_file).then((json_data) => {
@@ -43,7 +41,9 @@ const App = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', (e) => {
-      setY(window.scrollY);
+      if (window.scrollY > 200) {
+        setY(window.scrollY);
+      }
     });
     return () => {
       // window.removeEventListener('scroll');
@@ -51,8 +51,8 @@ const App = () => {
   }, [y]);
 
   const anchorClick = (i) => {
-    setAnchorClicked(true);
-    sectionsRefs[i].current.scrollIntoView();
+    setAnchorClicked(i);
+    sectionRefs[i].current.scrollIntoView({behavior: 'smooth'});
   }
 
   return (
@@ -62,6 +62,7 @@ const App = () => {
           <h1>Awesome Africa Report title 2022</h1>
           <img className={style.banner_image} src="https://baconmockup.com/1600/600" />
         </div>
+        <div className={style.download_section}><a href="#">Download the full report in PDF format</a></div>
         <div className={style.page_navigation}>
           <span className={style.page_navigation_label}>Jump to:</span>
           <span className={style.button_container}><button href="#section1" onClick={() => anchorClick(0)}>Section 1</button></span>
@@ -80,10 +81,10 @@ const App = () => {
           <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
           <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
           <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-          <h3 id="section1" ref={sectionsRefs[0]}>Section 1</h3>
+          <h3 id="section1" ref={sectionRefs[0]}>Section 1</h3>
           <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
           <div className={style.findings_container}>
-            <h4>Key findings</h4>
+            <h3>Key findings</h3>
             <ul>
               <li>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</li>
               <li>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</li>
@@ -93,12 +94,12 @@ const App = () => {
           <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
           <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
           <IsVisible once>
-            {(isVisible) => <img className={style.content_image + ' ' + style.full + ((isVisible && y > 200) ? ' ' + style.visible : ' ' + style.not_seen) + (anchorClicked ? ' ' + style.notransition : '')} src="https://baconmockup.com/1600/900" />}
+            {(isVisible) => <img className={style.content_image + ' ' + style.full + ((isVisible && y > 200) ? ' ' + style.visible : ' ' + style.not_seen) + (anchorClicked !== false && ' ' + style.notransition)} src="https://baconmockup.com/1600/900" />}
           </IsVisible>
           <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
           <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
           <IsVisible once>
-            {(isVisible) => <img className={style.content_image + ' ' + style.right + ((isVisible && y > 200) ? ' ' + style.visible : ' ' + style.not_seen) + (anchorClicked ? ' ' + style.notransition : '')} src="https://baconmockup.com/200/300" />}
+            {(isVisible) => <img className={style.content_image + ' ' + style.right + ((isVisible && y > 200) ? ' ' + style.visible : ' ' + style.not_seen) + (anchorClicked !== false && ' ' + style.notransition)} src="https://baconmockup.com/200/300" />}
           </IsVisible>
           <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
           <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
@@ -110,17 +111,17 @@ const App = () => {
           <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
           <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
           <IsVisible once>
-            {(isVisible) => <img className={style.content_image + ' ' + style.full + ((isVisible && y > 200) ? ' ' + style.visible : ' ' + style.not_seen) + (anchorClicked ? ' ' + style.notransition : '')} src="https://desk.zoho.com/portal/api/uploads/4004154208415/content?portalId=bf176ef04452afb226b71d032f1e8bd25fdf45fd13ed1e6d" />}
+            {(isVisible) => <img className={style.content_image + ' ' + style.full + ((isVisible && y > 200) ? ' ' + style.visible : ' ' + style.not_seen) + (anchorClicked !== false && ' ' + style.notransition)} src="https://desk.zoho.com/portal/api/uploads/4004154208415/content?portalId=bf176ef04452afb226b71d032f1e8bd25fdf45fd13ed1e6d" />}
           </IsVisible>
           <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
           <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
           <IsVisible once>
-            {(isVisible) => <div className={style.video_container + ((isVisible && y > 200) ? ' ' + style.visible : ' ' + style.not_seen) + (anchorClicked ? ' ' + style.notransition : '')}><iframe src="https://www.youtube.com/embed/msizPweg3kE" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;" allowFullScreen></iframe></div>}
+            {(isVisible) => <div className={style.video_container + ((isVisible && y > 200) ? ' ' + style.visible : ' ' + style.not_seen) + (anchorClicked !== false && ' ' + style.notransition)}><iframe src="https://www.youtube.com/embed/msizPweg3kE" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;" allowFullScreen></iframe></div>}
           </IsVisible>
           <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
           <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
           <div className={style.recommendations_container}>
-            <h4>Policy recommendations</h4>
+            <h3>Policy recommendations</h3>
             <div className={style.recommendation_container}>
               <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
             </div>
@@ -134,10 +135,10 @@ const App = () => {
               <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
             </div>
           </div>
-          <h3 id="section2" ref={sectionsRefs[1]}>Section 2</h3>
+          <h3 id="section2" ref={sectionRefs[1]}>Section 2</h3>
           <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
           <div className={style.findings_container}>
-            <h4>Key findings</h4>
+            <h3>Key findings</h3>
             <ul>
               <li>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</li>
               <li>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</li>
@@ -147,12 +148,15 @@ const App = () => {
           <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
           <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
           <IsVisible once>
-            {(isVisible) => <img className={style.content_image + ' ' + style.full + ((isVisible && y > 200) ? ' ' + style.visible : ' ' + style.not_seen) + (anchorClicked ? ' ' + style.notransition : '')} src="https://baconmockup.com/900/900" />}
+            {(isVisible) => <img className={style.content_image + ' ' + style.full + ((isVisible && y > 200) ? ' ' + style.visible : ' ' + style.not_seen) + (anchorClicked !== false && + style.notransition)} src="https://baconmockup.com/900/900" />}
           </IsVisible>
           <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
+          <IsVisible once>
+            {(isVisible) => <img className={style.content_image + ' ' + style.full + ((isVisible && y > 200) ? ' ' + style.visible : ' ' + style.not_seen) + (anchorClicked !== false && ' ' + style.notransition)} src="https://desk.zoho.com/portal/api/uploads/4004154208415/content?portalId=bf176ef04452afb226b71d032f1e8bd25fdf45fd13ed1e6d" />}
+          </IsVisible>
           <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
           <div className={style.recommendations_container}>
-            <h4>Policy recommendations</h4>
+            <h3>Policy recommendations</h3>
             <div className={style.recommendation_container}>
               <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
             </div>
@@ -166,10 +170,10 @@ const App = () => {
               <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
             </div>
           </div>
-          <h3 id="section3" ref={sectionsRefs[2]}>Section 3</h3>
+          <h3 id="section3" ref={sectionRefs[2]}>Section 3</h3>
           <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
           <div className={style.findings_container}>
-            <h4>Key findings</h4>
+            <h3>Key findings</h3>
             <ul>
               <li>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</li>
               <li>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</li>
@@ -178,18 +182,25 @@ const App = () => {
           </div>
           <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
           <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
+          <IsVisible once>
+            {(isVisible) => <img className={style.content_image + ' ' + style.full + ((isVisible && y > 200) ? ' ' + style.visible : ' ' + style.not_seen) + (anchorClicked !== false && ' ' + style.notransition)} src="https://desk.zoho.com/portal/api/uploads/4004154208415/content?portalId=bf176ef04452afb226b71d032f1e8bd25fdf45fd13ed1e6d" />}
+          </IsVisible>
           <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
           <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
+          <blockquote>
+            <span className={style.text}>Yet another hansom quote from an important person</span>
+            <span className={style.author}>Teemo Tebest</span>
+          </blockquote>
           <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
           <IsVisible once>
-            {(isVisible) => <div className={style.video_container + ((isVisible && y > 200) ? ' ' + style.visible : ' ' + style.not_seen) + (anchorClicked ? ' ' + style.notransition : '')}><iframe src="https://www.youtube.com/embed/msizPweg3kE" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;" allowFullScreen></iframe></div>}
+            {(isVisible) => <div className={style.video_container + ((isVisible && y > 200) ? ' ' + style.visible : ' ' + style.not_seen) + (anchorClicked !== false && ' ' + style.notransition)}><iframe src="https://www.youtube.com/embed/msizPweg3kE" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;" allowFullScreen></iframe></div>}
           </IsVisible>
           <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
           <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
           <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
           <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
           <div className={style.recommendations_container}>
-            <h4>Policy recommendations</h4>
+            <h3>Policy recommendations</h3>
             <div className={style.recommendation_container}>
               <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
             </div>
