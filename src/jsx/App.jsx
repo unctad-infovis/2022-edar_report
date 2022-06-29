@@ -23,18 +23,6 @@ const App = () => {
   const [y, setY] = useState(window.scrollY);
   const [anchorClicked, setAnchorClicked] = useState(false);
   const [data, setData] = useState(false);
-  
-  useEffect(() => {
-    // const data_file = (window.location.href.includes('unctad.org')) ? '/sites/default/files/data-file/2022-edar_report.json' : './data/data2020.json';
-    // try {
-    //   d3.json(data_file).then((json_data) => {
-    //     setData(json_data);
-    //   });
-    // }
-    // catch (error) {
-    //   console.error(error);
-    // }
-  }, []);
 
   useEffect(() => {
     window.addEventListener('scroll', (e) => {
