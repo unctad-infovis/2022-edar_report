@@ -1,9 +1,18 @@
 import React, { useState, useEffect, useRef } from 'react';
 import '../styles/styles.less';
 
+import scrollIntoView from 'scroll-into-view';
+
 // https://www.npmjs.com/package/react-is-visible
 import 'intersection-observer';
 import IsVisible from 'react-is-visible';
+
+import banner_img from '../../assets/img/edar_banner.png';
+import report_cover from '../../assets/img/report_cover.png';
+import graphic1 from '../../assets/img/graphic1.png';
+import graphic2 from '../../assets/img/graphic2.png';
+import graphic3 from '../../assets/img/graphic3.png';
+import graphic4 from '../../assets/img/graphic4.png';
 
 // https://www.highcharts.com/
 // import Highcharts from 'highcharts';
@@ -14,7 +23,7 @@ import IsVisible from 'react-is-visible';
 
 function App() {
   // Data states.
-  const sectionRefs = [useRef(null), useRef(null), useRef(null)];
+  const sectionRefs = [useRef(null), useRef(null)];
   const [y, setY] = useState(window.scrollY);
   const [anchorClicked, setAnchorClicked] = useState(false);
   // const [data, setData] = useState(false);
@@ -32,166 +41,190 @@ function App() {
 
   const anchorClick = (i) => {
     setAnchorClicked(i);
-    sectionRefs[i].current.scrollIntoView({ behavior: 'smooth' });
+    sectionRefs.forEach(el => {
+      el.current.style.height = 0;
+      el.current.style.opacity = 0;
+      el.current.style.visibility = 'hidden';
+      el.current.style.position = 'absolute';
+    });
+
+    document.querySelectorAll('.button_container').forEach(el => el.classList.remove('selected'));
+    document.querySelector(`.button_container_${i}`).classList.add('selected');
+
+    sectionRefs[i].current.style.position = 'static';
+    sectionRefs[i].current.style.visibility = 'visible';
+    sectionRefs[i].current.style.height = 'auto';
+    sectionRefs[i].current.style.opacity = 1;
+
+    scrollIntoView(sectionRefs[i].current, {
+      time: 500,
+      align: {
+        top: 0,
+        left: 0,
+        topOffset: 100,
+        leftOffset: 0,
+        lockX: false,
+        lockY: false
+      }
+    });
+
+    // sectionRefs[i].current.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
     <div className="app">
       <div className="content_wrapper">
+        <div className="placeholder">UNCTAD header</div>
+        <div className="placeholder">Top navigation including links to Webflyer, presskit, other resources, etc</div>
+        <div className="placeholder">Breadcrumbs</div>
         <div className="banner_container">
-          <h1>Awesome Africa Report title 2022</h1>
-          <img className="banner_image" src="https://baconmockup.com/1600/600" alt="" />
+          <img className="banner_image" src={banner_img} alt="" />
         </div>
-        <div className="download_section"><a href="#download">Download the full report in PDF format</a></div>
         <div className="page_navigation">
-          <span className="page_navigation_label">Jump to:</span>
-          <span className="button_container"><button type="button" href="#section1" onClick={() => anchorClick(0)}>Section 1</button></span>
-          <span className="button_container"><button type="button" href="#section2" onClick={() => anchorClick(1)}>Section 2</button></span>
-          <span className="button_container"><button type="button" href="#section3" onClick={() => anchorClick(2)}>Section 3</button></span>
+          <div className="button_container button_container_0">
+            <button type="button" href="#section1" onClick={() => anchorClick(0)}>
+              <div>Chapter 1</div>
+              <div>Export diversification</div>
+            </button>
+          </div>
+          <div className="button_container button_container_1">
+            <button type="button" href="#section2" onClick={() => anchorClick(1)}>
+              <div>Chapter 2</div>
+              <div>Trade in services</div>
+            </button>
+          </div>
+          <div className="button_container button_container_0">
+            <button type="button" href="#section3">
+              <div>Section 3</div>
+              <div>Looking forward</div>
+            </button>
+          </div>
+          <div className="button_container policy">
+            <button type="button" href="#section3">
+              <div>Policy</div>
+              <div>recommendations</div>
+            </button>
+          </div>
         </div>
         <div className="container">
-          <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-          <img className="content_image left" src="https://baconmockup.com/200/300" alt="" />
-          <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
+          <h4>Soaring food and energy prices are hitting African countries especially hard as they struggle with the impact of the pandemic and climate change.</h4>
+          <h4>The continent of 1.4 billion people relies heavily on exports of grain and other essentials from Ukraine and Russia, exposing the 54 nations to shortages and crippling costs that imperil their development.</h4>
+          <img className="content_image left" src={report_cover} alt="" />
+          <p>To cope with the current crisis and insulate itself against future shocks, Africa must diversify its economies to attract investment and narrow huge income gaps.</p>
+          <p>There is enormous potential for Africa to be more competitive by moving into service industries like finance and technology. To do this, companies need better access to affordable finance and bureaucratic red tape must be cut.</p>
           <blockquote>
-            <span className="text">Hansom quote from an important person</span>
-            <span className="author">Teemo Tebest</span>
+            <span className="text">Africa must diversify their economy</span>
           </blockquote>
-          <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-          <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-          <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-          <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-          <h3 id="section1" ref={sectionRefs[0]}>Section 1</h3>
-          <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-          <div className="findings_container">
-            <h3>Key findings</h3>
-            <ul>
-              <li>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</li>
-              <li>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</li>
-              <li>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</li>
-            </ul>
+          <p>Governments must help businesses to access new markets, make new products and move up the value chain by shifting away from exports of raw materials into processed goods that command higher prices.</p>
+          <p>For Africa to tap its true potential, stronger and more inclusive support is essential so women, young people and small companies have the skills, capital and opportunities to create viable businesses in markets now dominated by continental giants and multinationals.</p>
+          <IsVisible once>
+            {(isVisible) => (
+              <div className={`iframe_container full ${(isVisible && y > 200) ? 'visible' : 'not_seen'} ${anchorClicked !== false ? 'notransition' : ''}`}>
+                <iframe title="The Weekly Tradecast by UNCTAD" allowtransparency="true" height="150" width="100%" style={{ border: 'none', minWidth: 'min(100%, 430px)' }} scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=7htjy-1261b27-pb&btn-skin=009EDB&download=1&font-color=000000&fonts=Verdana&from=pb6admin&logo_link=none&rtl=0&share=1&size=240&skin=ffffff" allowFullScreen="" />
+              </div>
+            )}
+          </IsVisible>
+          <p>Better roads and railway networks would allow more efficient movement of goods, while stronger regional cooperation would open up trade, investment and mobility.</p>
+          <p>The African Continental Free Trade Area aims to eliminate more than 90 percent of tariffs and create a single market with a growing middle class. To make the most of it, African countries must encourage investment, improve infrastructure and support innovation. Decent jobs, higher revenues and inclusive growth will be just some of the benefits.</p>
+
+          <h3>African countries are highly dependend on one commody</h3>
+          <p>We must push for more diverse economies to boost Africa and make it more resilient to shocks.</p>
+          <IsVisible once>
+            {(isVisible) => <img className={`content_image full ${(isVisible && y > 200) ? 'visible' : 'not_seen'} ${anchorClicked !== false ? 'notransition' : ''}`} src={graphic1} alt="" />}
+          </IsVisible>
+          <div className="placeholder">Video</div>
+          <div className="chapter_navigation">
+            <button className="chapter_selection" type="button" onClick={() => anchorClick(0)}>
+              <div className="description">
+                <p>African countries struggle to diversify their exports, partly due to historical factors that created path dependencies from a lack of skills endowment and technological advancement.</p>
+                <div className="chapter_title_container">
+                  <h2>The pulse diversification in Africa</h2>
+                </div>
+              </div>
+            </button>
+            <button className="chapter_selection" type="button" onClick={() => anchorClick(1)}>
+              <div className="description">
+                <p>African exports remain concentrated in a narrow range of commodities, with, however, some level of export diversification in a few African countries during the past decade.</p>
+                <div className="chapter_title_container">
+                  <h2>A niche diversification in Africa</h2>
+                </div>
+              </div>
+            </button>
+            <button className="chapter_selection" type="button">
+              <div className="description">
+                <p>New entrants and small-scale exporting companies, need to secure external financing to cover the large costs of entering export markets.</p>
+                <div className="chapter_title_container">
+                  <h2>The future diversification in Africa</h2>
+                </div>
+              </div>
+            </button>
+            <button className="chapter_selection" type="button">
+              <div className="description">
+                <p>Despite efforts to achieve export diversification, African countries remain predominantly dependent on exports of primary products in the agricultural, mining and extractive industries.</p>
+                <div className="chapter_title_container policy">
+                  <h2>Conclusion and rec&shy;om&shy;men&shy;da&shy;tion</h2>
+                </div>
+              </div>
+            </button>
           </div>
-          <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-          <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-          <IsVisible once>
-            {(isVisible) => <img className={`content_image full ${(isVisible && y > 200) ? 'visible' : 'not_seen'} ${anchorClicked !== false ? 'notransition' : ''}`} src="https://baconmockup.com/1600/900" alt="" />}
-          </IsVisible>
-          <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-          <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-          <IsVisible once>
-            {(isVisible) => <img className={`content_image right ${(isVisible && y > 200) ? 'visible' : 'not_seen'} ${anchorClicked !== false ? 'notransition' : ''}`} src="https://baconmockup.com/200/300" alt="" />}
-          </IsVisible>
-          <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-          <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-          <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-          <blockquote>
-            <span className="text">Another hansom quote from an important person</span>
-            <span className="author">Teemo Tebest</span>
-          </blockquote>
-          <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-          <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-          <IsVisible once>
-            {(isVisible) => <img className={`content_image full ${(isVisible && y > 200) ? 'visible' : 'not_seen'} ${anchorClicked !== false ? 'notransition' : ''}`} src="https://desk.zoho.com/portal/api/uploads/4004154208415/content?portalId=bf176ef04452afb226b71d032f1e8bd25fdf45fd13ed1e6d" alt="" />}
-          </IsVisible>
-          <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-          <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-          <IsVisible once>
-            {(isVisible) => <div className={`video_container ${(isVisible && y > 200) ? 'visible' : 'not_seen'} ${anchorClicked !== false ? 'notransition' : ''}`}><iframe title="video1" src="https://www.youtube.com/embed/msizPweg3kE" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;" allowFullScreen /></div>}
-          </IsVisible>
-          <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-          <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-          <div className="recommendations_container">
+          <div className="section_container" id="section1" ref={sectionRefs[0]}>
+            <h3>Chapter 1: The pulse diversification in Africa</h3>
+            <h4>To cope with the current crisis and insulate itself against future shocks, Africa must diversify its economies to attract investment and narrow huge income gaps.</h4>
+            <img className="content_image full" src={graphic2} alt="" />
+            <p>There is enormous potential for Africa to be more competitive by moving into service industries like finance and technology. To do this, companies need better access to affordable finance and bureaucratic red tape must be cut.</p>
+            <p>Governments must help businesses to access new markets, make new products and move up the value chain by shifting away from exports of raw materials into processed goods that command higher prices.</p>
+            <img className="content_image left" src={graphic3} alt="" />
+            <blockquote>
+              <span className="text">Africa must diversify their economy</span>
+            </blockquote>
+            <p>For Africa to tap its true potential, stronger and more inclusive support is essential so women, young people and small companies have the skills, capital and opportunities to create viable businesses in markets now dominated by continental giants and multinationals.</p>
+            <img className="content_image right" src={graphic4} alt="" />
+            <p>Better roads and railway networks would allow more efficient movement of goods, while stronger regional cooperation would open up trade, investment and mobility.</p>
+            <blockquote>
+              <span className="text">Africa must diversify their economy</span>
+            </blockquote>
+            <p>The African Continental Free Trade Area aims to eliminate more than 90 percent of tariffs and create a single market with a growing middle class. To make the most of it, African countries must encourage investment, improve infrastructure and support innovation. Decent jobs, higher revenues and inclusive growth will be just some of the benefits.</p>
             <h3>Policy recommendations</h3>
-            <div className="recommendation_container">
-              <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
+            <div className="recommendations_container">
+              <div className="recommendation_container">
+                <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
+              </div>
+              <div className="recommendation_container">
+                <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
+              </div>
             </div>
-            <div className="recommendation_container">
-              <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-            </div>
-            <div className="recommendation_container">
-              <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-            </div>
-            <div className="recommendation_container">
-              <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
+            <div className="download_section">
+              <button type="button">Download full chapter 1</button>
             </div>
           </div>
-          <h3 id="section2" ref={sectionRefs[1]}>Section 2</h3>
-          <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-          <div className="findings_container">
-            <h3>Key findings</h3>
-            <ul>
-              <li>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</li>
-              <li>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</li>
-              <li>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</li>
-            </ul>
-          </div>
-          <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-          <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-          <IsVisible once>
-            {(isVisible) => <img className={`content_image full ${(isVisible && y > 200) ? 'visible' : 'not_seen'} ${anchorClicked !== false ? 'notransition' : ''}`} src="https://baconmockup.com/900/900" alt="" />}
-          </IsVisible>
-          <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-          <IsVisible once>
-            {(isVisible) => <img className={`content_image full ${(isVisible && y > 200) ? 'visible' : 'not_seen'} ${anchorClicked !== false ? 'notransition' : ''}`} src="https://desk.zoho.com/portal/api/uploads/4004154208415/content?portalId=bf176ef04452afb226b71d032f1e8bd25fdf45fd13ed1e6d" alt="" />}
-          </IsVisible>
-          <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-          <div className="recommendations_container">
+          <div className="section_container" id="section2" ref={sectionRefs[1]}>
+            <h3>Chapter 2: A niche diversification in Africa</h3>
+            <h4>To cope with the current crisis and insulate itself against future shocks, Africa must diversify its economies to attract investment and narrow huge income gaps.</h4>
+            <img className="content_image full" src={graphic2} alt="" />
+            <p>There is enormous potential for Africa to be more competitive by moving into service industries like finance and technology. To do this, companies need better access to affordable finance and bureaucratic red tape must be cut.</p>
+            <p>Governments must help businesses to access new markets, make new products and move up the value chain by shifting away from exports of raw materials into processed goods that command higher prices.</p>
+            <img className="content_image left" src={graphic3} alt="" />
+            <blockquote>
+              <span className="text">Africa must diversify their economy</span>
+            </blockquote>
+            <p>For Africa to tap its true potential, stronger and more inclusive support is essential so women, young people and small companies have the skills, capital and opportunities to create viable businesses in markets now dominated by continental giants and multinationals.</p>
+            <img className="content_image right" src={graphic4} alt="" />
+            <p>Better roads and railway networks would allow more efficient movement of goods, while stronger regional cooperation would open up trade, investment and mobility.</p>
+            <blockquote>
+              <span className="text">Africa must diversify their economy</span>
+            </blockquote>
+            <p>The African Continental Free Trade Area aims to eliminate more than 90 percent of tariffs and create a single market with a growing middle class. To make the most of it, African countries must encourage investment, improve infrastructure and support innovation. Decent jobs, higher revenues and inclusive growth will be just some of the benefits.</p>
             <h3>Policy recommendations</h3>
-            <div className="recommendation_container">
-              <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
+            <div className="recommendations_container">
+              <div className="recommendation_container">
+                <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
+              </div>
+              <div className="recommendation_container">
+                <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
+              </div>
             </div>
-            <div className="recommendation_container">
-              <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-            </div>
-            <div className="recommendation_container">
-              <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-            </div>
-            <div className="recommendation_container">
-              <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-            </div>
-          </div>
-          <h3 id="section3" ref={sectionRefs[2]}>Section 3</h3>
-          <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-          <div className="findings_container">
-            <h3>Key findings</h3>
-            <ul>
-              <li>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</li>
-              <li>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</li>
-              <li>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</li>
-            </ul>
-          </div>
-          <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-          <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-          <IsVisible once>
-            {(isVisible) => <img className={`content_image full ${(isVisible && y > 200) ? 'visible' : 'not_seen'} ${anchorClicked !== false ? 'notransition' : ''}`} src="https://desk.zoho.com/portal/api/uploads/4004154208415/content?portalId=bf176ef04452afb226b71d032f1e8bd25fdf45fd13ed1e6d" alt="" />}
-          </IsVisible>
-          <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-          <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-          <blockquote>
-            <span className="text">Yet another hansom quote from an important person</span>
-            <span className="author">Teemo Tebest</span>
-          </blockquote>
-          <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-          <IsVisible once>
-            {(isVisible) => <div className={`video_container ${(isVisible && y > 200) ? 'visible' : 'not_seen'} ${anchorClicked !== false ? 'notransition' : ''}`}><iframe title="video2" src="https://www.youtube.com/embed/msizPweg3kE" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;" allowFullScreen /></div>}
-          </IsVisible>
-          <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-          <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-          <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-          <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-          <div className="recommendations_container">
-            <h3>Policy recommendations</h3>
-            <div className="recommendation_container">
-              <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-            </div>
-            <div className="recommendation_container">
-              <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-            </div>
-            <div className="recommendation_container">
-              <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
-            </div>
-            <div className="recommendation_container">
-              <p>Bacon ipsum dolor amet corned beef cupim pork strip steak, sausage ball tip shank pork loin chuck kevin salami ribeye buffalo. Landjaeger brisket pig strip steak tri-tip jerky corned beef ham short loin tail pork chuck ball tip cow tenderloin.</p>
+            <div className="download_section">
+              <button type="button">Download full chapter 2</button>
             </div>
           </div>
         </div>

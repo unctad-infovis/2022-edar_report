@@ -2,45 +2,77 @@
 // @import url('https://fonts.googleapis.com/css?family=Roboto:400,700.css');
 
 @import 'colors.less';
-.app {
-  font-family: Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
+#app-root-2022-edar_report .app {
+  counter-reset: section;
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: auto auto;
   max-width: 1000px;
   img {
     width: 100%;
     margin-bottom: 20px;
+    font-size: 0;
+  }
+  .placeholder {
+    background-color: @ungrey;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 600;
+    padding: 20px;
+    margin: 40px 0;
+    text-align: center;
   }
   .banner_container {
     font-size: 0;
     margin-bottom: 10px;
     position: relative;
-    h1 {
-      background-color: #f00;
-      bottom: 10px;
-      font-size: 40px;
-      margin: 0;
-      padding: 5px;
-      position: absolute;
-      right: 10px;
-      text-transform: uppercase;
-      z-index: 2;
-    }
     .banner_image {
       font-size: 0;
       margin: 0;
     }
   }
   .page_navigation {
+    align-content: stretch;
+    background: linear-gradient(#fff 70%, transparent 100%);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
     margin: auto auto 20px auto;
-    max-width: 700px;
+    padding: 0 5px 40px 5px;
+    position: sticky;
+    top: 0;
+    z-index: 3;
     .button_container {
+      &.policy {
+        button {
+          background-color: #009EDB;
+        }
+      }
+      &.selected {
+        button {
+          box-sizing: border-box;
+          border-bottom: 5px solid #FFC800;
+          &:hover {
+            transform: scale(1);
+          }
+        }
+      }
       button {
-        background: #f00;
+        background-color: #72BF44;
         border-radius: 0;
         border: 0;
+        color: #fff;
         cursor: pointer;
+        display: block;
+        font-size: 20px;
+        font-weight: 400;
         margin: 0 2px;
-        padding: 5px 7px;
+        padding: 7px 15px;
+        text-align: center;
+        transition: transform 0.2s ease-in-out;
+        &:hover {
+          transform: scale(1.1);
+        }
         a {
           color: #000;
           text-decoration: none;
@@ -48,26 +80,14 @@
       }
     }
   }
-  .download_section {
-    background-color: #f00;
-    box-sizing: border-box;
-    font-size: 20px;
-    margin: auto auto 20px auto;
-    max-width: 700px;
-    padding: 10px;
-    text-align: center;
-    text-transform: uppercase;
-    a {
-      color: #fff;
-      text-decoration: none;
-    }
-  }
   .container {
     margin: auto auto;
     max-width: 700px;
     p,
-    >h3,
+    h3,
+    h4,
     blockquote,
+    .iframe_container,
      {
       margin: auto auto 20px auto;
       max-width: 600px;
@@ -75,11 +95,19 @@
     p {
       font-size: 16px;
     }
-    >h3 {
-      border-bottom: 3px solid #f00;
+    h3 {
+      font-family: "Roboto Serif";
+      font-size: 30px;
+      border-bottom: 3px solid #72BF44;
+    }
+    h4 {
+      font-family: "Roboto Serif";
+      font-weight: 600;
+      font-size: 18px;
     }
     blockquote {
       font-size: 18px;
+      font-family: "Roboto Serif";
       text-align: center;
       font-weight: 600;
       margin: auto auto 20px auto;
@@ -101,40 +129,72 @@
       }
       font-style: italic;
     }
-    .recommendations_container {
-      .clearfix;
-      .recommendation_container {
-        background: #f00;
+    .chapter_navigation {
+      align-content: stretch;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin: auto auto 40px auto;
+      .chapter_selection {
+        background-color: #fff;
+        border-radius: 10px 10px;
+        border: 1px solid #EBEAE6;
+        box-shadow: 2px 2px 3px #EBEAE6;
         box-sizing: border-box;
         color: #fff;
-        float: left;
+        cursor: pointer;
+        display: block;
+        flex: 50%;
+        padding: 0;
+        font-family: Roboto;
         margin-bottom: 20px;
-        padding: 20px;
-        width: calc(50% - 10px);
-        &:nth-child(2n-1) {
-          margin-left: 20px;
+        max-width: 300px;
+        text-align: left;
+        transition: transform 0.2s ease-in-out;
+        &:hover {
+          transform: scale(1.1);
         }
-      }
-    }
-    .findings_container {
-      background: #f00;
-      box-sizing: border-box;
-      color: #fff;
-      margin-bottom: 20px;
-      padding: 20px;
-      ul {
-        li {
-          margin-bottom: 5px;
+        p {
+          background-color: #72BF44;
+          border-radius: 10px 10px 0 0;
+          font-family: Roboto;
+          font-size: 20px;
+          height: 160px;
+          margin-bottom: 0;
+          padding: 20px 20px 30px 20px;
+        }
+        .chapter_title_container {
+          background-color: #fff;
+          color: #72BF44;
+          font-family: Roboto;
+          position: relative;
+          &.policy {
+            color: #009EDB;
+          }
+          &:before {
+            content: counter(section);
+            counter-increment: section;                  
+            font-size: 100px;
+            font-weight: 300;
+            line-height: 90px;
+            position: absolute;
+            top: 0;
+            left: 10px;
+            vertical-align: top;
+          }
+          h2 {
+            font-family: "Roboto Serif";
+            font-size: 26px;
+            margin-left: 80px;
+            padding-right: 10px;
+          }
         }
       }
     }
     .video_container {
       margin: auto auto 20px auto;
       padding-bottom: 56.25%;
-      position: relative;
-      transition-duration: 1.5s;
-      transition-property: opacity, padding;
-      transition-timing-function: linear;
       &.notransition {
         opacity: 1;
         padding-top: 0;
@@ -156,6 +216,8 @@
         width: 100%;
       }
     }
+    .video_container,
+    .iframe_container,
     .content_image {
       position: relative;
       transition-duration: 1.5s;
@@ -184,6 +246,55 @@
       }
       &.full {
         width: 100%;
+      }
+    }
+    .section_container {
+      height: 0;
+      position: absolute;
+      margin-bottom: 40px;
+      opacity: 0;
+      visibility: hidden;
+      overflow: hidden;
+      transition-duration: 1.5s;
+      max-height: 999999999px;
+      transition-property: opacity, height;
+      transition-timing-function: linear;
+      .download_section {
+        text-align: center;
+        button {
+          background-color: #72BF44;
+          border: 0;
+          color: #fff;
+          font-family: Roboto;
+          text-transform: uppercase;
+          padding: 10px;
+          box-sizing: border-box;
+          font-size: 20px;
+        }
+      }
+      .recommendations_container {
+        align-content: stretch;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: auto auto 20px auto;
+        .recommendation_container {
+          background: #72BF44;
+          border-radius: 10px;
+          box-sizing: border-box;
+          color: #fff;
+          flex: 50%;
+          font-family: Roboto;
+          margin-bottom: 20px;
+          max-width: 300px;
+          p {
+            margin-bottom: 0;
+            font-size: 20px;
+          }
+          padding: 20px 20px 30px 20px;
+
+        }
       }
     }
   }
