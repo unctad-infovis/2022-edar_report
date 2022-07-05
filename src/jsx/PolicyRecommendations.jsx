@@ -10,7 +10,7 @@ function PolicyRecommendations() {
             <p>Improve the capacity of people and firms to emulate and innovate</p>
           </div>
           <div className="recommendation_container">
-            <p>Support firms to innovatep</p>
+            <p>Support firms to innovate</p>
           </div>
           <div className="recommendation_container">
             <p>Expand the set of technologies and infrastructure</p>
