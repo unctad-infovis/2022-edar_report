@@ -4,7 +4,8 @@ function PolicyRecommendations() {
   return (
     <div>
       <div className="content_container">
-        <h3>Policy recommendations</h3>
+        <h3>Conclusions and policy recommendations</h3>
+        <p>Bacon ipsum dolor amet kevin ham tenderloin rump biltong. Corned beef andouille filet mignon ham burgdoggen swine hamburger tenderloin kielbasa kevin beef ribs rump. Chicken bresaola pancetta beef. Pig pork loin chislic pork chop ham pork belly turducken kevin shank. Chislic kielbasa picanha, tri-tip tongue pig kevin strip steak hamburger prosciutto pork belly filet mignon ground round. Strip steak filet mignon doner corned beef.</p>
         <div className="recommendations_container">
           <div className="recommendation_container">
             <p>Improve the capacity of people and firms to emulate and innovate</p>
@@ -31,8 +32,9 @@ function PolicyRecommendations() {
             <p>Putting recommendations into practice</p>
           </div>
         </div>
+        <p>Bacon ipsum dolor amet kevin ham tenderloin rump biltong. Corned beef andouille filet mignon ham burgdoggen swine hamburger tenderloin kielbasa kevin beef ribs rump. Chicken bresaola pancetta beef. Pig pork loin chislic pork chop ham pork belly turducken kevin shank. Chislic kielbasa picanha, tri-tip tongue pig kevin strip steak hamburger prosciutto pork belly filet mignon ground round. Strip steak filet mignon doner corned beef.</p>
         <div className="download_section">
-          <button type="button">Download full chapter 2</button>
+          <button type="button">Download conclusion and policy recommendations chapter</button>
         </div>
       </div>
     </div>

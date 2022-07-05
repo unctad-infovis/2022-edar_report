@@ -74,7 +74,7 @@ function App() {
         cancellable: false
       });
     }, 200);
-    sectionRefs[i].current.scrollIntoView({ behavior: 'smooth' });
+    // sectionRefs[i].current.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -198,6 +198,7 @@ function App() {
         </div>
         <div className="chapter_container" id="section4" ref={sectionRefs[3]}>
           <PolicyRecommendations />
+          <PageNavigation anchorClick={anchorClick} />
         </div>
       </div>
       <noscript>Your browser does not support JavaScript!</noscript>
