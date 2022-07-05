@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import '../styles/styles.less';
 
+// https://www.npmjs.com/package/scroll-into-view
 import scrollIntoView from 'scroll-into-view';
 
 // https://www.npmjs.com/package/react-is-visible
@@ -59,19 +60,21 @@ function App() {
     sectionRefs[i].current.style.height = 'auto';
     sectionRefs[i].current.style.opacity = 1;
 
-    scrollIntoView(sectionRefs[i].current, {
-      time: 500,
-      align: {
-        left: 0,
-        leftOffset: 0,
-        lockX: false,
-        lockY: false,
-        top: 0,
-        topOffset: 100
-      }
-    });
-
-    // sectionRefs[i].current.scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => {
+      scrollIntoView(sectionRefs[i].current, {
+        time: 500,
+        align: {
+          left: 0,
+          leftOffset: 0,
+          lockX: false,
+          lockY: false,
+          top: 0,
+          topOffset: 100
+        },
+        cancellable: false
+      });
+    }, 200);
+    sectionRefs[i].current.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
