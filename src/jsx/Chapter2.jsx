@@ -19,7 +19,7 @@ function Chapter2() {
       </div>
       <figure>
         <img className="content_image full" src={graphic7} alt="" />
-        <figcaption>Figure: Agricultural commodity-dependent countries diverse more slowly than mining commodity dependent countries.</figcaption>
+        <figcaption>Figure: </figcaption>
       </figure>
       <div className="content_container">
         <p>Some countries have made progress in diversifying their services. In 2005–2019, the top three services sectors represented less than 70% of total exports in services in five countries: Burkina Faso, Kenya, Malawi, Senegal and Sierra Leone.</p>
@@ -27,7 +27,7 @@ function Chapter2() {
       </div>
       <figure>
         <img className="content_image full" src={graphic8} alt="" />
-        <figcaption>Figure: Agricultural commodity-dependent countries diverse more slowly than mining commodity dependent countries.</figcaption>
+        <figcaption>Figure: </figcaption>
       </figure>
       <div className="content_container">
         <p>The key factors undermining trade in services in Africa include:</p>

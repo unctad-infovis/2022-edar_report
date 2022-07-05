@@ -18,7 +18,7 @@ function Chapter3() {
       </div>
       <figure>
         <img className="content_image full" src={graphic9} alt="" />
-        <figcaption>Figure: Agricultural commodity-dependent countries diverse more slowly than mining commodity dependent countries.</figcaption>
+        <figcaption>Figure: </figcaption>
       </figure>
       <div className="content_container">
         <p>Sectors that dominate the African fintech industry are payments and remittances, marketplace lending and wealth technology, accounting respectively for 26%, 19% and 14% of all transactions in 2021.</p>
@@ -27,7 +27,7 @@ function Chapter3() {
       </div>
       <figure>
         <img className="content_image full" src={graphic10} alt="" />
-        <figcaption>Figure: Agricultural commodity-dependent countries diverse more slowly than mining commodity dependent countries.</figcaption>
+        <figcaption>Figure: </figcaption>
       </figure>
       <div className="content_container">
         <h5>Challenges to be tackled</h5>

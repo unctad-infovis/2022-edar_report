@@ -43,7 +43,7 @@ function Chapter1() {
         <p>Nevertheless, the large demand for these goods provides new export opportunities for African countries and firms.</p>
         <figure>
           <img className="content_image full" src={graphic6} alt="" />
-          <figcaption>Figure: Highest opportunities to diversify the economy are in machinery.</figcaption>
+          <figcaption>Figure: </figcaption>
         </figure>
         <div className="download_section">
           <button type="button">Download Chapter 1 as PDF</button>
