@@ -1,0 +1,65 @@
+.chapter_container {
+  height: 0;
+  margin-top: 200px;
+  max-height: 999999999px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  transition-duration: 1.5s;
+  transition-property: opacity, height;
+  transition-timing-function: linear;
+  visibility: hidden;
+  .content_container {
+    margin-bottom: 50px;
+    .infobox {
+      background-color: #EBEAE6;
+      box-sizing: border-box;
+      padding: 20px;
+    }
+    .download_section {
+      text-align: center;
+      button {
+        background-color: #72BF44;
+        border: 0;
+        box-sizing: border-box;
+        color: #fff;
+        font-family: Roboto;
+        font-size: 20px;
+        padding: 10px;
+        text-transform: uppercase;
+      }
+    }
+    .recommendations_container {
+      align-content: stretch;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin: auto auto 20px auto;
+      .recommendation_container {
+        background: #72BF44;
+        border-radius: 10px;
+        box-sizing: border-box;
+        color: #fff;
+        flex: 50%;
+        font-family: Roboto;
+        margin-bottom: 20px;
+        max-width: 300px;
+        p {
+          margin-bottom: 0;
+          font-size: 20px;
+        }
+        padding: 20px 20px 30px 20px;
+      }
+    }
+
+  }
+  figure {
+    margin: 40px auto 40px auto;
+    max-width: 800px;
+    figcaption {
+      color: #7C7067;
+      font-size: 14px;
+    }
+  }
+}
