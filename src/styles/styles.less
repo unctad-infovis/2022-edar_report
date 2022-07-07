@@ -21,6 +21,23 @@
   max-width: 1350px;
   padding-bottom: 40px;
   @import 'background_container.less';
+  .download_section {
+    margin: 30px 0;
+    button {
+      background-color: transparent;
+      border: 0;
+      box-sizing: border-box;
+      color: #72BF44;
+      cursor: pointer;
+      font-family: Roboto;
+      font-size: 20px;
+      padding: 0;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
   .content_wrapper {
     margin: auto auto;
     position: relative;
@@ -52,7 +69,6 @@
       .iframe_container,
        {
         margin: auto auto 20px auto;
-        max-width: 600px;
       }
       .iframe_container {
         margin: 40px auto;
@@ -61,9 +77,14 @@
         font-size: 16px;
         line-height: 22px;
       }
+      h1 {
+        font-family: "Roboto Serif";
+        border-bottom: 3px solid #72BF44;
+        font-size: 30px;
+      }
       h3 {
         font-family: "Roboto Serif";
-        font-size: 30px;
+        font-size: 24px;
         border-bottom: 3px solid #72BF44;
       }
       h4 {
@@ -71,7 +92,7 @@
         font-weight: 600;
         font-size: 20px;
         color: #009EDB;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
       }
       h5 {
         font-family: "Roboto Serif";
@@ -164,38 +185,38 @@
         z-index: -1;
       }
       .title_container {
-        padding-left: 50px;
+        padding: 0 20px 0 50px;
+        width: 30%;
         h2 {
           color: #009EDB;
         }
-        width: 30%;
       }
       .image_container {
-        width: 70%;
         text-align: center;
+        width: 70%;
         img {
           max-width: 600px;
         }
       }
       .quote_container {
-        width: 100%;
         height: 100%;
-        
+        width: 100%;
         p {
           font-family: Kalam;
           font-size: 26px;
           line-height: 30px;
         }
         h3 {
-          text-align: center;
           font-size: 30px;
+          text-align: center;
           color: #009EDB;
           margin-bottom: 5px
         }
         .title {
           font-weight: 400;
+          margin: auto auto;
+          max-width: 300px;
           text-align: center;
-
         }
       }
     }

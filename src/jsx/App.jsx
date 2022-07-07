@@ -11,12 +11,13 @@ import IsVisible from 'react-is-visible';
 import banner_img from '../../assets/img/highlight-EDAR.png';
 // import report_cover from '../../assets/img/report_cover.png';
 import graphic1 from '../../assets/img/test/graphic1.png';
+import graphic11 from '../../assets/img/test/graphic11.png';
 
 import Chapter1 from './Chapter1.jsx';
 import Chapter2 from './Chapter2.jsx';
 import Chapter3 from './Chapter3.jsx';
 import PageNavigation from './PageNavigation.jsx';
-import PolicyRecommendations from './PolicyRecommendations.jsx';
+import Chapter4 from './Chapter4.jsx';
 
 // https://www.highcharts.com/
 // import Highcharts from 'highcharts';
@@ -89,15 +90,19 @@ function App() {
         </div>
         <PageNavigation anchorClick={anchorClick} />
         <div className="content_container">
+          <h1>Rethinking the Foundations of Export Diversification in Africa</h1>
           <img className="content_image right" style={{ transform: 'rotate(3deg)', border: '2px solid #AEA29A' }} src="https://via.placeholder.com/280/AEA29A/000000/?text=Placeholder%20photo" alt="" />
           <h4>Soaring food and energy prices are hitting African countries especially hard as they struggle with the impact of the COVID-19 pandemic, climate change and the war in Ukraine.</h4>
-          <h4>To cope with current crises and insulate itself against future shocks, Africa must diversify its economies. The continent of 1.4 billion people is among the least diversified regions in the world with regard to exports. </h4>
-          <p>Commodities account for more than 60% of total merchandise exports in 45 of the 54 countries in Africa, leaving them highly vulnerable to global commodity price shocks and undermining the continent’s inclusive growth and development prospects. </p>
-          <p>UNCTAD’s Economic Development in Africa Report 2022 shows that neglecting the potentially transformative role of high knowledge-intensive services, such as information and communications technology services and financial services, is among the key reasons why export diversification remains a challenge in Africa. </p>
+          <h4>To cope with current crises and insulate itself against future shocks, Africa must diversify its economies. The continent of 1.4 billion people is among the least diversified regions in the world with regard to exports.</h4>
+          <div className="download_section">
+            <button type="button">Download the executive summary as PDF</button>
+          </div>
+          <p>Commodities account for more than 60% of total merchandise exports in 45 of the 54 countries in Africa, leaving them highly vulnerable to global commodity price shocks and undermining the continent’s inclusive growth and development prospects.</p>
+          <p>UNCTAD’s Economic Development in Africa Report 2022 shows that neglecting the potentially transformative role of high knowledge-intensive services, such as information and communications technology services and financial services, is among the key reasons why export diversification remains a challenge in Africa.</p>
           <blockquote>
             <span className="text">High knowledge-intensive services can foster diversification</span>
           </blockquote>
-          <p>The report shows that effectively addressing barriers to services trade under the African Continental Free Trade Area will be key to unleashing the transformative role of services in enhancing the diversity and complexity of products from Africa. </p>
+          <p>The report shows that effectively addressing barriers to services trade under the African Continental Free Trade Area will be key to unleashing the transformative role of services in enhancing the diversity and complexity of products from Africa.</p>
           <IsVisible once>
             {(isVisible) => (
               <div className={`iframe_container full ${(isVisible && y > 200) ? 'visible' : 'not_seen'} ${anchorClicked !== false ? 'notransition' : ''}`}>
@@ -108,6 +113,15 @@ function App() {
           <p>UNCTAD recommends that for export diversification strategies to be impactful in Africa, policies need to be in place that enhance inclusive access to innovative financing technologies, including for small and medium-sized enterprises.</p>
           <p>Leveraging high knowledge-intensive services to increase productivity and improve competitiveness in the private sector will be key to achieving higher value-added diversification and growth on the continent.</p>
         </div>
+        <IsVisible once>
+          {(isVisible) => (
+            <div className="content_container">
+              <div className={`iframe_container video_container ${(isVisible && y > 200) ? 'visible' : 'not_seen'} ${anchorClicked !== false ? 'notransition' : ''}`}>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/EljY4vkOxX8" title="YouTube video player" className="youtube_video" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+              </div>
+            </div>
+          )}
+        </IsVisible>
         <IsVisible once>
           {(isVisible) => (
             <div className={`graphic_container ${(isVisible && y > 200) ? 'visible' : 'not_seen'} ${anchorClicked !== false ? 'notransition' : ''}`}>
@@ -122,31 +136,40 @@ function App() {
             </div>
           )}
         </IsVisible>
-        <div className="content_container">
-          <IsVisible once>
-            {(isVisible) => (
-              <div className={`iframe_container video_container ${(isVisible && y > 200) ? 'visible' : 'not_seen'} ${anchorClicked !== false ? 'notransition' : ''}`}>
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/EljY4vkOxX8" title="YouTube video player" className="youtube_video" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
-              </div>
-            )}
-          </IsVisible>
-        </div>
         <IsVisible once>
           {(isVisible) => (
             <div className={`graphic_container ${(isVisible && y > 200) ? 'visible' : 'not_seen'} ${anchorClicked !== false ? 'notransition' : ''}`}>
-              <div className="image_container" style={{ margin: '0 50px', maxWidth: '450px' }}>
-                <img className="content_image" style={{ border: '2px solid #009EDB' }} src="https://via.placeholder.com/450/AEA29A/000000/?text=Placeholder%20graphic" alt="" />
+              <div className="extra_background" />
+              <div className="image_container">
+                <img src={graphic11} alt="" />
               </div>
-              <div className="quote_container" style={{ margin: '0 50px', maxWidth: '450px' }}>
-                <p>
-                  I hope that this report will prove a valuable guide to policymakers to drive the export diversification of goods and services by empowering private businesses to step into new markets and thrive.
-                </p>
-                <h3 className="name">Rebeca Grynspan</h3>
-                <div className="title">Secretary-General of UNCTAD</div>
+              <div className="title_container">
+                <h2>Most African countries are highly dependent on commodities</h2>
+                <p>NCTAD considers a country to be dependent on commodities when these products make up more than 60% of its total merchandise exports. Based on this definition, 83% of African countries are commodity dependent, accounting for 45% of the commodity-dependent countries worldwide.</p>
               </div>
             </div>
           )}
         </IsVisible>
+        <IsVisible once>
+          {(isVisible) => (
+            <div className={`graphic_container ${(isVisible && y > 200) ? 'visible' : 'not_seen'} ${anchorClicked !== false ? 'notransition' : ''}`}>
+              <div className="quote_container" style={{ margin: '0 50px', maxWidth: '450px' }}>
+                <p>I hope that this report will prove a valuable guide to policymakers to drive the export diversification of goods and services by empowering private businesses to step into new markets and thrive.</p>
+                <h3 className="name">Rebeca Grynspan</h3>
+                <div className="title">Secretary-General of United Nations Conference on Trade and Development</div>
+              </div>
+              <div className="quote_container" style={{ margin: '0 50px', maxWidth: '450px' }}>
+                <p>As African countries work to rebuild their economies post COVID-19, Economic Development in Africa Report 2022 brings a new perspective on how the services sector contributes to export diversification and promotes structural change.</p>
+                <h3 className="name">Benedict O. Oramah</h3>
+                <div className="title">President and Chair, Board of Directors, African Export-Import Bank</div>
+              </div>
+            </div>
+          )}
+        </IsVisible>
+        <div className="content_container">
+          <h3>Dive in to the different chapters</h3>
+          <h4>The Economic Development Report in Africa Report has three chapters. Choose the chapter of your interest for the summary and to download the full chapter.</h4>
+        </div>
         <div className="chapter_navigation">
           <button className="chapter_selection" type="button" onClick={() => anchorClick(0)}>
             <div className="description">
@@ -197,8 +220,8 @@ function App() {
           <PageNavigation anchorClick={anchorClick} />
         </div>
         <div className="chapter_container" id="section4" ref={sectionRefs[3]}>
-          <PolicyRecommendations />
-          <PageNavigation anchorClick={anchorClick} />
+          <Chapter4 />
+          <PageNavigation anchorClick={anchorClick} anchorClicked={anchorClicked} />
         </div>
       </div>
       <noscript>Your browser does not support JavaScript!</noscript>

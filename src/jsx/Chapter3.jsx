@@ -1,4 +1,8 @@
 import React from 'react';
+// https://github.com/joshwnj/react-visibility-sensor
+import VisibilitySensor from 'react-visibility-sensor';
+// https://www.npmjs.com/package/react-countup
+import CountUp from 'react-countup';
 import graphic9 from '../../assets/img/test/graphic9.png';
 import graphic10 from '../../assets/img/test/graphic10.png';
 
@@ -35,14 +39,24 @@ function Chapter3() {
         <p>Other identified risks include poor governance or process control, which can disrupt provision of financial services or critical infrastructure and cyberattacks on financial activity and risk contagion effects on other interconnected financial institutions.</p>
         <p>Additional risks include uncertainty concerning liability for losses, especially in the absence of sound legal and regulatory arbitrage systems, which can negatively affect the confidence of investors and businesses in the system, and excessive volatility of some fintech services or business models.</p>
         <blockquote>
-          <span className="text">Finance and IT sector amounts 44% of private capital deals</span>
+          <span className="text">
+            Finance and IT sector amounts
+            <VisibilitySensor>
+              {({ isVisible }) => (
+                <span style={{ height: 19, display: 'inline-block', width: 26 }}>
+                  {isVisible ? <CountUp delay={0} end={44} duration={3} /> : null}
+                </span>
+              )}
+            </VisibilitySensor>
+            % of private capital deals
+          </span>
         </blockquote>
         <p>Policies and regulations relating to fintech haven’t yet been established in most African countries, which limits the ability of jurisdictions to efficiently tackle these risks, thus reducing the prospects to realize the diversification-inducing potential of fintech and alternative finance.</p>
         <p>Addressing some of the hurdles to seed and start-up financing for SMEs or putting in place legal frameworks and regulatory infrastructure that can foster tailored innovative financing structures and instruments for SMEs will be important enabling factors for export diversification.</p>
         <p>When accompanied by appropriate regulatory frameworks, fintech can increase SMEs’ access to long-term financing, so that funds can also flow more readily into this traditionally neglected but promising sector. </p>
         <p>Stronger protection of property rights and rule-based governance, in addition to guaranteeing a level playing field for enterprises – especially SMEs – to compete, are prerequisites for promoting export diversification.</p>
         <div className="download_section">
-          <button type="button">Download full chapter 3</button>
+          <button type="button">Download Chapter 3 as PDF</button>
         </div>
       </div>
     </div>

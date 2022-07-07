@@ -8,7 +8,6 @@ function Chapter2() {
       <div className="content_container">
         <h3>CHAPTER 2: Trade in services: A niche for export diversification in Africa</h3>
         <h4>Services play a critical role in global and regional value chains and international trade. They represent the main source of value added in total trade, as they contribute to the physical and digital connectivity of all sectors within and across economies.</h4>
-
         <p>The development of trade in services enhances inclusive growth by reducing poverty and inequality and fosters the achievement of Agenda 2063 and the Sustainable Development Goals.</p>
         <p>Africa can leverage trade in services to diversify economic activities into new and potentially transformative sectors.</p>
         <h5>Traditional services dominate trade</h5>
@@ -49,7 +48,7 @@ function Chapter2() {
         <p>Firms, in particular new entrants and small-scale exporting companies, need to secure external financing to cover the large costs of entering export markets.</p>
         <p>Other obstacles affecting the use of services by African firms and the integration of SMEs in the sector include infrastructure and competitiveness challenges, the cost of increased informality and the need for increased skills in high knowledge-intensive sectors.</p>
         <div className="download_section">
-          <button type="button">Download full chapter 2</button>
+          <button type="button">Download Chapter 2 as PDF</button>
         </div>
       </div>
     </div>
