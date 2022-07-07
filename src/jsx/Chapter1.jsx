@@ -14,20 +14,21 @@ function Chapter1() {
           a statistical measure of concentration or diversification, is used as the main indicator to identify diversification trends. Export diversification is usually measured by the number of export lines and the Theil index. Although the number of active export lines is easier to interpret, export volume can still be strongly concentrated in a few products or sectors only. Both indicators are used to illustrate diversification trends at the aggregate and sector levels. The higher the Theil index, the more unequal the export distribution, and the more concentrated the exports.
         </p>
         <h5>Diversification trends</h5>
-        <p>Over the past two decades, less than half of all African countries managed to diversify their exports. Non-commodity-dependent countries are, on average, the most diversified (Theil index 4.5), followed by agricultural commodity-dependent countries (Theil index 5.7), mining commodity-dependent countries (Theil index 6.2) and fuel-dependent countries (Theil index 7). </p>
-        <p>Although mining commodity-dependent countries export on average more products than agricultural commodity-dependent countries (on average 1,829 and 1,410 export lines, respectively), the share of export products is much more concentrated in mining commodity-dependent countries. Between 1998–2000 and 2018–2019, some fuel-dependent countries experienced relatively strong diversification trends.</p>
-        <p>In the figure below illustrates within-sector diversification in 2018–2019 and the change in diversification compared with 1998–2000.</p>
+        <p>Over the past two decades, less than half of all African countries managed to diversify their exports. Non-commodity-dependent countries are, on average, the most diversified (Theil index 4.5), followed by agricultural commodity-dependent countries (Theil index 5.7), mining commodity-dependent countries (Theil index 6.2) and fuel-dependent countries (Theil index 7).</p>
+        <p>While in the 2000s, export diversification increased in 31 African countries (average improvement of -0.1186 index points), the 2010s was characterized by a reverse trend (average increase by 0.18 index points).</p>
+        <p>The slowdown or reversed trend in diversification was partly due to the impact of the global financial crisis in reduced growth in the global economy, trade and investment, and the increasing industrialization of Asian countries, fuelling demand for African natural resources.</p>
+        <p>The figure below illustrates within-sector diversification in 2018–2019 and the change in diversification compared with 1998–2000.</p>
       </div>
       <figure>
+        <h5>Non-commodity-dependent countries boast stronger within-sector diversification.</h5>
         <img className="content_image full" src={graphic5} alt="" />
-        <figcaption>Figure: Agricultural commodity-dependent countries diverse more slowly than mining commodity dependent countries.</figcaption>
+        <figcaption />
       </figure>
       <div className="content_container">
-        <p>Non-commodity-dependent countries experienced the strongest diversification trend in opticals, followed by textiles (increase in active export lines of 137% and 118%, respectively, compared with 1998–2000). </p>
-        <p>Fuel-dependent countries diversified more in miscellaneous manufactured articles (252% increase in export lines) and articles of stone (246%). </p>
+        <p>Non-commodity-dependent countries experienced stronger diversification trend in more complex manufacturing products (such as opticals and textiles, with increases in active export lines of 137% and 118% respectively, compared with 1998–2000) than commodity-dependent countries.</p>
         <p>Agricultural commodity-dependent countries diversified more in base metals and articles (98%) and footwear (93%), and diversification in mining commodity-dependent countries was highest in fats and oils (547% increase), footwear (309%) and articles of stone (304%).</p>
-        <p>These trends suggest that while resource-dependent African countries have diversified and added new products to their export basket, diversification was higher within commodities, compared with sophisticated manufactured products, where diversification was low.</p>
-        <p>The main drivers of Africa’s export diversification are:</p>
+        <p>These trends suggest that while resource-dependent African countries have diversified and added new products to their export basket, diversification into sophisticated manufactured products was low.</p>
+        <p><strong>The main drivers of Africa’s export diversification are:</strong></p>
         <ul>
           <li>Shorter distance between countries</li>
           <li>Lower trade costs</li>
@@ -35,15 +36,23 @@ function Chapter1() {
           <li>Access to services</li>
           <li>The African Continental Free Trade Area as a catalyst</li>
         </ul>
-        <h5>Product diversification export opportunities</h5>
-        <p>The potential sectors of product diversification vary widely across countries, based on their current productive capabilities and position in the product space. Nevertheless, there are some common sectors with vast new export opportunities across African countries.</p>
-        <p>Owing to their potential for upgrading, large unit values and favourable market conditions, the sectors with the best prospects for new export opportunities in value are machinery and mechanical appliances, electrical machinery and equipment, plastics and articles thereof and organic chemicals. </p>
-        <p>Though in different products and unit values, an assessment of feasible product diversification opportunities reveals that all countries have some potential for export diversification into all these sectors through relatively small jumps.</p>
-        <p>Importantly, the values reported in figure 17 refer to the global increase in imports of the products, explaining the large opportunity values of export diversification. Hence, other countries that produce those goods also compete for the same expanding market. </p>
-        <p>Nevertheless, the large demand for these goods provides new export opportunities for African countries and firms.</p>
+        <h5>Complex and diverse products will expand export opportunities</h5>
+        <p>Identifying the most feasible new products with large demand and a higher-than-average product complexity will exponentially increase the opportunities for structural change. Larger jumps in the product space towards industrial sectors can be necessary to promote structural change.</p>
+        <p>Identifying the most feasible new products with large demand and a higher-than-average product complexity will exponentially increase the opportunities for structural change. Larger jumps in the product space towards industrial sectors can be necessary to promote structural change.</p>
+        <p>Nevertheless, there are potential sectors with upgrading and vast new export opportunities across African countries, including machinery and mechanical appliances, electrical machinery and equipment, plastics and articles thereof and organic chemicals.</p>
+        <p>Global demand for these goods provides new export and market opportunities for African countries and firms. The active provision of market intelligence and business services can increase supply and demand linkages, lower barriers to value chain and market entry, and facilitate more complex, diverse and higher-value-added exports.</p>
+        <p><strong>The steps to identify feasible product diversification are:</strong></p>
+        <ul>
+          <li>Identify strategic products and sectors</li>
+          <li>Look into demand opportunities</li>
+          <li>Explore market access conditions</li>
+          <li>Determine strategic policies to ensure competitiveness</li>
+        </ul>
+        <p>Further opportunities for African market expansion are underpinned by the benefits of intraregional trade and the potential role of the African Continental Free Trade Area.</p>
         <figure>
+          <h5>Sectors with vast new export opportunities across African countries</h5>
           <img className="content_image full" src={graphic6} alt="" />
-          <figcaption>Figure: </figcaption>
+          <figcaption />
         </figure>
         <div className="download_section">
           <button type="button">Download Chapter 1 as PDF</button>

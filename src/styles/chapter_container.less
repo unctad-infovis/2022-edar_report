@@ -22,9 +22,22 @@
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-around;
-      text-align: center;
       margin: auto auto 20px auto;
+      text-align: center;
       .recommendation_container {
+        &:before {
+          background-color: #fff;
+          color: #009EDB;
+          content: counter(recommendation);
+          counter-increment: recommendation;
+          position: absolute;
+          top: -30px;
+          left: -30px;
+          line-height: 50px;
+          border-radius: 50px;
+          width: 50px;
+          font-size: 45px;
+        }
         align-content: center;
         background: #72BF44;
         border-radius: 10px;
@@ -35,13 +48,19 @@
         flex: 50%;
         font-family: Roboto;
         justify-content: center;
+        justify-content: center;
         margin: 20px;
         max-width: 300px;
+        opacity: 0;
+        padding: 20px 20px 20px 20px;
+        position: relative;
+        transition-duration: 0.5s;
+        transition-property: opacity;
+        transition-timing-function: linear;
         p {
           margin: 0;
           font-size: 20px;
         }
-        padding: 20px 20px 20px 20px;
       }
     }
 
@@ -49,8 +68,16 @@
   figure {
     margin: 40px auto 40px auto;
     max-width: 800px;
+    h5 {
+      font-family: "Roboto Serif";
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0 auto 20px auto;
+      max-width: 700px;
+    }
     figcaption {
       color: #7C7067;
+      display: none;
       font-size: 14px;
     }
   }
