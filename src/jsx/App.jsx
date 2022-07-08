@@ -150,6 +150,7 @@ function App() {
               <div className="title_container">
                 <h2>The promise of fintech</h2>
                 <p>The recent growth of financial technology (fintech) firms in Africa is spurring more innovation and investment opportunities. Fintech has the potential to help African countries achieve financial and social inclusion.</p>
+                <SocialMediaButtons text="text" url="url" image="image" />
               </div>
             </div>
           )}

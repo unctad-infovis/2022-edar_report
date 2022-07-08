@@ -3,8 +3,8 @@ import React from 'react';
 import VisibilitySensor from 'react-visibility-sensor';
 // https://www.npmjs.com/package/react-countup
 import CountUp from 'react-countup';
-import graphic9 from '../../assets/img/test/graphic9.png';
-import graphic10 from '../../assets/img/test/graphic10.png';
+import graphic9 from '../../assets/img/graphs/EDAR-2022-chapt-3-white.png';
+import graphic10 from '../../assets/img/graphs/EDAR-2022-Fig-25.png';
 
 import photo4 from '../../assets/img/photos/shutterstock_1907037457-min.jpg';
 

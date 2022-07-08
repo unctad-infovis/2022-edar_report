@@ -1,7 +1,7 @@
 import React from 'react';
 import graphic7 from '../../assets/img/graphs/EDAR-2022-2005.png';
 import graphic8 from '../../assets/img/graphs/EDAR-2022-2019.png';
-import graphic9 from '../../assets/img/test/graphic8.png';
+import graphic9 from '../../assets/img/graphs/EDAR-2022-Fig-19.png';
 
 import photo3 from '../../assets/img/photos/shutterstock_1907037457-min.jpg';
 

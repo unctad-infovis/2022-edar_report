@@ -27,9 +27,9 @@ function Chapter1() {
         <p>The figure below illustrates within-sector diversification in 2018–2019 and the change in diversification compared with 1998–2000.</p>
       </div>
       <figure>
-        <h5>Non-commodity-dependent countries boast stronger within-sector diversification.</h5>
-        <img className="content_image half" src={graphic5} alt="" />
+        <h5>Non-commodity-dependent countries boast stronger within-sector diversification</h5>
         <img className="content_image half" src={graphic6} alt="" />
+        <img className="content_image half" src={graphic5} alt="" />
         <figcaption />
       </figure>
       <div className="content_container">

@@ -26,8 +26,9 @@ function PolicyRecommendations(anchorClicked) {
       <div className="content_container">
         <h3>Conclusions and policy recommendations</h3>
         <img className="content_image right" style={{ transform: 'rotate(3deg)', border: '2px solid #AEA29A' }} src={photo4} alt="" />
-        <p>Bacon ipsum dolor amet kevin ham tenderloin rump biltong. Corned beef andouille filet mignon ham burgdoggen swine hamburger tenderloin kielbasa kevin beef ribs rump. Chicken bresaola pancetta beef. Pig pork loin chislic pork chop ham pork belly turducken kevin shank. Chislic kielbasa picanha, tri-tip tongue pig kevin strip steak hamburger prosciutto pork belly filet mignon ground round. Strip steak filet mignon doner corned beef.</p>
-        <p>Bacon ipsum dolor amet kevin ham tenderloin rump biltong. Corned beef andouille filet mignon ham burgdoggen swine hamburger tenderloin kielbasa kevin beef ribs rump. Chicken bresaola pancetta beef. Pig pork loin chislic pork chop ham pork belly turducken kevin shank. Chislic kielbasa picanha, tri-tip tongue pig kevin strip steak hamburger prosciutto pork belly filet mignon ground round. Strip steak filet mignon doner corned beef.</p>
+        <h4>The services sector could be a forceful impetus for economic diversification, growth and structural transformation in Africa. But this requires that policies be aligned to build complementarities between the services sector and other sectors of the economy, especially manufacturing.</h4>
+        <h4>UNCTAD recommends that African governments and businesses take the following policy actions to support effective exports diversification on the continent:</h4>
+        <div className="clear_both" />
         <IsVisible once>
           {(isVisible) => (
             <div className={`recommendations_container ${(isVisible) ? 'visible' : 'not_seen'} ${anchorClicked !== false ? 'notransition' : ''}`}>
@@ -59,7 +60,8 @@ function PolicyRecommendations(anchorClicked) {
             </div>
           )}
         </IsVisible>
-        <p>Bacon ipsum dolor amet kevin ham tenderloin rump biltong. Corned beef andouille filet mignon ham burgdoggen swine hamburger tenderloin kielbasa kevin beef ribs rump. Chicken bresaola pancetta beef. Pig pork loin chislic pork chop ham pork belly turducken kevin shank. Chislic kielbasa picanha, tri-tip tongue pig kevin strip steak hamburger prosciutto pork belly filet mignon ground round. Strip steak filet mignon doner corned beef.</p>
+        <p>UNCTAD stands ready to provide cutting-edge economic research and policy analysis and data tools to support African countries in their efforts to reach export diversification and sustainable development objectives.</p>
+        <p>In partnership with regional and national institutions, UNCTAD can deliver institutional and productive capacity-building programmes and offer support to build consensus on key policy and regulatory issues with a view to achieving effective structural change on the continent.</p>
         <div className="download_section">
           <button type="button">Download Chapter 4 as PDF</button>
         </div>
