@@ -14,12 +14,12 @@ import graphic11 from '../../assets/img/test/graphic11.png';
 import graphic1 from '../../assets/img/graphic1.png';
 import banner_img from '../../assets/img/highlight-EDAR.png';
 
-import PageNavigation from './PageNavigation.jsx';
-import ChapterNavigation from './ChapterNavigation.jsx';
 import Chapter1 from './Chapter1.jsx';
 import Chapter2 from './Chapter2.jsx';
 import Chapter3 from './Chapter3.jsx';
 import Chapter4 from './Chapter4.jsx';
+import ChapterNavigation from './ChapterNavigation.jsx';
+import PageNavigation from './PageNavigation.jsx';
 import SocialMediaButtons from './helpers/SocialMediaButtons.jsx';
 
 // https://www.highcharts.com/

@@ -3,17 +3,19 @@ import React from 'react';
 import VisibilitySensor from 'react-visibility-sensor';
 // https://www.npmjs.com/package/react-countup
 import CountUp from 'react-countup';
-import graphic9 from '../../assets/img/graphs/EDAR-2022-chapt-3-white.png';
-import graphic10 from '../../assets/img/graphs/EDAR-2022-Fig-25.png';
+import graphic1 from '../../assets/img/graphs/EDAR-2022-chapt-3-white.png';
+import graphic2 from '../../assets/img/graphs/EDAR-2022-Fig-25.png';
 
-import photo4 from '../../assets/img/photos/shutterstock_1907037457-min.jpg';
+import SocialMediaButtons from './helpers/SocialMediaButtons.jsx';
+
+import photo1 from '../../assets/img/photos/shutterstock_1677766576-min.jpg';
 
 function Chapter3() {
   return (
     <div>
       <div className="content_container">
         <h3>CHAPTER 3: Financial services and private sector: The future of export diversification in Africa</h3>
-        <img className="content_image right" style={{ transform: 'rotate(3deg)', border: '2px solid #AEA29A' }} src={photo4} alt="" />
+        <img className="content_image right" style={{ transform: 'rotate(3deg)', border: '2px solid #AEA29A' }} src={photo1} alt="" />
         <h4>Private businesses, particularly small and medium-sized enterprises (SMEs), can facilitate high value-added export diversification in Africa, especially through the services sector, when supported by sound financial services or provided with access to affordable financing.</h4>
         <p>The current structure of the financial system in Africa, which mainly revolved around the banking sector, may not be suitable for SMEs’ growth and export performance, which requires tailored financing mechanisms.</p>
         <p>These include private capital investment and financial technology (fintech) that can improve access to affordable credit and offer other promising channels to bridge the financing gaps of start-ups and SMEs.</p>
@@ -23,8 +25,9 @@ function Chapter3() {
         <p>For example, mobile money, the most commonly used financial technology in Africa, is only being utilized to advance short-term microloans to users.</p>
       </div>
       <figure>
-        <img className="content_image full" src={graphic9} alt="" />
-        <figcaption>Figure: </figcaption>
+        <h5>Figure title</h5>
+        <img className="content_image full" src={graphic1} alt="" />
+        <SocialMediaButtons text="text" url="url" image="image" />
       </figure>
       <div className="content_container">
         <p>Sectors that dominate the African fintech industry are payments and remittances, marketplace lending and wealth technology, accounting respectively for 26%, 19% and 14% of all transactions in 2021.</p>
@@ -35,8 +38,9 @@ function Chapter3() {
         <p>The use of more innovative technologies in logistics management solutions are contributing to making supply chains more customer-centric and sustainable. Applying technology-driven solutions to logistics processes results in increased productivity and efficiency in the workflow.</p>
       </div>
       <figure>
-        <img className="content_image full" src={graphic10} alt="" />
-        <figcaption>Figure: </figcaption>
+        <h5>Figure title</h5>
+        <img className="content_image full" src={graphic2} alt="" />
+        <SocialMediaButtons text="text" url="url" image="image" />
       </figure>
       <div className="content_container">
         <h5>Challenges to be tackled</h5>

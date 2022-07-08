@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import photo2 from '../../assets/img/photos/shutterstock_2013653246-min.jpg';
+import photo2 from '../../assets/img/photos/shutterstock_1571475058-min.jpg';
 
 function ChapterNavigation({ anchorClick }) {
   return (
@@ -32,7 +32,7 @@ function ChapterNavigation({ anchorClick }) {
           </div>
         </button>
       </div>
-      <div className="chapter_navigation policy" style={{ backgroundImage: `url(${photo2})`, minHeight: '640px' }}>
+      <div className="chapter_navigation policy" style={{ backgroundImage: `url(${photo2})`, minHeight: '640px', backgroundSize: '100%' }}>
         <button className="chapter_selection policy" type="button" onClick={() => anchorClick(3)} style={{ position: 'absolute' }}>
           <div className="description">
             <div className="chapter_title_container policy">

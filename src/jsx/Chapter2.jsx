@@ -1,16 +1,18 @@
 import React from 'react';
-import graphic7 from '../../assets/img/graphs/EDAR-2022-2005.png';
-import graphic8 from '../../assets/img/graphs/EDAR-2022-2019.png';
-import graphic9 from '../../assets/img/graphs/EDAR-2022-Fig-19.png';
+import graphic1 from '../../assets/img/graphs/EDAR-2022-2005.png';
+import graphic2 from '../../assets/img/graphs/EDAR-2022-2019.png';
+import graphic3 from '../../assets/img/graphs/EDAR-2022-Fig-19.png';
 
-import photo3 from '../../assets/img/photos/shutterstock_1907037457-min.jpg';
+import SocialMediaButtons from './helpers/SocialMediaButtons.jsx';
+
+import photo1 from '../../assets/img/photos/shutterstock_1907037457-min.jpg';
 
 function Chapter2() {
   return (
     <div>
       <div className="content_container">
         <h3>CHAPTER 2: Trade in services: A niche for export diversification in Africa</h3>
-        <img className="content_image right" style={{ transform: 'rotate(3deg)', border: '2px solid #AEA29A' }} src={photo3} alt="" />
+        <img className="content_image right" style={{ transform: 'rotate(3deg)', border: '2px solid #AEA29A' }} src={photo1} alt="" />
         <h4>Services play a critical role in global and regional value chains and international trade. They represent the main source of value added in total trade, as they contribute to the physical and digital connectivity of all sectors within and across economies.</h4>
         <p>The development of trade in services enhances inclusive growth by reducing poverty and inequality and fosters the achievement of Agenda 2063 and the Sustainable Development Goals.</p>
         <p>Africa can leverage trade in services to diversify economic activities into new and potentially transformative sectors.</p>
@@ -20,17 +22,25 @@ function Chapter2() {
         <p>Traditional services don’t have a direct impact on the complexity and diversity of the export basket, which is seen to increase with high knowledge-intensity services such as ICT.</p>
       </div>
       <figure>
-        <img className="content_image half" src={graphic7} alt="" />
-        <img className="content_image half" src={graphic8} alt="" />
-        <figcaption>Figure: </figcaption>
+        <h5>Figure title</h5>
+        <div className="content_image half">
+          <img className="" src={graphic1} alt="" />
+          <SocialMediaButtons text="text" url="url" image="image" />
+        </div>
+        <div className="content_image half">
+          <img className="" src={graphic2} alt="" />
+          <SocialMediaButtons text="text" url="url" image="image" />
+        </div>
+        <figcaption />
       </figure>
       <div className="content_container">
         <p>Some countries have made progress in diversifying their services. In 2005–2019, the top three services sectors represented less than 70% of total exports in services in five countries: Burkina Faso, Kenya, Malawi, Senegal and Sierra Leone.</p>
         <p>Exports in services remain dominated by travel and transport in most African countries, except in a few countries such as Malawi, where the primary services sector is telecommunications, representing one fourth of total exports in services.</p>
       </div>
       <figure>
-        <img className="content_image full" src={graphic9} alt="" />
-        <figcaption>Figure: </figcaption>
+        <h5>Figure title</h5>
+        <img className="content_image full" src={graphic3} alt="" />
+        <SocialMediaButtons text="text" url="url" image="image" />
       </figure>
       <div className="content_container">
         <p>The key factors undermining trade in services in Africa include:</p>

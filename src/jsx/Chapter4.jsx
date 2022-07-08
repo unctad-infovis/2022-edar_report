@@ -1,7 +1,7 @@
 import React from 'react';
 import IsVisible from 'react-is-visible';
 
-import photo4 from '../../assets/img/photos/shutterstock_2113047023-min.jpg';
+import photo1 from '../../assets/img/photos/shutterstock_1424563532-min.jpg';
 
 let animated = false;
 function PolicyRecommendations(anchorClicked) {
@@ -25,7 +25,7 @@ function PolicyRecommendations(anchorClicked) {
     <div>
       <div className="content_container">
         <h3>Conclusions and policy recommendations</h3>
-        <img className="content_image right" style={{ transform: 'rotate(3deg)', border: '2px solid #AEA29A' }} src={photo4} alt="" />
+        <img className="content_image right" style={{ transform: 'rotate(3deg)', border: '2px solid #AEA29A' }} src={photo1} alt="" />
         <h4>The services sector could be a forceful impetus for economic diversification, growth and structural transformation in Africa. But this requires that policies be aligned to build complementarities between the services sector and other sectors of the economy, especially manufacturing.</h4>
         <h4>UNCTAD recommends that African governments and businesses take the following policy actions to support effective exports diversification on the continent:</h4>
         <div className="clear_both" />
