@@ -33,12 +33,16 @@
       font-size: 20px;
       padding: 0;
       text-decoration: underline;
+      &:before {
+        content: "» "
+      }
       &:hover {
         text-decoration: none;
       }
     }
   }
   .content_wrapper {
+    @import 'social_media_buttons.less';
     margin: auto auto;
     position: relative;
     z-index: 2;
@@ -58,7 +62,7 @@
     }
     @import 'page_navigation.less';
     .content_container {
-      margin: auto auto auto auto;
+      margin: auto auto 20px auto;
       max-width: 700px;
       p,
       h3,
@@ -69,9 +73,6 @@
       .iframe_container,
        {
         margin: auto auto 20px auto;
-      }
-      .iframe_container {
-        margin: 40px auto;
       }
       p {
         font-size: 16px;
@@ -178,11 +179,12 @@
       align-items: center;
       display: flex;
       justify-content: center;
-      margin: 100px auto 100px auto;
+      margin: 40px auto 40px auto;
       max-width: 1200px;
       vertical-align: middle;
       &.quotes_container {
         align-items: flex-start;
+        margin-bottom: 100px;
       }
       .extra_background {
         background-color: rgba(255, 255, 255, 0.75);
@@ -206,7 +208,9 @@
         }
       }
       .quote_container {
+        border: 2px solid #009EDB;
         height: 100%;
+        padding: 30px;
         width: 100%;
         p {
           font-family: Kalam;

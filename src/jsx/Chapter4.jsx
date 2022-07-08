@@ -1,6 +1,8 @@
 import React from 'react';
 import IsVisible from 'react-is-visible';
 
+import photo4 from '../../assets/img/photos/shutterstock_2113047023-min.jpg';
+
 let animated = false;
 function PolicyRecommendations(anchorClicked) {
   const showElements = () => {
@@ -23,6 +25,8 @@ function PolicyRecommendations(anchorClicked) {
     <div>
       <div className="content_container">
         <h3>Conclusions and policy recommendations</h3>
+        <img className="content_image right" style={{ transform: 'rotate(3deg)', border: '2px solid #AEA29A' }} src={photo4} alt="" />
+        <p>Bacon ipsum dolor amet kevin ham tenderloin rump biltong. Corned beef andouille filet mignon ham burgdoggen swine hamburger tenderloin kielbasa kevin beef ribs rump. Chicken bresaola pancetta beef. Pig pork loin chislic pork chop ham pork belly turducken kevin shank. Chislic kielbasa picanha, tri-tip tongue pig kevin strip steak hamburger prosciutto pork belly filet mignon ground round. Strip steak filet mignon doner corned beef.</p>
         <p>Bacon ipsum dolor amet kevin ham tenderloin rump biltong. Corned beef andouille filet mignon ham burgdoggen swine hamburger tenderloin kielbasa kevin beef ribs rump. Chicken bresaola pancetta beef. Pig pork loin chislic pork chop ham pork belly turducken kevin shank. Chislic kielbasa picanha, tri-tip tongue pig kevin strip steak hamburger prosciutto pork belly filet mignon ground round. Strip steak filet mignon doner corned beef.</p>
         <IsVisible once>
           {(isVisible) => (

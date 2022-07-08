@@ -18,7 +18,7 @@ function PageNavigation({ anchorClick }) {
       </div>
       <div className="button_container button_container_2">
         <button type="button" href="#section3" onClick={() => anchorClick(2)}>
-          <div className="chapter_label">Section 3</div>
+          <div className="chapter_label">Chapter 3</div>
           <div className="chapter_title">Looking ahead</div>
         </button>
       </div>

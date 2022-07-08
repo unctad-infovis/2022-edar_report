@@ -2,11 +2,14 @@ import React from 'react';
 import graphic7 from '../../assets/img/test/graphic7.png';
 import graphic8 from '../../assets/img/test/graphic8.png';
 
+import photo3 from '../../assets/img/photos/shutterstock_1907037457-min.jpg';
+
 function Chapter2() {
   return (
     <div>
       <div className="content_container">
         <h3>CHAPTER 2: Trade in services: A niche for export diversification in Africa</h3>
+        <img className="content_image right" style={{ transform: 'rotate(3deg)', border: '2px solid #AEA29A' }} src={photo3} alt="" />
         <h4>Services play a critical role in global and regional value chains and international trade. They represent the main source of value added in total trade, as they contribute to the physical and digital connectivity of all sectors within and across economies.</h4>
         <p>The development of trade in services enhances inclusive growth by reducing poverty and inequality and fosters the achievement of Agenda 2063 and the Sustainable Development Goals.</p>
         <p>Africa can leverage trade in services to diversify economic activities into new and potentially transformative sectors.</p>

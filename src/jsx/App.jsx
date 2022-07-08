@@ -8,9 +8,11 @@ import scrollIntoView from 'scroll-into-view';
 import 'intersection-observer';
 import IsVisible from 'react-is-visible';
 
-import banner_img from '../../assets/img/highlight-EDAR.png';
-import graphic1 from '../../assets/img/test/graphic1.png';
+import photo1 from '../../assets/img/photos/shutterstock_1622817574-min.jpg';
+
 import graphic11 from '../../assets/img/test/graphic11.png';
+import graphic1 from '../../assets/img/graphic1.png';
+import banner_img from '../../assets/img/highlight-EDAR.png';
 
 import PageNavigation from './PageNavigation.jsx';
 import ChapterNavigation from './ChapterNavigation.jsx';
@@ -18,6 +20,7 @@ import Chapter1 from './Chapter1.jsx';
 import Chapter2 from './Chapter2.jsx';
 import Chapter3 from './Chapter3.jsx';
 import Chapter4 from './Chapter4.jsx';
+import SocialMediaButtons from './helpers/SocialMediaButtons.jsx';
 
 // https://www.highcharts.com/
 // import Highcharts from 'highcharts';
@@ -91,7 +94,7 @@ function App() {
         <PageNavigation anchorClick={anchorClick} />
         <div className="content_container">
           <h1>Rethinking the Foundations of Export Diversification in Africa</h1>
-          <img className="content_image right" style={{ transform: 'rotate(3deg)', border: '2px solid #AEA29A' }} src="https://via.placeholder.com/280/AEA29A/000000/?text=Placeholder%20photo" alt="" />
+          <img className="content_image right" style={{ transform: 'rotate(3deg)', border: '2px solid #AEA29A' }} src={photo1} alt="" />
           <h4>Soaring food and energy prices are hitting African countries especially hard as they struggle with the impact of the COVID-19 pandemic, climate change and the war in Ukraine.</h4>
           <h4>To cope with current crises and insulate itself against future shocks, Africa must diversify its economies. The continent of 1.4 billion people is among the least diversified regions in the world with regard to exports.</h4>
           <div className="download_section">
@@ -129,6 +132,7 @@ function App() {
               <div className="title_container">
                 <h2>Most African countries are highly dependent on commodities</h2>
                 <p>UNCTAD considers a country to be dependent on commodities when these products make up more than 60% of its total merchandise exports. Based on this definition, 83% of African countries are commodity dependent, accounting for 45% of the commodity-dependent countries worldwide.</p>
+                <SocialMediaButtons text="text" url="url" image="image" />
               </div>
               <div className="image_container">
                 <img src={graphic1} alt="" />

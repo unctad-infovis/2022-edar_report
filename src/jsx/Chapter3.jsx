@@ -6,11 +6,14 @@ import CountUp from 'react-countup';
 import graphic9 from '../../assets/img/test/graphic9.png';
 import graphic10 from '../../assets/img/test/graphic10.png';
 
+import photo4 from '../../assets/img/photos/shutterstock_1907037457-min.jpg';
+
 function Chapter3() {
   return (
     <div>
       <div className="content_container">
         <h3>CHAPTER 3: Financial services and private sector: The future of export diversification in Africa</h3>
+        <img className="content_image right" style={{ transform: 'rotate(3deg)', border: '2px solid #AEA29A' }} src={photo4} alt="" />
         <h4>Private businesses, particularly small and medium-sized enterprises (SMEs), can facilitate high value-added export diversification in Africa, especially through the services sector, when supported by sound financial services or provided with access to affordable financing.</h4>
         <p>The current structure of the financial system in Africa, which mainly revolved around the banking sector, may not be suitable for SMEs’ growth and export performance, which requires tailored financing mechanisms.</p>
         <p>These include private capital investment and financial technology (fintech) that can improve access to affordable credit and offer other promising channels to bridge the financing gaps of start-ups and SMEs.</p>

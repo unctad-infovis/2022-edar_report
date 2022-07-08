@@ -1,12 +1,19 @@
 import React from 'react';
-import graphic5 from '../../assets/img/test/graphic5.png';
-import graphic6 from '../../assets/img/test/graphic6.png';
+import graphic5 from '../../assets/img/graphs/EDAR-2022-Fig-3-1.png';
+import graphic6 from '../../assets/img/graphs/EDAR-2022-Fig-3-2.png';
+import graphic7 from '../../assets/img/test/graphic6.png';
+
+import photo5 from '../../assets/img/photos/shutterstock_2006080094-min.jpg';
+// import photo6 from '../../assets/img/photos/shutterstock_1165318783-min.jpg';
+// import photo7 from '../../assets/img/photos/shutterstock_1137295295-min.jpg';
+// import photo8 from '../../assets/img/photos/shutterstock_1019371918-min.jpg';
 
 function Chapter1() {
   return (
     <div>
       <div className="content_container">
         <h3>CHAPTER 1: The pulse of export diversification in Africa</h3>
+        <img className="content_image right" style={{ transform: 'rotate(3deg)', border: '2px solid #AEA29A' }} src={photo5} alt="" />
         <h4>Africa is the second least diversified region after Oceania, and it has the most concentrated export structure when considering the unequal distribution of export shares over products.</h4>
         <p className="infobox">
           <strong>The Theil index</strong>
@@ -21,7 +28,8 @@ function Chapter1() {
       </div>
       <figure>
         <h5>Non-commodity-dependent countries boast stronger within-sector diversification.</h5>
-        <img className="content_image full" src={graphic5} alt="" />
+        <img className="content_image half" src={graphic5} alt="" />
+        <img className="content_image half" src={graphic6} alt="" />
         <figcaption />
       </figure>
       <div className="content_container">
@@ -51,7 +59,7 @@ function Chapter1() {
         <p>Further opportunities for African market expansion are underpinned by the benefits of intraregional trade and the potential role of the African Continental Free Trade Area.</p>
         <figure>
           <h5>Sectors with vast new export opportunities across African countries</h5>
-          <img className="content_image full" src={graphic6} alt="" />
+          <img className="content_image full" src={graphic7} alt="" />
           <figcaption />
         </figure>
         <div className="download_section">
