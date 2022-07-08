@@ -1,6 +1,7 @@
 import React from 'react';
-import graphic7 from '../../assets/img/test/graphic7.png';
-import graphic8 from '../../assets/img/test/graphic8.png';
+import graphic7 from '../../assets/img/graphs/EDAR-2022-2005.png';
+import graphic8 from '../../assets/img/graphs/EDAR-2022-2019.png';
+import graphic9 from '../../assets/img/test/graphic8.png';
 
 import photo3 from '../../assets/img/photos/shutterstock_1907037457-min.jpg';
 
@@ -19,7 +20,8 @@ function Chapter2() {
         <p>Traditional services don’t have a direct impact on the complexity and diversity of the export basket, which is seen to increase with high knowledge-intensity services such as ICT.</p>
       </div>
       <figure>
-        <img className="content_image full" src={graphic7} alt="" />
+        <img className="content_image half" src={graphic7} alt="" />
+        <img className="content_image half" src={graphic8} alt="" />
         <figcaption>Figure: </figcaption>
       </figure>
       <div className="content_container">
@@ -27,7 +29,7 @@ function Chapter2() {
         <p>Exports in services remain dominated by travel and transport in most African countries, except in a few countries such as Malawi, where the primary services sector is telecommunications, representing one fourth of total exports in services.</p>
       </div>
       <figure>
-        <img className="content_image full" src={graphic8} alt="" />
+        <img className="content_image full" src={graphic9} alt="" />
         <figcaption>Figure: </figcaption>
       </figure>
       <div className="content_container">
