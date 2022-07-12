@@ -10,7 +10,7 @@ import IsVisible from 'react-is-visible';
 
 import photo1 from '../../assets/img/photos/shutterstock_1622817574-min.jpg';
 
-import graphic11 from '../../assets/img/test/graphic11.png';
+import graphic11 from '../../assets/img/graphs/EDAR-2022-figure2.png';
 import graphic1 from '../../assets/img/graphic1.png';
 import banner_img from '../../assets/img/highlight-EDAR.png';
 
