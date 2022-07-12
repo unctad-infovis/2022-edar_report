@@ -1,48 +1,82 @@
-.chapter_navigation {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 40px auto 100px auto;
-  max-width: 1200px;
-  position: relative;
-  &.policy {
-    justify-content: flex-end;
-  }
-  .content_image {
-    margin: auto auto;
-    z-index: -1;
-  }
-  .chapter_selection {
-    background-color: #fff;
-    border: 0;
-    box-shadow: 5px 8px 20px #AEA29A;
-    box-sizing: border-box;
-    color: #fff;
-    cursor: pointer;
-    display: block;
-    flex: 30%;
-    font-family: Roboto;
-    margin-bottom: 20px;
-    margin: 0 20px;
-    max-width: 300px;
-    padding: 0;
-    border-radius: 30px;
-    text-align: left;
-    transition: transform 0.2s ease-in-out;
-    &:hover {
-      transform: scale(1.05);
+.chapter_navigation_wrapper {
+  .chapter_navigation {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 40px auto 100px auto;
+    max-width: 1200px;
+    position: relative;
+    &.chapters {
+      @media all and (max-width: 1000px) {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 20px;
+      }
     }
     &.policy {
-       .description {
+      align-items: center;
+      justify-content: flex-end;
+      min-height: 640px;
+      background-position: 20%;
+      background-size: auto auto;
+      background-image: url("../assets/img/photos/shutterstock_1962681901-min.jpg");
+    }
+    .content_image {
+      margin: auto auto;
+      z-index: -1;
+    }
+    .chapter_selection {
+      background-color: #fff;
+      border-radius: 30px;
+      border: 0;
+      box-shadow: 5px 8px 20px #AEA29A;
+      box-sizing: border-box;
+      color: #fff;
+      cursor: pointer;
+      display: block;
+      flex: 30%;
+      font-family: Roboto;
+      max-width: 300px;
+      padding: 0;
+      text-align: left;
+      transition-duration: 0.2s;
+      transition-property: opacity, transform;
+      transition-timing-function: ease-in-out;
+      width: 100%;
+      &.nohover {
+        opacity: 0.7;
+      }
+      &:hover {
+        transform: scale(1.05);
+        opacity: 1;
+      }
+      @media all and (min-width: 1001px) {
+        &:first-child {
+          margin: 0 0 20px 40px;
+        }
+        &:last-child {
+          margin: 0 40px 20px 0;
+        }
+      }
+      @media all and (max-width: 1000px) {
+        margin-bottom: 20px;
+      }
+      &.chapter {
+        @media all and (max-width: 1000px) {
+          flex: 100%;
+          max-width: 510px;
+        }
+      }
+      &.policy {
+        margin: 20px 40px 20px 0;
+        .description {
           p {
             background-color: #009EDB;
           }
-       }
-    }
-    .description {
-      border-radius: 30px;
+        }
+      }
       .chapter_title_container {
         background-color: #fff;
         border-radius: 30px;
@@ -50,11 +84,17 @@
         display: flex;
         flex-direction: column;
         font-family: Roboto;
-        height: 270px;
+        justify-content: center;
         margin: auto auto auto auto;
-        max-width: 1200px;
+        min-height: 290px;
+        pointer-events: none;
         position: relative;
-        vertical-align: top;
+        &.chapter {
+          @media all and (max-width: 1000px) {
+            min-height: 100%;
+            padding-bottom: 20px;
+          }
+        }
         &.policy {
           color: #009EDB;
           h2 {
@@ -70,25 +110,30 @@
           line-height: 90px;
           margin-top: 20px;
           text-align: center;
-          vertical-align: top;
         }
         h2 {
           color: #72BF44;
           font-family: "Roboto Serif";
-          font-size: 24px;
+          font-size: 22px;
+          line-height: 28px;
           margin: auto auto;
           padding: 0 30px;
           text-align: center;
         }
       }
-      p {
+      h3 {
         background-color: #72BF44;
         border-radius: 0 0 30px 30px;
         font-family: Roboto;
         font-size: 20px;
-        height: 200px;
+        min-height: 210px;
+        font-weight: 400;
         margin-bottom: 0;
         padding: 20px 20px 30px 20px;
+        @media all and (max-width: 1000px) {
+          min-height: 100%;
+          padding-bottom: 20px;
+        }
       }
     }
   }

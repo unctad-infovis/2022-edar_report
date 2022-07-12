@@ -4,12 +4,21 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  @media all and (max-width: 580px) {
+    margin-bottom: 0px;
+    padding: 0 10px;
+  }
   .button_container {
-    @media all and (max-width: 1050px) {
+    @media all and (max-width: 1200px) {
+      flex: 50%;
       display: flex;
       justify-content: center;
-      width: 50%;
+    }
+    @media all and (max-width: 580px) {
+      flex: 100%;
+      display: flex;
+      justify-content: center;
     }
     &.selected {
       button {
@@ -34,12 +43,16 @@
       padding: 7px 15px;
       text-align: center;
       transition: transform 0.2s ease-in-out;
-      width: 280px;
+      min-width: 280px;
       &.policy {
         background-color: #009EDB;
       }
       &:hover {
         transform: scale(1.05);
+      }
+      @media all and (max-width: 580px) {
+        min-width: 100%;
+        margin-bottom: 10px;
       }
       .chapter_label {
         letter-spacing: -0.05em;

@@ -3,23 +3,26 @@ import graphic1 from '../../assets/img/graphs/EDAR-2022-Fig-3-1.png';
 import graphic2 from '../../assets/img/graphs/EDAR-2022-Fig-3-2.png';
 import graphic3 from '../../assets/img/graphs/EDAR-2022-Fig-15.png';
 
-import SocialMediaButtons from './helpers/SocialMediaButtons.jsx';
-
 import photo1 from '../../assets/img/photos/shutterstock_1418357606-min.jpg';
+
+import SocialMediaButtons from './helpers/SocialMediaButtons.jsx';
+import DownloadButton from './helpers/DownloadButton.jsx';
 
 function Chapter1() {
   return (
     <div>
-      <div className="headline_container">
+      <div className="heading_container">
         <img className="content_image right" src={photo1} alt="" />
-        <h1>1. The pulse of export diversification in Africa</h1>
-        <h2>Africa is the second least diversified region after Oceania, and it has the most concentrated export structure when considering the unequal distribution of export shares over products.</h2>
-        <div className="download_section">
-          <button type="button">Download Chapter 1 as PDF</button>
+        <div className="content">
+          <h1>1. The pulse of export diversification in Africa</h1>
+          <h2>Africa is the second least diversified region after Oceania, and it has the most concentrated export structure when considering the unequal distribution of export shares over products.</h2>
+          <div className="download_section">
+            <DownloadButton href="https://unctad.org/system/files/official-document/aldcafrica2022_Ch1_en.pdf" text="Download Chapter 1 as PDF" />
+          </div>
         </div>
       </div>
       <div className="content_container">
-        <h5>Diversification trends</h5>
+        <h3>Diversification trends</h3>
         <p>Over the past two decades, less than half of all African countries managed to diversify their exports. Non-commodity-dependent countries are, on average, the most diversified (Theil index 4.5), followed by agricultural commodity-dependent countries (Theil index 5.7), mining commodity-dependent countries (Theil index 6.2) and fuel-dependent countries (Theil index 7).</p>
         <p className="infobox">
           <strong>The Theil index</strong>
@@ -31,25 +34,15 @@ function Chapter1() {
         <p>The figure below illustrates within-sector diversification in 2018–2019 and the change in diversification compared with 1998–2000.</p>
       </div>
       <figure>
-        <h5>Non-commodity-dependent countries boast stronger within-sector diversification</h5>
+        <h3>Non-commodity-dependent countries boast stronger within-sector diversification</h3>
         <div className="content_image half">
-          <img className="" src={graphic2} alt="" />
+          <img className="" src={graphic2} alt="Graphic: Non-commodity-dependent countries" />
         </div>
         <div className="content_image half">
-          <img className="" src={graphic1} alt="" />
+          <img className="" src={graphic1} alt="Graphic: Agricultural commodity-dependent countries" />
         </div>
-        <figcaption>
-          <div>
-            Source: UNCTAD calculations, based on data from the international trade analysis database and the United
-            Nations Commodity Trade Statistics database.
-          </div>
-          <div>
-            Note: Within-sector diversification refers to the average relative diversification (number of active export lines over
-            the total number of lines within each HS section); the change refers to the percentage change in the number of
-            active export lines.
-          </div>
-        </figcaption>
-        <SocialMediaButtons text="text" url="url" image="image" />
+        <figcaption>Source: UNCTAD calculations, based on data from the international trade analysis database and the United Nations Commodity Trade Statistics database.</figcaption>
+        <SocialMediaButtons text="Agricultural commodity-dependent countries" url="url" image={graphic1} />
       </figure>
       <div className="content_container">
         <p>Non-commodity-dependent countries experienced stronger diversification trend in more complex manufacturing products (such as opticals and textiles, with increases in active export lines of 137% and 118% respectively, compared with 1998–2000) than commodity-dependent countries.</p>
@@ -63,7 +56,7 @@ function Chapter1() {
           <li>Access to services</li>
           <li>The African Continental Free Trade Area as a catalyst</li>
         </ul>
-        <h5>Complex and diverse products will expand export opportunities</h5>
+        <h3>Complex and diverse products will expand export opportunities</h3>
         <p>Identifying the most feasible new products with large demand and a higher-than-average product complexity will exponentially increase the opportunities for structural change. Larger jumps in the product space towards industrial sectors can be necessary to promote structural change.</p>
         <p>Identifying the most feasible new products with large demand and a higher-than-average product complexity will exponentially increase the opportunities for structural change. Larger jumps in the product space towards industrial sectors can be necessary to promote structural change.</p>
         <p>Nevertheless, there are potential sectors with upgrading and vast new export opportunities across African countries, including machinery and mechanical appliances, electrical machinery and equipment, plastics and articles thereof and organic chemicals.</p>
@@ -78,17 +71,14 @@ function Chapter1() {
         <p>Further opportunities for African market expansion are underpinned by the benefits of intraregional trade and the potential role of the African Continental Free Trade Area.</p>
       </div>
       <figure>
-        <h5>Sectors with vast new export opportunities across African countries</h5>
-        <img className="content_image full" src={graphic3} alt="" />
-        <figcaption>
-          <div>Source: UNCTAD calculations, based on data from the United Nations Commodity Trade Statistics database and Freire (2017).</div>
-          <div>Note: The assessment of feasible product diversification export opportunities uses the product space methodology, taking into account product opportunities with above-average complexity (using a revised product complexity index) and presented by their highest demand in the world.</div>
-        </figcaption>
-        <SocialMediaButtons text="text" url="url" image="image" />
+        <h3>Sectors with vast new export opportunities across African countries</h3>
+        <img className="content_image full" src={graphic3} alt="Graphic: Sectors with vast new export opportunities across African countries" />
+        <figcaption>Source: UNCTAD calculations, based on data from the United Nations Commodity Trade Statistics database and Freire (2017).</figcaption>
+        <SocialMediaButtons text="Sectors with vast new export opportunities across African countries" url="url" image={graphic3} />
       </figure>
       <div className="content_container">
         <div className="download_section">
-          <button type="button">Download Chapter 1 as PDF</button>
+          <DownloadButton href="https://unctad.org/system/files/official-document/aldcafrica2022_Ch1_en.pdf" text="Download Chapter 1 as PDF" />
         </div>
       </div>
     </div>

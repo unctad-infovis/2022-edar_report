@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 function SocialMediaButtons({ text, url, image }) {
   return (
     <div className="social_media_buttons">
-
       Share on social media
       <a href={`#${url} ${text} ${image}`}>
         <img src="https://unctad.org/themes/custom/newyork/images/inline-images/sn6.png" alt="" />

@@ -3,17 +3,6 @@
 
 @import 'colors.less';
 
-
-.placeholder {
-  background-color: #AEA29A;
-  font-size: 20px;
-  font-style: italic;
-  font-weight: 600;
-  margin: 0 0 40px 0;
-  padding: 20px;
-  text-align: center;
-}
-
 #app-root-2022-edar_report .app {
   counter-reset: section recommendation;
   font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -21,56 +10,108 @@
   max-width: 1350px;
   padding-bottom: 40px;
   @import 'background_container.less';
-  .download_section {
-    display: inline-block;
-    border: 0.5px solid #009EDB;
-    margin: 30px 0;
-    &:hover {
-        background-color: #EBEAE6;
-
-    }
-    button {
-      background-color: transparent;
-      border: 0;
-      box-sizing: border-box;
-      color: #000;
-      cursor: pointer;
-      display: inline-block;
-      font-family: Roboto;
-      font-size: 15px;
-      padding: 10px 15px;
-      text-transform: uppercase;
-      &:before {
-        // content: "» "
-      }
-      &:hover {
-      // text-decoration: underline;
-      }
-    }
-  }
   .content_wrapper {
     @import 'social_media_buttons.less';
     margin: auto auto;
     position: relative;
     z-index: 2;
+    .banner_container {
+      font-size: 0;
+      margin-bottom: 20px;
+      position: relative;
+      @media all and (max-width: 580px) {
+        margin-bottom: 10px;
+      }
+      .banner_image {
+        font-size: 0;
+        margin: 0;
+        @media all and (max-width: 650px) {
+          display: none;
+        }
+      }
+      .banner_image_square {
+        font-size: 0;
+        margin: 0;
+        @media all and (min-width: 650px) {
+          display: none;
+        }
+      }
+    }
+    .heading_container {
+      .clearfix;
+      background-color: rgba(255, 255, 255, 0.75);
+      margin: auto auto 40px auto;
+      max-width: 1350px;
+      padding: 30px 40px 20px 40px;
+      position: relative;
+      vertical-align: middle;
+      @media all and (max-width: 800px) {
+        padding: 30px 20px 20px 20px;
+      }
+      @media all and (max-width: 700px) {
+        padding: 0 0 1px 0;
+        .content {
+          padding: 0 20px 0 20px;
+        }
+      }
+      .right {
+        @media all and (max-width: 1200px) {
+          max-width: 550px;
+        }
+        @media all and (max-width: 1100px) {
+          max-width: 500px;
+        }
+        @media all and (max-width: 1000px) {
+          max-width: 450px;
+        }
+        @media all and (max-width: 900px) {
+          max-width: 400px;
+        }
+        @media all and (max-width: 800px) {
+          max-width: 350px;
+        }
+        @media all and (max-width: 700px) {
+          float: none;
+          margin-left: 0;
+          max-width: 100%;
+        }
+        max-width: 650px;
+        margin-left: 20px;
+        float: right;
+      }
+    }
+    .download_section {
+      display: block;
+      margin: 30px 0;
+      a {
+        background-color: transparent;
+        border: 0.5px solid #009EDB;
+        box-sizing: border-box;
+        color: #000;
+        cursor: pointer;
+        display: inline-block;
+        font-family: Roboto;
+        font-size: 15px;
+        margin-bottom: 5px;
+        padding: 10px 15px;
+        text-transform: uppercase;
+        &:hover {
+          background-color: #EBEAE6;
+        }
+      }
+    }
     img {
       font-size: 0;
       margin-bottom: 20px;
       width: 100%;
     }
-    .banner_container {
-      font-size: 0;
-      margin-bottom: 20px;
-      position: relative;
-      .banner_image {
-        font-size: 0;
-        margin: 0;
-      }
+    h1,h2,h3,p,ul,blockquote,.iframe_container,
+     {
+      margin: auto auto 20px auto;
     }
     h1 {
       font-family: "Roboto Serif";
       font-size: 30px;
-      margin: 0 0 20px 0;
       padding: 0;
     }
     h2 {
@@ -78,54 +119,59 @@
       font-family: "Roboto Serif";
       font-size: 18px;
       line-height: 22px;
-      margin: 0 0 20px 0;
+    }
+    h3 {
+      font-family: "Roboto Serif";
+      font-size: 20px;
+      font-weight: 600;
+    }
+    p {
+      font-family: Roboto;
+      font-size: 16px;
+      line-height: 22px;
+    }
+    figure {
+      box-sizing: border-box;
+      margin: auto auto 20px auto;
+      max-width: 850px;
+      padding: 0 20px;
+      .content_image {
+        &.half {
+          @media all and (min-width: 701px) {
+            box-sizing: border-box;
+            float: left;
+            padding: 0 3px;
+            width: 50%;
+          }
+        }
+      }
+      figcaption {
+        .clear_both;
+        color: #7C7067;
+        font-size: 14px;
+        margin-bottom: 20px;
+        div {
+          margin-bottom: 3px;
+        }
+      }
+      .social_media_buttons {
+        opacity: 0;
+        transition-duration: 0.5s;
+        transition-property: opacity;
+        transition-timing-function: linear;
+      }
+      &:hover {
+        .social_media_buttons {
+          opacity: 1;
+        }
+      }
     }
     @import 'page_navigation.less';
     .content_container {
+      box-sizing: border-box;
       margin: auto auto 20px auto;
       max-width: 700px;
-      p,
-      h3,
-      h4,
-      h5,
-      ul,
-      blockquote,
-      .iframe_container,
-       {
-        margin: auto auto 20px auto;
-      }
-      p {
-        box-sizing: border-box;
-        font-family: Roboto;
-        font-size: 16px;
-        line-height: 22px;
-        padding: 0 20px;
-      }
-      h3 {
-        border-bottom: 3px solid #72BF44;
-        box-sizing: border-box;
-        font-family: "Roboto Serif";
-        font-size: 24px;
-        padding: 0 20px;
-      }
-      h4 {
-        box-sizing: border-box;
-        color: #009EDB;
-        font-family: "Roboto Serif";
-        font-size: 20px;
-        font-weight: 600;
-        margin-bottom: 20px;
-        padding: 0 20px;
-      }
-      h5 {
-        box-sizing: border-box;
-        font-family: "Roboto Serif";
-        font-size: 20px;
-        font-weight: 600;
-        margin-bottom: 20px;
-        margin-top: 30px;
-        padding: 0 20px;
-      }
+      padding: 0 20px;
       blockquote {
         font-family: "Roboto Serif";
         font-size: 20px;
@@ -177,72 +223,113 @@
           width: 100%;
         }
       }
-      .content_image {
-        &.left {
-          float: left;
-          margin-left: -100px;
-          margin-right: 20px;
-          width: 200px;
-        }
-        &.right {
-          float: right;
-          margin-left: 20px;
-          margin-right: 0px;
-          width: 280px;
-        }
-        &.full {
-          width: 100%;
-        }
-      }
     }
     @import 'chapter_navigation.less';
     @import 'chapter_container.less';
     // Wider graphic container.
     .quotes_container,
     .graphic_container {
-      align-items: center;
       display: flex;
-      justify-content: center;
-      margin: 40px auto 40px auto;
       max-width: 1200px;
       vertical-align: middle;
+      &.graphic_container {
+        align-items: center;
+        margin: 50px auto;
+        justify-content: space-between;
+        flex-direction: row;
+        @media all and (max-width: 800px) {
+          background-color: rgba(255, 255, 255, 0.75);
+          flex-direction: column;
+          &.graphic_left {
+            flex-direction: column-reverse;
+          }
+        }
+      }
       &.quotes_container {
         align-items: flex-start;
-        margin-bottom: 100px;
+        justify-content: space-between;
+        margin: auto auto 100px auto;
+        @media all and (max-width: 1000px) {
+          align-items: center;
+          flex-direction: column;
+        }
+        @media all and (max-width: 1200px) {
+          justify-content: space-evenly;
+        }
       }
       .extra_background {
         background-color: rgba(255, 255, 255, 0.75);
-        height: 300px;
+        height: 75%;
+        max-height: 400px;
         position: absolute;
         width: 100%;
         z-index: -1;
       }
       .title_container {
-        padding: 0 20px 0 50px;
         width: 30%;
+        padding: 30px 40px 20px 40px;
+        @media all and (max-width: 800px) {
+          box-sizing: border-box;
+          max-width: 700px;
+          padding: 20px 20px 40px 20px;
+          width: 100%;
+        }
       }
       .image_container {
-        text-align: center;
-        width: 70%;
-        img {
-          max-width: 600px;
+        padding: 30px 40px 20px 40px;
+        width: 60%;
+        &.left {
+          text-align: left;
+          padding-right: 40px;
+        }
+        &.right {
+          padding-left: 40px;
+          text-align: right;
+          figcaption {
+            text-align: center;
+          }
+        }
+        @media all and (max-width: 800px) {
+          width: 100%;
+          &.left,
+          &.right {
+            padding: 0;
+            text-align: center;
+          }
+        }
+        figure {
+          padding: 0;
+          img {
+            padding: 20px 0;
+            box-sizing: border-box;
+            max-width: 600px;
+            @media all and (max-width: 800px) {
+              max-width: 700px;
+              padding: 0 20px;
+            }
+          }
         }
       }
       .quote_container {
         border: 2px solid #009EDB;
         height: 100%;
+        max-width: 420px;
         padding: 30px;
         width: 100%;
+        @media all and (max-width: 1000px) {
+          margin-bottom: 20px;
+        }
+        h3 {
+          max-width: 450px;
+          color: #009EDB;
+          margin-bottom: 5px;
+          text-align: center;
+        }
         p {
+          max-width: 450px;
           font-family: Kalam;
           font-size: 26px;
           line-height: 30px;
-        }
-        h3 {
-          color: #009EDB;
-          font-size: 30px;
-          margin-bottom: 5px;
-          text-align: center;
         }
         .title {
           font-weight: 400;
@@ -271,22 +358,6 @@
       &.visible {
         opacity: 1;
         padding-top: 0;
-      }
-    }
-    .headline_container {
-      .clearfix;
-      background-color: rgba(255, 255, 255, 0.75);
-      margin: auto auto 40px auto;
-      max-width: 1350px;
-      padding: 30px 40px 20px 40px;
-      position: relative;
-      vertical-align: middle;
-      .right {
-        float: right;
-        margin-left: 20px;
-        margin-right: 0px;
-        width: 700px;
-        height: 393px;
       }
     }
   }

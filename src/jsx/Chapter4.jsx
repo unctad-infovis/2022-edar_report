@@ -1,7 +1,9 @@
 import React from 'react';
 import IsVisible from 'react-is-visible';
 
-import photo1 from '../../assets/img/photos/shutterstock_1424563532-min.jpg';
+import DownloadButton from './helpers/DownloadButton.jsx';
+
+import photo1 from '../../assets/img/photos/shutterstock_530359630-min.jpg';
 
 let animated = false;
 function PolicyRecommendations(anchorClicked) {
@@ -23,12 +25,14 @@ function PolicyRecommendations(anchorClicked) {
   };
   return (
     <div>
-      <div className="headline_container">
+      <div className="heading_container">
         <img className="content_image right" src={photo1} alt="" />
-        <h1>4. Conclusions and policy recommendations</h1>
-        <h2>The services sector could be a forceful impetus for economic diversification, growth and structural transformation in Africa. But this requires that policies be aligned to build complementarities between the services sector and other sectors of the economy, especially manufacturing.</h2>
-        <div className="download_section">
-          <button type="button">Download Chapter 4 as PDF</button>
+        <div className="content">
+          <h1>4. Conclusions and policy recommendations</h1>
+          <h2>The services sector could be a forceful impetus for economic diversification, growth and structural transformation in Africa. But this requires that policies be aligned to build complementarities between the services sector and other sectors of the economy, especially manufacturing.</h2>
+          <div className="download_section">
+            <DownloadButton href="https://unctad.org/system/files/official-document/aldcafrica2022_Ch4_en.pdf" text="Download Chapter 4 as PDF" />
+          </div>
         </div>
       </div>
       <div className="content_container">
@@ -68,7 +72,7 @@ function PolicyRecommendations(anchorClicked) {
         <p>UNCTAD stands ready to provide cutting-edge economic research and policy analysis and data tools to support African countries in their efforts to reach export diversification and sustainable development objectives.</p>
         <p>In partnership with regional and national institutions, UNCTAD can deliver institutional and productive capacity-building programmes and offer support to build consensus on key policy and regulatory issues with a view to achieving effective structural change on the continent.</p>
         <div className="download_section">
-          <button type="button">Download Chapter 4 as PDF</button>
+          <DownloadButton href="https://unctad.org/system/files/official-document/aldcafrica2022_Ch4_en.pdf" text="Download Chapter 4 as PDF" />
         </div>
       </div>
     </div>
