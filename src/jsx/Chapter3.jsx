@@ -13,10 +13,15 @@ import photo1 from '../../assets/img/photos/shutterstock_1677766576-min.jpg';
 function Chapter3() {
   return (
     <div>
+      <div className="headline_container">
+        <img className="content_image right" src={photo1} alt="" />
+        <h1>3. Financial services and private sector: The future of export diversification in Africa</h1>
+        <h2>Private businesses, particularly small and medium-sized enterprises (SMEs), can facilitate high value-added export diversification in Africa, especially through the services sector, when supported by sound financial services or provided with access to affordable financing.</h2>
+        <div className="download_section">
+          <button type="button">Download Chapter 3 as PDF</button>
+        </div>
+      </div>
       <div className="content_container">
-        <h3>CHAPTER 3: Financial services and private sector: The future of export diversification in Africa</h3>
-        <img className="content_image right" style={{ transform: 'rotate(3deg)', border: '2px solid #AEA29A' }} src={photo1} alt="" />
-        <h4>Private businesses, particularly small and medium-sized enterprises (SMEs), can facilitate high value-added export diversification in Africa, especially through the services sector, when supported by sound financial services or provided with access to affordable financing.</h4>
         <p>The current structure of the financial system in Africa, which mainly revolved around the banking sector, may not be suitable for SMEs’ growth and export performance, which requires tailored financing mechanisms.</p>
         <p>These include private capital investment and financial technology (fintech) that can improve access to affordable credit and offer other promising channels to bridge the financing gaps of start-ups and SMEs.</p>
         <h5>The promise of fintech</h5>
@@ -27,6 +32,7 @@ function Chapter3() {
       <figure>
         <h5>Figure title</h5>
         <img className="content_image full" src={graphic1} alt="" />
+        <figcaption>Figure caption</figcaption>
         <SocialMediaButtons text="text" url="url" image="image" />
       </figure>
       <div className="content_container">
@@ -40,6 +46,7 @@ function Chapter3() {
       <figure>
         <h5>Figure title</h5>
         <img className="content_image full" src={graphic2} alt="" />
+        <figcaption>Figure caption</figcaption>
         <SocialMediaButtons text="text" url="url" image="image" />
       </figure>
       <div className="content_container">

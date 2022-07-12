@@ -10,17 +10,22 @@ import photo1 from '../../assets/img/photos/shutterstock_1418357606-min.jpg';
 function Chapter1() {
   return (
     <div>
+      <div className="headline_container">
+        <img className="content_image right" src={photo1} alt="" />
+        <h1>1. The pulse of export diversification in Africa</h1>
+        <h2>Africa is the second least diversified region after Oceania, and it has the most concentrated export structure when considering the unequal distribution of export shares over products.</h2>
+        <div className="download_section">
+          <button type="button">Download Chapter 1 as PDF</button>
+        </div>
+      </div>
       <div className="content_container">
-        <h3>CHAPTER 1: The pulse of export diversification in Africa</h3>
-        <img className="content_image right" style={{ transform: 'rotate(3deg)', border: '2px solid #AEA29A' }} src={photo1} alt="" />
-        <h4>Africa is the second least diversified region after Oceania, and it has the most concentrated export structure when considering the unequal distribution of export shares over products.</h4>
+        <h5>Diversification trends</h5>
+        <p>Over the past two decades, less than half of all African countries managed to diversify their exports. Non-commodity-dependent countries are, on average, the most diversified (Theil index 4.5), followed by agricultural commodity-dependent countries (Theil index 5.7), mining commodity-dependent countries (Theil index 6.2) and fuel-dependent countries (Theil index 7).</p>
         <p className="infobox">
           <strong>The Theil index</strong>
           {', '}
           a statistical measure of concentration or diversification, is used as the main indicator to identify diversification trends. Export diversification is usually measured by the number of export lines and the Theil index. Although the number of active export lines is easier to interpret, export volume can still be strongly concentrated in a few products or sectors only. Both indicators are used to illustrate diversification trends at the aggregate and sector levels. The higher the Theil index, the more unequal the export distribution, and the more concentrated the exports.
         </p>
-        <h5>Diversification trends</h5>
-        <p>Over the past two decades, less than half of all African countries managed to diversify their exports. Non-commodity-dependent countries are, on average, the most diversified (Theil index 4.5), followed by agricultural commodity-dependent countries (Theil index 5.7), mining commodity-dependent countries (Theil index 6.2) and fuel-dependent countries (Theil index 7).</p>
         <p>While in the 2000s, export diversification increased in 31 African countries (average improvement of -0.1186 index points), the 2010s was characterized by a reverse trend (average increase by 0.18 index points).</p>
         <p>The slowdown or reversed trend in diversification was partly due to the impact of the global financial crisis in reduced growth in the global economy, trade and investment, and the increasing industrialization of Asian countries, fuelling demand for African natural resources.</p>
         <p>The figure below illustrates within-sector diversification in 2018–2019 and the change in diversification compared with 1998–2000.</p>
@@ -28,14 +33,15 @@ function Chapter1() {
       <figure>
         <h5>Figure title</h5>
         <div className="content_image half">
-          <SocialMediaButtons text="text" url="url" image="image" />
           <img className="" src={graphic2} alt="" />
+          <figcaption>Figure caption</figcaption>
+          <SocialMediaButtons text="text" url="url" image="image" />
         </div>
         <div className="content_image half">
-          <SocialMediaButtons text="text" url="url" image="image" />
           <img className="" src={graphic1} alt="" />
+          <figcaption>Figure caption</figcaption>
+          <SocialMediaButtons text="text" url="url" image="image" />
         </div>
-        <figcaption />
       </figure>
       <div className="content_container">
         <p>Non-commodity-dependent countries experienced stronger diversification trend in more complex manufacturing products (such as opticals and textiles, with increases in active export lines of 137% and 118% respectively, compared with 1998–2000) than commodity-dependent countries.</p>
@@ -65,9 +71,9 @@ function Chapter1() {
       </div>
       <figure>
         <h5>Sectors with vast new export opportunities across African countries</h5>
-        <SocialMediaButtons text="text" url="url" image="image" />
         <img className="content_image full" src={graphic3} alt="" />
-        <figcaption />
+        <figcaption>Figure caption</figcaption>
+        <SocialMediaButtons text="text" url="url" image="image" />
       </figure>
       <div className="content_container">
         <div className="download_section">

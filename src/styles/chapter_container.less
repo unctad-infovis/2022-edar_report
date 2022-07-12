@@ -31,8 +31,10 @@
           color: #009EDB;
           content: counter(recommendation);
           counter-increment: recommendation;
+          font-family: "Roboto Serif";
           font-size: 45px;
           left: -25px;
+          font-weight: 600;
           line-height: 50px;
           position: absolute;
           top: -25px;
@@ -67,13 +69,14 @@
   figure {
     margin: 40px auto 40px auto;
     max-width: 850px;
+    padding: 0 20px;
+    box-sizing: border-box;
     .clearfix;
     h5 {
       font-family: "Roboto Serif";
       font-size: 20px;
       font-weight: 600;
       margin: 0 auto 20px auto;
-      max-width: 700px;
     }
     .content_image {
       &.half {
@@ -95,8 +98,8 @@
       }
     }
     figcaption {
+      margin-bottom: 20px;
       color: #7C7067;
-      display: none;
       font-size: 14px;
     }
   }

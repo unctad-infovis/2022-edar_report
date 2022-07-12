@@ -22,22 +22,29 @@
   padding-bottom: 40px;
   @import 'background_container.less';
   .download_section {
+    display: inline-block;
+    border: 0.5px solid #009EDB;
     margin: 30px 0;
+    &:hover {
+        background-color: #EBEAE6;
+
+    }
     button {
       background-color: transparent;
       border: 0;
       box-sizing: border-box;
-      color: #72BF44;
+      color: #000;
       cursor: pointer;
+      display: inline-block;
       font-family: Roboto;
-      font-size: 20px;
-      padding: 0;
-      text-decoration: underline;
+      font-size: 15px;
+      padding: 10px 15px;
+      text-transform: uppercase;
       &:before {
-        content: "» "
+        // content: "» "
       }
       &:hover {
-        text-decoration: none;
+      // text-decoration: underline;
       }
     }
   }
@@ -60,6 +67,19 @@
         margin: 0;
       }
     }
+    h1 {
+      font-family: "Roboto Serif";
+      font-size: 30px;
+      margin: 0 0 20px 0;
+      padding: 0;
+    }
+    h2 {
+      color: #009EDB;
+      font-family: "Roboto Serif";
+      font-size: 18px;
+      line-height: 22px;
+      margin: 0 0 20px 0;
+    }
     @import 'page_navigation.less';
     .content_container {
       margin: auto auto 20px auto;
@@ -75,41 +95,45 @@
         margin: auto auto 20px auto;
       }
       p {
+        box-sizing: border-box;
+        font-family: Roboto;
         font-size: 16px;
         line-height: 22px;
-      }
-      h1 {
-        font-family: "Roboto Serif";
-        border-bottom: 3px solid #72BF44;
-        font-size: 30px;
+        padding: 0 20px;
       }
       h3 {
+        border-bottom: 3px solid #72BF44;
+        box-sizing: border-box;
         font-family: "Roboto Serif";
         font-size: 24px;
-        border-bottom: 3px solid #72BF44;
+        padding: 0 20px;
       }
       h4 {
-        font-family: "Roboto Serif";
-        font-weight: 600;
-        font-size: 20px;
+        box-sizing: border-box;
         color: #009EDB;
+        font-family: "Roboto Serif";
+        font-size: 20px;
+        font-weight: 600;
         margin-bottom: 20px;
+        padding: 0 20px;
       }
       h5 {
+        box-sizing: border-box;
         font-family: "Roboto Serif";
-        font-weight: 600;
         font-size: 20px;
-        margin-top: 30px;
+        font-weight: 600;
         margin-bottom: 20px;
+        margin-top: 30px;
+        padding: 0 20px;
       }
       blockquote {
-        font-size: 20px;
         font-family: "Roboto Serif";
-        text-align: center;
+        font-size: 20px;
         font-weight: 600;
         margin: 40px auto 40px auto;
         max-width: 600px;
-        font-style: italic;
+        text-align: center;
+        // font-style: italic;
         .text {
           &:before {
             content: "“"
@@ -163,7 +187,7 @@
         &.right {
           float: right;
           margin-left: 20px;
-          margin-right: -100px;
+          margin-right: 0px;
           width: 280px;
         }
         &.full {
@@ -196,9 +220,6 @@
       .title_container {
         padding: 0 20px 0 50px;
         width: 30%;
-        h2 {
-          color: #009EDB;
-        }
       }
       .image_container {
         text-align: center;
@@ -250,6 +271,22 @@
       &.visible {
         opacity: 1;
         padding-top: 0;
+      }
+    }
+    .headline_container {
+      .clearfix;
+      background-color: rgba(255, 255, 255, 0.75);
+      margin: auto auto 40px auto;
+      max-width: 1350px;
+      padding: 30px 40px 20px 40px;
+      position: relative;
+      vertical-align: middle;
+      .right {
+        float: right;
+        margin-left: 20px;
+        margin-right: 0px;
+        width: 700px;
+        height: 393px;
       }
     }
   }

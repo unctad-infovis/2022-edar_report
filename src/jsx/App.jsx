@@ -8,7 +8,7 @@ import scrollIntoView from 'scroll-into-view';
 import 'intersection-observer';
 import IsVisible from 'react-is-visible';
 
-import photo1 from '../../assets/img/photos/shutterstock_1622817574-min.jpg';
+import photo1 from '../../assets/img/photos/shutterstock_1962681901.jpg';
 
 import graphic11 from '../../assets/img/graphs/EDAR-2022-figure2.png';
 import graphic1 from '../../assets/img/graphic1.png';
@@ -92,14 +92,16 @@ function App() {
           <img className="banner_image" src={banner_img} alt="" />
         </div>
         <PageNavigation anchorClick={anchorClick} />
-        <div className="content_container">
+        <div className="headline_container">
+          <img className="content_image right" src={photo1} alt="" />
           <h1>Rethinking the Foundations of Export Diversification in Africa</h1>
-          <img className="content_image right" style={{ transform: 'rotate(3deg)', border: '2px solid #AEA29A' }} src={photo1} alt="" />
-          <h4>Soaring food and energy prices are hitting African countries especially hard as they struggle with the impact of the COVID-19 pandemic, climate change and the war in Ukraine.</h4>
-          <h4>To cope with current crises and insulate itself against future shocks, Africa must diversify its economies. The continent of 1.4 billion people is among the least diversified regions in the world with regard to exports.</h4>
+          <h2>Soaring food and energy prices are hitting African countries especially hard as they struggle with the impact of the COVID-19 pandemic, climate change and the war in Ukraine.</h2>
+          <h2>To cope with current crises and insulate itself against future shocks, Africa must diversify its economies. The continent of 1.4 billion people is among the least diversified regions in the world with regard to exports.</h2>
           <div className="download_section">
             <button type="button">Download the executive summary as PDF</button>
           </div>
+        </div>
+        <div className="content_container">
           <p>Commodities account for more than 60% of total merchandise exports in 45 of the 54 countries in Africa, leaving them highly vulnerable to global commodity price shocks and undermining the continent’s inclusive growth and development prospects.</p>
           <p>UNCTAD’s Economic Development in Africa Report 2022 shows that neglecting the potentially transformative role of high knowledge-intensive services, such as information and communications technology, business services and digital financial services, is among the key reasons why export diversification remains a challenge in Africa.</p>
           <blockquote>
@@ -171,9 +173,9 @@ function App() {
             </div>
           )}
         </IsVisible>
-        <div className="content_container">
-          <h3>Dive deeper into the chapters</h3>
-          <h4>The report has four chapters. Choose a chapter to read an excerpt, see visuals and download the full chapter.</h4>
+        <div className="content_container" style={{ textAlign: 'center', maxWidth: '530px' }}>
+          <h1>Dive deeper into the chapters</h1>
+          <h2>The report has four chapters. Choose a chapter to read an excerpt, see visuals and download the full chapter.</h2>
         </div>
         <ChapterNavigation anchorClick={anchorClick} />
         <div className="chapter_container" id="section1" ref={sectionRefs[0]}>

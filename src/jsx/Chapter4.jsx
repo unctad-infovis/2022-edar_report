@@ -23,11 +23,16 @@ function PolicyRecommendations(anchorClicked) {
   };
   return (
     <div>
+      <div className="headline_container">
+        <img className="content_image right" src={photo1} alt="" />
+        <h1>4. Conclusions and policy recommendations</h1>
+        <h2>The services sector could be a forceful impetus for economic diversification, growth and structural transformation in Africa. But this requires that policies be aligned to build complementarities between the services sector and other sectors of the economy, especially manufacturing.</h2>
+        <div className="download_section">
+          <button type="button">Download Chapter 4 as PDF</button>
+        </div>
+      </div>
       <div className="content_container">
-        <h3>Conclusions and policy recommendations</h3>
-        <img className="content_image right" style={{ transform: 'rotate(3deg)', border: '2px solid #AEA29A' }} src={photo1} alt="" />
-        <h4>The services sector could be a forceful impetus for economic diversification, growth and structural transformation in Africa. But this requires that policies be aligned to build complementarities between the services sector and other sectors of the economy, especially manufacturing.</h4>
-        <h4>UNCTAD recommends that African governments and businesses take the following policy actions to support effective exports diversification on the continent:</h4>
+        <p>UNCTAD recommends that African governments and businesses take the following policy actions to support effective exports diversification on the continent:</p>
         <div className="clear_both" />
         <IsVisible once>
           {(isVisible) => (
