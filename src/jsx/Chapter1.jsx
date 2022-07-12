@@ -31,17 +31,25 @@ function Chapter1() {
         <p>The figure below illustrates within-sector diversification in 2018–2019 and the change in diversification compared with 1998–2000.</p>
       </div>
       <figure>
-        <h5>Figure title</h5>
+        <h5>Non-commodity-dependent countries boast stronger within-sector diversification</h5>
         <div className="content_image half">
           <img className="" src={graphic2} alt="" />
-          <figcaption>Figure caption</figcaption>
-          <SocialMediaButtons text="text" url="url" image="image" />
         </div>
         <div className="content_image half">
           <img className="" src={graphic1} alt="" />
-          <figcaption>Figure caption</figcaption>
-          <SocialMediaButtons text="text" url="url" image="image" />
         </div>
+        <figcaption>
+          <div>
+            Source: UNCTAD calculations, based on data from the international trade analysis database and the United
+            Nations Commodity Trade Statistics database.
+          </div>
+          <div>
+            Note: Within-sector diversification refers to the average relative diversification (number of active export lines over
+            the total number of lines within each HS section); the change refers to the percentage change in the number of
+            active export lines.
+          </div>
+        </figcaption>
+        <SocialMediaButtons text="text" url="url" image="image" />
       </figure>
       <div className="content_container">
         <p>Non-commodity-dependent countries experienced stronger diversification trend in more complex manufacturing products (such as opticals and textiles, with increases in active export lines of 137% and 118% respectively, compared with 1998–2000) than commodity-dependent countries.</p>
@@ -72,7 +80,10 @@ function Chapter1() {
       <figure>
         <h5>Sectors with vast new export opportunities across African countries</h5>
         <img className="content_image full" src={graphic3} alt="" />
-        <figcaption>Figure caption</figcaption>
+        <figcaption>
+          <div>Source: UNCTAD calculations, based on data from the United Nations Commodity Trade Statistics database and Freire (2017).</div>
+          <div>Note: The assessment of feasible product diversification export opportunities uses the product space methodology, taking into account product opportunities with above-average complexity (using a revised product complexity index) and presented by their highest demand in the world.</div>
+        </figcaption>
         <SocialMediaButtons text="text" url="url" image="image" />
       </figure>
       <div className="content_container">

@@ -27,27 +27,27 @@ function Chapter2() {
         <p>Traditional services don’t have a direct impact on the complexity and diversity of the export basket, which is seen to increase with high knowledge-intensity services such as ICT.</p>
       </div>
       <figure>
-        <h5>Figure title</h5>
+        <h5>Travel and transport dominate Africa&apos;s services exports</h5>
         <div className="content_image half">
           <img className="" src={graphic1} alt="" />
-          <figcaption>Figure caption</figcaption>
-          <SocialMediaButtons text="text" url="url" image="image" />
         </div>
         <div className="content_image half">
           <img className="" src={graphic2} alt="" />
-          <figcaption>Figure caption</figcaption>
-          <SocialMediaButtons text="text" url="url" image="image" />
         </div>
-        <figcaption />
+        <figcaption>Source: UNCTAD calculations, based on data from the Balanced Trade in Services database of the Organisation for Economic Co-operation and Development and the World Trade Organization</figcaption>
+        <SocialMediaButtons text="text" url="url" image="image" />
       </figure>
       <div className="content_container">
         <p>Some countries have made progress in diversifying their services. In 2005–2019, the top three services sectors represented less than 70% of total exports in services in five countries: Burkina Faso, Kenya, Malawi, Senegal and Sierra Leone.</p>
         <p>Exports in services remain dominated by travel and transport in most African countries, except in a few countries such as Malawi, where the primary services sector is telecommunications, representing one fourth of total exports in services.</p>
       </div>
       <figure>
-        <h5>Figure title</h5>
+        <h5>Traditional services leading even in countries making diversification progress</h5>
         <img className="content_image full" src={graphic3} alt="" />
-        <figcaption>Figure caption</figcaption>
+        <figcaption>
+          <div>Source: UNCTAD, based on data from the Balanced Trade in Services database of the Organisation for Economic Co-operation and Development and the World Trade Organization.</div>
+          <div>Note: Top three services sectors share less than 70 per cent of total exports in services</div>
+        </figcaption>
         <SocialMediaButtons text="text" url="url" image="image" />
       </figure>
       <div className="content_container">

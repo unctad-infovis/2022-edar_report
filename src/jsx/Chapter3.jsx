@@ -30,9 +30,9 @@ function Chapter3() {
         <p>For example, mobile money, the most commonly used financial technology in Africa, is only being utilized to advance short-term microloans to users.</p>
       </div>
       <figure>
-        <h5>Figure title</h5>
+        <h5>Investment in African fintech firms shot up in 2021</h5>
         <img className="content_image full" src={graphic1} alt="" />
-        <figcaption>Figure caption</figcaption>
+        <figcaption>Source: UNCTAD, based on data from Fintech Global, 2022</figcaption>
         <SocialMediaButtons text="text" url="url" image="image" />
       </figure>
       <div className="content_container">
@@ -44,9 +44,9 @@ function Chapter3() {
         <p>The use of more innovative technologies in logistics management solutions are contributing to making supply chains more customer-centric and sustainable. Applying technology-driven solutions to logistics processes results in increased productivity and efficiency in the workflow.</p>
       </div>
       <figure>
-        <h5>Figure title</h5>
+        <h5>Payments and remittances dominate African fintech industry</h5>
         <img className="content_image full" src={graphic2} alt="" />
-        <figcaption>Figure caption</figcaption>
+        <figcaption>Source: UNCTAD, based on data from Fintech Global, 2022.</figcaption>
         <SocialMediaButtons text="text" url="url" image="image" />
       </figure>
       <div className="content_container">
@@ -56,7 +56,7 @@ function Chapter3() {
         <p>Additional risks include uncertainty concerning liability for losses, especially in the absence of sound legal and regulatory arbitrage systems, which can negatively affect the confidence of investors and businesses in the system, and excessive volatility of some fintech services or business models.</p>
         <blockquote>
           <span className="text">
-            Finance and IT sector amounts
+            Finance and IT sectors take
             <span className="highlight">
               <VisibilitySensor>
                 {({ isVisible }) => (
