@@ -3,7 +3,8 @@ import IsVisible from 'react-is-visible';
 
 import DownloadButton from './helpers/DownloadButton.jsx';
 
-import photo1 from '../../assets/img/photos/EDAR-2022-chapter4_photo1.jpg';
+// import photo1 from '../../assets/img/photos/EDAR-2022-chapter4_photo1.jpg';
+const photo1 = '//unctad.org/sites/default/files/2022-07/EDAR-2022-chapter4_photo1.jpg';
 
 let animated = false;
 function PolicyRecommendations(anchorClicked) {

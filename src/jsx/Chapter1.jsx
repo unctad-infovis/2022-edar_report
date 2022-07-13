@@ -1,12 +1,17 @@
 import React from 'react';
-import graphic1 from '../../assets/img/graphs/EDAR-2022-Non_commodity_dependent_countries.png';
-import graphic2 from '../../assets/img/graphs/EDAR-2022-Agricultural_commodity_dependent_countries.png';
-import graphic3 from '../../assets/img/graphs/EDAR-2022-Sectors_with_vast_new_export_opportunities_across_African_countries.png';
-
-import photo1 from '../../assets/img/photos/EDAR-2022-chapter1_photo1.jpg';
 
 import SocialMediaButtons from './helpers/SocialMediaButtons.jsx';
 import DownloadButton from './helpers/DownloadButton.jsx';
+
+// import graphic1 from '../../assets/img/graphs/EDAR-2022-Non_commodity_dependent_countries.png';
+const graphic1 = '//unctad.org/sites/default/files/2022-07/EDAR-2022-Non_commodity_dependent_countries.png';
+// import graphic2 from '../../assets/img/graphs/EDAR-2022-Agricultural_commodity_dependent_countries.png';
+const graphic2 = '//unctad.org/sites/default/files/2022-07/EDAR-2022-Agricultural_commodity_dependent_countries.png';
+// import graphic3 from '../../assets/img/graphs/EDAR-2022-Sectors_with_vast_new_export_opportunities_across_African_countries.png';
+const graphic3 = '//unctad.org/sites/default/files/2022-07/EDAR-2022-Sectors_with_vast_new_export_opportunities_across_African_countries.png';
+
+// import photo1 from '../../assets/img/photos/EDAR-2022-chapter1_photo1.jpg';
+const photo1 = '//unctad.org/sites/default/files/2022-07/EDAR-2022-chapter1_photo1.jpg';
 
 function Chapter1() {
   return (
