@@ -55,6 +55,20 @@ function App() {
     };
   }, [y]);
 
+  const addNavBarItems = () => {
+    const li_item = document.createElement('li');
+    li_item.classList.add('nav-item');
+    const anchor = document.createElement('a');
+    anchor.append('The webflyer');
+    anchor.href = '//unctad.org/webflyer/economic-development-africa-report-2022';
+    li_item.append(anchor);
+    document.querySelector('.navbar-nav.ml-auto').append(li_item);
+  };
+
+  useEffect(() => {
+    addNavBarItems();
+  }, []);
+
   const anchorClick = (i) => {
     setAnchorClicked(i);
     sectionRefs.forEach(el => {
