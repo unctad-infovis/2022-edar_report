@@ -47,7 +47,7 @@ function Chapter1() {
           <img className="" src={graphic2} alt="Graphic: Agricultural commodity-dependent countries" />
         </div>
         <figcaption>Source: UNCTAD calculations, based on data from the international trade analysis database and the United Nations Commodity Trade Statistics database.</figcaption>
-        <SocialMediaButtons className="hidden" text="Non-commodity-dependent African countries boast stronger within-sector diversification" url="https://unctad.org/publication/economic-development-africa-report-2022" image="" />
+        <SocialMediaButtons extra_class="hidden" text="Non-commodity-dependent African countries boast stronger within-sector diversification" url="https://unctad.org/publication/economic-development-africa-report-2022" image="" />
       </figure>
       <div className="content_container">
         <p>Non-commodity-dependent countries experienced stronger diversification trend in more complex manufacturing products (such as opticals and textiles, with increases in active export lines of 137% and 118% respectively, compared with 1998–2000) than commodity-dependent countries.</p>
