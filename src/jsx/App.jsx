@@ -17,7 +17,7 @@ import PageNavigation from './PageNavigation.jsx';
 import SocialMediaButtons from './helpers/SocialMediaButtons.jsx';
 import DownloadButton from './helpers/DownloadButton.jsx';
 
-const domain = window.location.href.includes('localhost') ? '//unctad.org/' : '/';
+const domain = window.location.href.includes('unctad.org') ? '/' : '//unctad.org/';
 
 function App() {
   // import graphic1 from '../../assets/img/graphs/EDAR-2022-Most_African_countries_are_highly_dependent_on_commodities.png';
