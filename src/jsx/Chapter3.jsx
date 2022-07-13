@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 // https://github.com/joshwnj/react-visibility-sensor
 import VisibilitySensor from 'react-visibility-sensor';
 // https://www.npmjs.com/package/react-countup
@@ -7,15 +8,15 @@ import CountUp from 'react-countup';
 import SocialMediaButtons from './helpers/SocialMediaButtons.jsx';
 import DownloadButton from './helpers/DownloadButton.jsx';
 
-// import graphic1 from '../../assets/img/graphs/EDAR-2022-Investment_in_African_fintech_firms_shot_up_in_2021.png';
-const graphic1 = '//unctad.org/sites/default/files/2022-07/EDAR-2022-Investment_in_African_fintech_firms_shot_up_in_2021.png';
-// import graphic2 from '../../assets/img/graphs/EDAR-2022-Payments_and_remittances_dominate_African_fintech_industry.png';
-const graphic2 = '//unctad.org/sites/default/files/2022-07/EDAR-2022-Payments_and_remittances_dominate_African_fintech_industry.png';
+function Chapter({ domain }) {
+  // import graphic1 from '../../assets/img/graphs/EDAR-2022-Investment_in_African_fintech_firms_shot_up_in_2021.png';
+  const graphic1 = `${domain}/sites/default/files/2022-07/EDAR-2022-Investment_in_African_fintech_firms_shot_up_in_2021.png`;
+  // import graphic2 from '../../assets/img/graphs/EDAR-2022-Payments_and_remittances_dominate_African_fintech_industry.png';
+  const graphic2 = `${domain}//sites/default/files/2022-07/EDAR-2022-Payments_and_remittances_dominate_African_fintech_industry.png`;
 
-// import photo1 from '../../assets/img/photos/EDAR-2022-chapter3_photo1.jpg';
-const photo1 = '//unctad.org/sites/default/files/2022-07/EDAR-2022-chapter3_photo1.jpg';
+  // import photo1 from '../../assets/img/photos/EDAR-2022-chapter3_photo1.jpg';
+  const photo1 = `${domain}//sites/default/files/2022-07/EDAR-2022-chapter3_photo1.jpg`;
 
-function Chapter3() {
   return (
     <div>
       <div className="heading_container">
@@ -90,4 +91,8 @@ function Chapter3() {
   );
 }
 
-export default Chapter3;
+Chapter.propTypes = {
+  domain: PropTypes.string.isRequired
+};
+
+export default Chapter;
