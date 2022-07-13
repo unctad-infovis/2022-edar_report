@@ -1,9 +1,9 @@
 import React from 'react';
-import graphic1 from '../../assets/img/graphs/EDAR-2022-2005.png';
-import graphic2 from '../../assets/img/graphs/EDAR-2022-2019.png';
-import graphic3 from '../../assets/img/graphs/EDAR-2022-Fig-19.png';
+import graphic1 from '../../assets/img/graphs/EDAR-2022-Service_exports_in_Africa_in_2005.png';
+import graphic2 from '../../assets/img/graphs/EDAR-2022-Service_exports_in_Africa_in_2019.png';
+import graphic3 from '../../assets/img/graphs/EDAR-2022-Traditional_services_leading_even_in_countries_making_diversification_progress.png';
 
-import photo1 from '../../assets/img/photos/shutterstock_469114847-min.jpg';
+import photo1 from '../../assets/img/photos/EDAR-2022-chapter2_photo1.jpg';
 
 import SocialMediaButtons from './helpers/SocialMediaButtons.jsx';
 import DownloadButton from './helpers/DownloadButton.jsx';
@@ -17,7 +17,7 @@ function Chapter2() {
           <h1>2. Trade in services: A niche for export diversification in Africa</h1>
           <h2>Services play a critical role in global and regional value chains and international trade. They represent the main source of value added in total trade, as they contribute to the physical and digital connectivity of all sectors within and across economies.</h2>
           <div className="download_section">
-            <DownloadButton href="https://unctad.org/system/files/official-document/aldcafrica2022_Ch2_en.pdf" text="Download Chapter 2 as PDF" />
+            <DownloadButton href="//unctad.org/system/files/official-document/aldcafrica2022_Ch2_en.pdf" text="Download Chapter 2" />
           </div>
         </div>
       </div>
@@ -68,7 +68,7 @@ function Chapter2() {
         <p>But multiple barriers are constraining this potential role of African SMEs. Africa, today, has about 50 million formal SMEs, which can help diversify its exports. However, SMEs have an unmet financing need of $416 billion every year, according to the International Finance Corporation.</p>
         <p>Firms, in particular new entrants and small-scale exporting companies, need to secure external financing to cover the large costs of entering export markets.</p>
         <div className="download_section">
-          <DownloadButton href="https://unctad.org/system/files/official-document/aldcafrica2022_Ch2_en.pdf" text="Download Chapter 2 as PDF" />
+          <DownloadButton href="//unctad.org/system/files/official-document/aldcafrica2022_Ch2_en.pdf" text="Download Chapter 2" />
         </div>
       </div>
     </div>

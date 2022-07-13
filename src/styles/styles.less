@@ -85,15 +85,20 @@
       margin: 30px 0;
       a {
         background-color: transparent;
-        border: 0.5px solid #009EDB;
+        border-radius: 4px;
+        border: 1px solid #009edb;
         box-sizing: border-box;
-        color: #000;
+        color: #454545;
         cursor: pointer;
         display: inline-block;
-        font-family: Roboto;
-        font-size: 15px;
-        margin-bottom: 5px;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 1.27px;
+        line-height: 1;
+        margin-bottom: 10px;
         padding: 10px 15px;
+        text-align: center;
+        text-decoration: none;
         text-transform: uppercase;
         &:hover {
           background-color: #EBEAE6;
@@ -132,7 +137,7 @@
     }
     figure {
       box-sizing: border-box;
-      margin: auto auto 20px auto;
+      margin: 30px auto 30px auto;
       max-width: 850px;
       padding: 0 20px;
       .content_image {
@@ -226,7 +231,6 @@
     }
     @import 'chapter_navigation.less';
     @import 'chapter_container.less';
-    // Wider graphic container.
     .quotes_container,
     .graphic_container {
       display: flex;
@@ -246,8 +250,8 @@
         }
       }
       &.quotes_container {
-        align-items: flex-start;
-        justify-content: space-between;
+        align-items: center;
+        justify-content: space-evenly;
         margin: auto auto 100px auto;
         @media all and (max-width: 1000px) {
           align-items: center;
@@ -311,31 +315,61 @@
         }
       }
       .quote_container {
-        border: 2px solid #009EDB;
         height: 100%;
         max-width: 420px;
         padding: 30px;
+        position: relative;
         width: 100%;
+        &:before {
+          background-image: url("../assets/img/EDAR-2022-quote_symbol.png");
+          background-size: 100%;
+          content: '';
+          display: block;
+          height: 60px;
+          left: -30px;
+          position: absolute;
+          top: 0px;
+          width: 60px;
+          z-index: -1;
+        }
         @media all and (max-width: 1000px) {
           margin-bottom: 20px;
         }
+        &.quote_container_1 h3:before {
+          background-image: url("../assets/img/photos/EDAR-2022-rebeca_grynspan.png");
+        }
+        &.quote_container_2 h3:before {
+          background-image: url("../assets/img/photos/EDAR-2022-benedict_oramah.png");
+        }
         h3 {
-          max-width: 450px;
+          &:before {
+            background-size: 100%;            
+            content: '';
+            height: 75px;
+            left: 0;
+            position: absolute;
+            width: 75px;
+          }
           color: #009EDB;
           margin-bottom: 5px;
-          text-align: center;
+          max-width: 450px;
+          padding-left: 85px;
+          position: relative;
+          text-align: left;
+          z-index: 2;
         }
         p {
-          max-width: 450px;
           font-family: Kalam;
-          font-size: 26px;
-          line-height: 30px;
+          font-size: 30px;
+          line-height: 40px;
+          max-width: 450px;
         }
         .title {
           font-weight: 400;
-          margin: auto auto;
+          margin: 0;
           max-width: 300px;
-          text-align: center;
+          padding-left: 85px;
+          text-align: left;
         }
       }
     }

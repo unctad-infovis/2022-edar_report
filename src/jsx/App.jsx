@@ -10,10 +10,10 @@ import IsVisible from 'react-is-visible';
 
 import graphic1 from '../../assets/img/graphs/EDAR-2022-Most-African_countries_are_highly_dependent_on_commodities.png';
 import graphic2 from '../../assets/img/graphs/EDAR-2022-The_promise_of_fintech.png';
-import banner_img from '../../assets/img/EDAR-2022-Banner.png';
-import banner_img_square from '../../assets/img/EDAR-2022-Banner_square.png';
+import banner_img from '../../assets/img/EDAR-2022-banner.png';
+import banner_img_square from '../../assets/img/EDAR-2022-banner_square.png';
 
-import photo1 from '../../assets/img/photos/shutterstock_1019519434-min.jpg';
+import photo1 from '../../assets/img/photos/EDAR-2022-summary_photo1.jpg';
 
 import Chapter1 from './Chapter1.jsx';
 import Chapter2 from './Chapter2.jsx';
@@ -99,8 +99,8 @@ function App() {
             <h2>Soaring food and energy prices are hitting African countries especially hard as they struggle with the impact of the COVID-19 pandemic, climate change and the war in Ukraine.</h2>
             <h2>To cope with current crises and insulate itself against future shocks, Africa must diversify its economies. The continent of 1.4 billion people is among the least diversified regions in the world with regard to exports.</h2>
             <div className="download_section">
-              <DownloadButton href="https://unctad.org/system/files/official-document/aldcafrica2022_en.pdf" text="Download the full report as PDF" />
-              <DownloadButton href="https://unctad.org/system/files/official-document/aldcafrica2022-summary_en.pdf" text="Download the executive summary as PDF" />
+              <DownloadButton href="//unctad.org/system/files/official-document/aldcafrica2022_en.pdf" text="Download the full report" />
+              <DownloadButton href="//unctad.org/system/files/official-document/aldcafrica2022-summary_en.pdf" text="Download the executive summary" />
             </div>
           </div>
         </div>
@@ -168,12 +168,12 @@ function App() {
         <IsVisible once>
           {(isVisible) => (
             <div className={`quotes_container ${(isVisible && y > 200) ? 'visible' : 'not_seen'} ${anchorClicked !== false ? 'notransition' : ''}`}>
-              <div className="quote_container">
+              <div className="quote_container quote_container_1">
                 <p>The Economic Development in Africa Report 2022 serves Africa’s effective integration into high-end global value chains, a key objective for its long-term sustainable development. I hope that this report will prove a valuable guide to policymakers to drive the export diversification of goods and services by empowering private businesses to step into new markets and thrive.</p>
                 <h3 className="name">Rebeca Grynspan</h3>
                 <div className="title">Secretary-General of United Nations Conference on Trade and Development</div>
               </div>
-              <div className="quote_container">
+              <div className="quote_container quote_container_2">
                 <p>As African countries work to rebuild their economies post COVID-19, Economic Development in Africa Report 2022 brings a new perspective on how the services sector contributes to export diversification and promotes structural change.</p>
                 <h3 className="name">Benedict O. Oramah</h3>
                 <div className="title">President and Chair, Board of Directors, African Export-Import Bank</div>

@@ -4,10 +4,10 @@ import VisibilitySensor from 'react-visibility-sensor';
 // https://www.npmjs.com/package/react-countup
 import CountUp from 'react-countup';
 
-import graphic1 from '../../assets/img/graphs/EDAR-2022-chapt-3-white.png';
-import graphic2 from '../../assets/img/graphs/EDAR-2022-Fig-25.png';
+import graphic1 from '../../assets/img/graphs/EDAR-2022-Investment_in_African_fintech_firms_shot_up_in_2021.png';
+import graphic2 from '../../assets/img/graphs/EDAR-2022-Payments_and_remittances_dominate_African_fintech_industry.png';
 
-import photo1 from '../../assets/img/photos/shutterstock_1677766576-min.jpg';
+import photo1 from '../../assets/img/photos/EDAR-2022-chapter3_photo1.jpg';
 
 import SocialMediaButtons from './helpers/SocialMediaButtons.jsx';
 import DownloadButton from './helpers/DownloadButton.jsx';
@@ -21,7 +21,7 @@ function Chapter3() {
           <h1>3. Financial services and private sector: The future of export diversification in Africa</h1>
           <h2>Private businesses, particularly small and medium-sized enterprises (SMEs), can facilitate high value-added export diversification in Africa, especially through the services sector, when supported by sound financial services or provided with access to affordable financing.</h2>
           <div className="download_section">
-            <DownloadButton href="https://unctad.org/system/files/official-document/aldcafrica2022_Ch3_en.pdf" text="Download Chapter 3 as PDF" />
+            <DownloadButton href="//unctad.org/system/files/official-document/aldcafrica2022_Ch3_en.pdf" text="Download Chapter 3" />
           </div>
         </div>
       </div>
@@ -80,7 +80,7 @@ function Chapter3() {
         <p>When accompanied by appropriate regulatory frameworks, fintech can increase SMEs’ access to long-term financing, so that funds can also flow more readily into this traditionally neglected but promising sector.</p>
         <p>Stronger protection of property rights and rule-based governance, in addition to guaranteeing a level playing field for enterprises – especially SMEs – to compete, are prerequisites for promoting export diversification.</p>
         <div className="download_section">
-          <DownloadButton href="https://unctad.org/system/files/official-document/aldcafrica2022_Ch3_en.pdf" text="Download Chapter 3 as PDF" />
+          <DownloadButton href="//unctad.org/system/files/official-document/aldcafrica2022_Ch3_en.pdf" text="Download Chapter 3" />
         </div>
       </div>
     </div>

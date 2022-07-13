@@ -1,9 +1,9 @@
 import React from 'react';
-import graphic1 from '../../assets/img/graphs/EDAR-2022-Fig-3-1.png';
-import graphic2 from '../../assets/img/graphs/EDAR-2022-Fig-3-2.png';
-import graphic3 from '../../assets/img/graphs/EDAR-2022-Fig-15.png';
+import graphic1 from '../../assets/img/graphs/EDAR-2022-Non_commodity_dependent_countries.png';
+import graphic2 from '../../assets/img/graphs/EDAR-2022-Agricultural_commodity_dependent_countries.png';
+import graphic3 from '../../assets/img/graphs/EDAR-2022-Sectors_with_vast_new_export_opportunities_across_African_countries.png';
 
-import photo1 from '../../assets/img/photos/shutterstock_1418357606-min.jpg';
+import photo1 from '../../assets/img/photos/EDAR-2022-chapter1_photo1.jpg';
 
 import SocialMediaButtons from './helpers/SocialMediaButtons.jsx';
 import DownloadButton from './helpers/DownloadButton.jsx';
@@ -17,7 +17,7 @@ function Chapter1() {
           <h1>1. The pulse of export diversification in Africa</h1>
           <h2>Africa is the second least diversified region after Oceania, and it has the most concentrated export structure when considering the unequal distribution of export shares over products.</h2>
           <div className="download_section">
-            <DownloadButton href="https://unctad.org/system/files/official-document/aldcafrica2022_Ch1_en.pdf" text="Download Chapter 1 as PDF" />
+            <DownloadButton href="//unctad.org/system/files/official-document/aldcafrica2022_Ch1_en.pdf" text="Download Chapter 1" />
           </div>
         </div>
       </div>
@@ -78,7 +78,7 @@ function Chapter1() {
       </figure>
       <div className="content_container">
         <div className="download_section">
-          <DownloadButton href="https://unctad.org/system/files/official-document/aldcafrica2022_Ch1_en.pdf" text="Download Chapter 1 as PDF" />
+          <DownloadButton href="//unctad.org/system/files/official-document/aldcafrica2022_Ch1_en.pdf" text="Download Chapter 1" />
         </div>
       </div>
     </div>
