@@ -10,12 +10,12 @@ import DownloadButton from './helpers/DownloadButton.jsx';
 
 function Chapter({ domain }) {
   // import graphic1 from '../../assets/img/graphs/EDAR-2022-Investment_in_African_fintech_firms_shot_up_in_2021.png';
-  const graphic1 = `${domain}/sites/default/files/2022-07/EDAR-2022-Investment_in_African_fintech_firms_shot_up_in_2021.png`;
+  const graphic1 = `${domain}sites/default/files/2022-07/EDAR-2022-Investment_in_African_fintech_firms_shot_up_in_2021.png`;
   // import graphic2 from '../../assets/img/graphs/EDAR-2022-Payments_and_remittances_dominate_African_fintech_industry.png';
-  const graphic2 = `${domain}//sites/default/files/2022-07/EDAR-2022-Payments_and_remittances_dominate_African_fintech_industry.png`;
+  const graphic2 = `${domain}sites/default/files/2022-07/EDAR-2022-Payments_and_remittances_dominate_African_fintech_industry.png`;
 
   // import photo1 from '../../assets/img/photos/EDAR-2022-chapter3_photo1.jpg';
-  const photo1 = `${domain}//sites/default/files/2022-07/EDAR-2022-chapter3_photo1.jpg`;
+  const photo1 = `${domain}sites/default/files/2022-07/EDAR-2022-chapter3_photo1.jpg`;
 
   return (
     <div>

@@ -21,17 +21,17 @@ const domain = window.location.href.includes('localhost') ? '//unctad.org/' : '/
 
 function App() {
   // import graphic1 from '../../assets/img/graphs/EDAR-2022-Most_African_countries_are_highly_dependent_on_commodities.png';
-  const graphic1 = `${domain}/sites/default/files/2022-07/EDAR-2022-Most_African_countries_are_highly_dependent_on_commodities.png`;
+  const graphic1 = `${domain}sites/default/files/2022-07/EDAR-2022-Most_African_countries_are_highly_dependent_on_commodities.png`;
   // import graphic2 from '../../assets/img/graphs/EDAR-2022-The_promise_of_fintech.png';
-  const graphic2 = `${domain}/sites/default/files/2022-07/EDAR-2022-The_promise_of_fintech.png`;
+  const graphic2 = `${domain}sites/default/files/2022-07/EDAR-2022-The_promise_of_fintech.png`;
 
   // import banner_img from '../../assets/img/EDAR-2022-banner.png';
-  const banner_img = `${domain}/sites/default/files/2022-07/EDAR-2022-banner.png`;
+  const banner_img = `${domain}sites/default/files/2022-07/EDAR-2022-banner.png`;
   // import banner_img_square from '../../assets/img/EDAR-2022-banner_square.png';
-  const banner_img_square = `${domain}/sites/default/files/2022-07/EDAR-2022-banner_square.png`;
+  const banner_img_square = `${domain}sites/default/files/2022-07/EDAR-2022-banner_square.png`;
 
   // import photo1 from '../../assets/img/photos/EDAR-2022-summary_photo1.jpg';
-  const photo1 = `${domain}/sites/default/files/2022-07/EDAR-2022-summary_photo1.jpg`;
+  const photo1 = `${domain}sites/default/files/2022-07/EDAR-2022-summary_photo1.jpg`;
 
   // Data states.
   const sectionRefs = [useRef(null), useRef(null), useRef(null), useRef(null)];

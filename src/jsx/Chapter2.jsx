@@ -6,14 +6,14 @@ import DownloadButton from './helpers/DownloadButton.jsx';
 
 function Chapter({ domain }) {
   // import graphic1 from '../../assets/img/graphs/EDAR-2022-Service_exports_in_Africa_in_2005.png';
-  const graphic1 = `${domain}/sites/default/files/2022-07/EDAR-2022-Service_exports_in_Africa_in_2005.png`;
+  const graphic1 = `${domain}sites/default/files/2022-07/EDAR-2022-Service_exports_in_Africa_in_2005.png`;
   // import graphic2 from '../../assets/img/graphs/EDAR-2022-Service_exports_in_Africa_in_2019.png';
-  const graphic2 = `${domain}/sites/default/files/2022-07/EDAR-2022-Service_exports_in_Africa_in_2019.png`;
+  const graphic2 = `${domain}sites/default/files/2022-07/EDAR-2022-Service_exports_in_Africa_in_2019.png`;
   // import graphic3 from '../../assets/img/graphs/EDAR-2022-Traditional_services_leading_even_in_countries_making_diversification_progress.png';
-  const graphic3 = `${domain}/sites/default/files/2022-07/EDAR-2022-Traditional_services_leading_even_in_countries_making_diversification_progress.png`;
+  const graphic3 = `${domain}sites/default/files/2022-07/EDAR-2022-Traditional_services_leading_even_in_countries_making_diversification_progress.png`;
 
   // import photo1 from '../../assets/img/photos/EDAR-2022-chapter2_photo1.jpg';
-  const photo1 = `${domain}/sites/default/files/2022-07/EDAR-2022-chapter2_photo1.jpg`;
+  const photo1 = `${domain}sites/default/files/2022-07/EDAR-2022-chapter2_photo1.jpg`;
 
   return (
     <div>
