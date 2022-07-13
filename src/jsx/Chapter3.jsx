@@ -10,7 +10,7 @@ import DownloadButton from './helpers/DownloadButton.jsx';
 // import graphic1 from '../../assets/img/graphs/EDAR-2022-Investment_in_African_fintech_firms_shot_up_in_2021.png';
 const graphic1 = '//unctad.org/sites/default/files/2022-07/EDAR-2022-Investment_in_African_fintech_firms_shot_up_in_2021.png';
 // import graphic2 from '../../assets/img/graphs/EDAR-2022-Payments_and_remittances_dominate_African_fintech_industry.png';
-const graphic2 = '//unctad.org/sites/default/files/2022-07/EDAR-2022-Payments_and_remittances_dominate_African_fintech_industry.pngpng';
+const graphic2 = '//unctad.org/sites/default/files/2022-07/EDAR-2022-Payments_and_remittances_dominate_African_fintech_industry.png';
 
 // import photo1 from '../../assets/img/photos/EDAR-2022-chapter3_photo1.jpg';
 const photo1 = '//unctad.org/sites/default/files/2022-07/EDAR-2022-chapter3_photo1.jpg';
@@ -40,7 +40,7 @@ function Chapter3() {
         <h3>Investment in African fintech firms shot up in 2021</h3>
         <img className="content_image full" src={graphic1} alt="Graphic: Investment in African fintech firms shot up in 2021" />
         <figcaption>Source: UNCTAD, based on data from Fintech Global, 2022</figcaption>
-        <SocialMediaButtons text="Investment in African fintech firms shot up in 2021" url="url" image={graphic1} />
+        <SocialMediaButtons text="Investment in African fintech firms shot up in 2021" url="https://unctad.org/publication/economic-development-africa-report-2022" image="pic.twitter.com/g8uh43GK5f" />
       </figure>
       <div className="content_container">
         <p>Sectors that dominate the African fintech industry are payments and remittances, marketplace lending and wealth technology, accounting respectively for 26%, 19% and 14% of all transactions in 2021.</p>
@@ -51,10 +51,10 @@ function Chapter3() {
         <p>The use of more innovative technologies in logistics management solutions are contributing to making supply chains more customer-centric and sustainable. Applying technology-driven solutions to logistics processes results in increased productivity and efficiency in the workflow.</p>
       </div>
       <figure>
-        <h3>Payments and remittances dominate African fintech industry</h3>
-        <img className="content_image full" src={graphic2} alt="Graphic: Payments and remittances dominate African fintech industry" />
+        <h3>Payments and remittances dominate Africa&apos;s fintech industry</h3>
+        <img className="content_image full" src={graphic2} alt="Graphic: Payments and remittances dominate Africa&apos;s fintech industry" />
         <figcaption>Source: UNCTAD, based on data from Fintech Global, 2022.</figcaption>
-        <SocialMediaButtons text="Payments and remittances dominate African fintech industry" url="url" image={graphic2} />
+        <SocialMediaButtons extra_class="hidden" text="Payments and remittances dominate Africa&apos;s fintech industry" url="https://unctad.org/publication/economic-development-africa-report-2022" image="" />
       </figure>
       <div className="content_container">
         <h3>Challenges to be tackled</h3>

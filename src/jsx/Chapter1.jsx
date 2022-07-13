@@ -39,15 +39,15 @@ function Chapter1() {
         <p>The figure below illustrates within-sector diversification in 2018–2019 and the change in diversification compared with 1998–2000.</p>
       </div>
       <figure>
-        <h3>Non-commodity-dependent countries boast stronger within-sector diversification</h3>
+        <h3>Non-commodity-dependent African countries boast stronger within-sector diversification</h3>
         <div className="content_image half">
-          <img className="" src={graphic2} alt="Graphic: Non-commodity-dependent countries" />
+          <img className="" src={graphic1} alt="Graphic: Non-commodity-dependent countries" />
         </div>
         <div className="content_image half">
-          <img className="" src={graphic1} alt="Graphic: Agricultural commodity-dependent countries" />
+          <img className="" src={graphic2} alt="Graphic: Agricultural commodity-dependent countries" />
         </div>
         <figcaption>Source: UNCTAD calculations, based on data from the international trade analysis database and the United Nations Commodity Trade Statistics database.</figcaption>
-        <SocialMediaButtons text="Agricultural commodity-dependent countries" url="url" image={graphic1} />
+        <SocialMediaButtons className="hidden" text="Non-commodity-dependent African countries boast stronger within-sector diversification" url="https://unctad.org/publication/economic-development-africa-report-2022" image="" />
       </figure>
       <div className="content_container">
         <p>Non-commodity-dependent countries experienced stronger diversification trend in more complex manufacturing products (such as opticals and textiles, with increases in active export lines of 137% and 118% respectively, compared with 1998–2000) than commodity-dependent countries.</p>
@@ -76,10 +76,10 @@ function Chapter1() {
         <p>Further opportunities for African market expansion are underpinned by the benefits of intraregional trade and the potential role of the African Continental Free Trade Area.</p>
       </div>
       <figure>
-        <h3>Sectors with vast new export opportunities across African countries</h3>
+        <h3>Some sectors have vast new export opportunities across African countries</h3>
         <img className="content_image full" src={graphic3} alt="Graphic: Sectors with vast new export opportunities across African countries" />
         <figcaption>Source: UNCTAD calculations, based on data from the United Nations Commodity Trade Statistics database and Freire (2017).</figcaption>
-        <SocialMediaButtons text="Sectors with vast new export opportunities across African countries" url="url" image={graphic3} />
+        <SocialMediaButtons extra_class="hidden" text="Some sectors have vast new export opportunities across African countries" url="https://unctad.org/publication/economic-development-africa-report-2022" image="" />
       </figure>
       <div className="content_container">
         <div className="download_section">

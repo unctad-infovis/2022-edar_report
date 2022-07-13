@@ -59,13 +59,13 @@ function PolicyRecommendations(anchorClicked) {
                 <p>Enhance the access of small and medium-sized enterprises to alternative finance</p>
               </div>
               <div className="recommendation_container recommendation_container_6">
-                <p>Maximize the potential benefits of the African Continental Free Trade Area for export diversification by streamlining with inclusive growth and financial inclusion goals and practices</p>
+                <p>Maximize the potential benefits of the African Continental Free Trade Area for export diversification</p>
               </div>
               <div className="recommendation_container recommendation_container_7">
                 <p>Strengthen efforts to improve trade and financial data</p>
               </div>
               <div className="recommendation_container recommendation_container_8">
-                <p>Putting recommendations into practice</p>
+                <p>Put recommendations into practice</p>
               </div>
             </div>
           )}

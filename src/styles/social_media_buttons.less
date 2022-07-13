@@ -1,13 +1,18 @@
 .social_media_buttons {
-  display: none;
   font-size: 11px;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   a {
     color: #009EDB;
-    font-size: 0;
+    text-decoration: none;
+    &:hover {
+      color: #AEA29A;
+      filter: grayscale(100%);
+      text-decoration: underline;
+    }
     img {
       display: inline;
-      margin: -8px 0 0 0;
+      margin: -2px 3px 0 0;
       vertical-align: middle;
       width: 36px;
     }

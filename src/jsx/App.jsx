@@ -55,18 +55,21 @@ function App() {
     };
   }, [y]);
 
-  const addNavBarItems = () => {
+  const addNavBarItems = (href, text) => {
     const li_item = document.createElement('li');
     li_item.classList.add('nav-item');
     const anchor = document.createElement('a');
-    anchor.append('The webflyer');
-    anchor.href = '//unctad.org/webflyer/economic-development-africa-report-2022';
+    anchor.append(text);
+    anchor.href = href;
     li_item.append(anchor);
-    document.querySelector('.navbar-nav.ml-auto').append(li_item);
+    document.querySelector('.navbar-nav.ml-auto:not(.right-menu)').append(li_item);
   };
 
   useEffect(() => {
-    addNavBarItems();
+    if (document.querySelector('.navbar-nav.ml-auto') !== null) {
+      addNavBarItems('//unctad.org/webflyer/economic-development-africa-report-2022', 'Downloads');
+      addNavBarItems('//unctad.org/topic/africa/economic-development-in-africa-report', 'Full series');
+    }
   }, []);
 
   const anchorClick = (i) => {
@@ -155,9 +158,9 @@ function App() {
             <div className={`graphic_container ${(isVisible && y > 200) ? 'visible' : 'not_seen'} ${anchorClicked !== false ? 'notransition' : ''}`}>
               <div className="extra_background" />
               <div className="title_container">
-                <h2>Most African countries are highly dependent on commodities</h2>
+                <h2>83% of African countries are highly dependent on commodities</h2>
                 <p>UNCTAD considers a country to be dependent on commodities when these products make up more than 60% of its total merchandise exports. Based on this definition, 83% of African countries are commodity dependent, accounting for 45% of the commodity-dependent countries worldwide.</p>
-                <SocialMediaButtons text="text" url="url" image="image" />
+                <SocialMediaButtons text="83% of African countries are highly dependent on commodities" url="https://unctad.org/publication/economic-development-africa-report-2022" image="pic.twitter.com/IOA9guajHC" />
               </div>
               <div className="image_container right">
                 <figure>
@@ -173,14 +176,14 @@ function App() {
             <div className={`graphic_container graphic_left ${(isVisible && y > 200) ? 'visible' : 'not_seen'} ${anchorClicked !== false ? 'notransition' : ''}`} style={{ backgroundColor: '#fff' }}>
               <div className="image_container left">
                 <figure>
-                  <img src={graphic2} alt="Infographic: The promise of fintech" />
+                  <img src={graphic2} alt="Infographic: Fintech holds promise in Africa" />
                   <figcaption>Source: FinTech Global (2022)</figcaption>
                 </figure>
               </div>
               <div className="title_container">
-                <h2>The promise of fintech</h2>
+                <h2>Fintech holds promise in Africa</h2>
                 <p>The recent growth of financial technology (fintech) firms in Africa is spurring more innovation and investment opportunities. Fintech has the potential to help African countries achieve financial and social inclusion.</p>
-                <SocialMediaButtons text="text" url="url" image="image" />
+                <SocialMediaButtons extra_class="hidden" text="Fintech holds promise in Africa" url="https://unctad.org/publication/economic-development-africa-report-2022" image="image" />
               </div>
             </div>
           )}
@@ -189,7 +192,7 @@ function App() {
           {(isVisible) => (
             <div className={`quotes_container ${(isVisible && y > 200) ? 'visible' : 'not_seen'} ${anchorClicked !== false ? 'notransition' : ''}`}>
               <div className="quote_container quote_container_1">
-                <p>The Economic Development in Africa Report 2022 serves Africa’s effective integration into high-end global value chains, a key objective for its long-term sustainable development. I hope that this report will prove a valuable guide to policymakers to drive the export diversification of goods and services by empowering private businesses to step into new markets and thrive.</p>
+                <p>The Economic Development in Africa Report 2022 serves Africa’s effective integration into high-end global value chains. I hope that this report will prove a valuable guide to policymakers to drive the export diversification of goods and services by empowering private businesses to step into new markets and thrive.</p>
                 <h3 className="name">Rebeca Grynspan</h3>
                 <div className="title">Secretary-General of United Nations Conference on Trade and Development</div>
               </div>

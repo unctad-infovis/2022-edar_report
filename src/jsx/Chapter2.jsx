@@ -43,17 +43,17 @@ function Chapter2() {
           <img className="" src={graphic2} alt="Graphic: Service exports in Africa in 2019" />
         </div>
         <figcaption>Source: UNCTAD calculations, based on data from the Balanced Trade in Services database of the Organisation for Economic Co-operation and Development and the World Trade Organization</figcaption>
-        <SocialMediaButtons text="Service exports in Africa in 2019" url="url" image={graphic2} />
+        <SocialMediaButtons extra_class="hidden" text="Service exports in Africa in 2019" url="https://unctad.org/publication/economic-development-africa-report-2022" image="" />
       </figure>
       <div className="content_container">
         <p>Some countries have made progress in diversifying their services. In 2005–2019, the top three services sectors represented less than 70% of total exports in services in five countries: Burkina Faso, Kenya, Malawi, Senegal and Sierra Leone.</p>
         <p>Exports in services remain dominated by travel and transport in most African countries, except in a few countries such as Malawi, where the primary services sector is telecommunications, representing one fourth of total exports in services.</p>
       </div>
       <figure>
-        <h3>Traditional services leading even in countries making diversification progress</h3>
-        <img className="content_image full" src={graphic3} alt="Graphic: Traditional services leading even in countries making diversification progress" />
+        <h3>Traditional services lead even in African countries making diversification progress</h3>
+        <img className="content_image full" src={graphic3} alt="Graphic: Traditional services lead even in African countries making diversification progress" />
         <figcaption>Source: UNCTAD, based on data from the Balanced Trade in Services database of the Organisation for Economic Co-operation and Development and the World Trade Organization.</figcaption>
-        <SocialMediaButtons text="Traditional services leading even in countries making diversification progress" url="url" image={graphic3} />
+        <SocialMediaButtons extra_class="hidden" text="Traditional services lead even in African countries making diversification progress" url="https://unctad.org/publication/economic-development-africa-report-2022" image="" />
       </figure>
       <div className="content_container">
         <p>The key factors undermining trade in services in Africa include:</p>
