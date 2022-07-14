@@ -101,7 +101,7 @@ function App() {
 
     if (typeof analytics !== 'undefined') {
       analytics('event', 'Navigation Click', {
-        event_category: 'EDAR Publication Page 2022',
+        event_category: '2022-edar_report',
         event_label: `Chapter ${i + 1}`,
         transport_type: 'beacon'
       });
