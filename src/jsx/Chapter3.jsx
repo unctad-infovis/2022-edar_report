@@ -41,7 +41,7 @@ function Chapter({ domain }) {
         <h3>Investment in African fintech firms shot up in 2021</h3>
         <img className="content_image full" src={graphic1} alt="Graphic: Investment in African fintech firms shot up in 2021" />
         <figcaption>Source: UNCTAD, based on data from Fintech Global, 2022</figcaption>
-        <SocialMediaButtons text="Investment in African fintech firms shot up in 2021" url="https://unctad.org/publication/economic-development-africa-report-2022" image="pic.twitter.com/g8uh43GK5f" />
+        <SocialMediaButtons text="Investment in African fintech firms shot up in 2021" url="https://unctad.org/publication/economic-development-africa-report-2022" image="pic.twitter.com/iBAU9AW362" />
       </figure>
       <div className="content_container">
         <p>Sectors that dominate the African fintech industry are payments and remittances, marketplace lending and wealth technology, accounting respectively for 26%, 19% and 14% of all transactions in 2021.</p>
@@ -55,7 +55,7 @@ function Chapter({ domain }) {
         <h3>Payments and remittances dominate Africa&apos;s fintech industry</h3>
         <img className="content_image full" src={graphic2} alt="Graphic: Payments and remittances dominate Africa&apos;s fintech industry" />
         <figcaption>Source: UNCTAD, based on data from Fintech Global, 2022.</figcaption>
-        <SocialMediaButtons extra_class="hidden" text="Payments and remittances dominate Africa&apos;s fintech industry" url="https://unctad.org/publication/economic-development-africa-report-2022" image="" />
+        <SocialMediaButtons text="Payments and remittances dominate Africa&apos;s fintech industry" url="https://unctad.org/publication/economic-development-africa-report-2022" image="pic.twitter.com/fGvmp74maQ" />
       </figure>
       <div className="content_container">
         <h3>Challenges to be tackled</h3>

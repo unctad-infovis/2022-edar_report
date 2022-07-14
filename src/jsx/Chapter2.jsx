@@ -23,7 +23,7 @@ function Chapter({ domain }) {
           <h1>2. Trade in services: A niche for export diversification in Africa</h1>
           <h2>Services play a critical role in global and regional value chains and international trade. They represent the main source of value added in total trade, as they contribute to the physical and digital connectivity of all sectors within and across economies.</h2>
           <div className="download_section">
-            <DownloadButton href="'+domain+'/system/files/official-document/aldcafrica2022_Ch2_en.pdf" text="Download Chapter 2" />
+            <DownloadButton href="//unctad.org/system/files/official-document/aldcafrica2022_Ch2_en.pdf" text="Download Chapter 2" />
           </div>
         </div>
       </div>
@@ -44,7 +44,7 @@ function Chapter({ domain }) {
           <img className="" src={graphic2} alt="Graphic: Service exports in Africa in 2019" />
         </div>
         <figcaption>Source: UNCTAD calculations, based on data from the Balanced Trade in Services database of the Organisation for Economic Co-operation and Development and the World Trade Organization</figcaption>
-        <SocialMediaButtons extra_class="hidden" text="Service exports in Africa in 2019" url="https:'+domain+'/publication/economic-development-africa-report-2022" image="" />
+        <SocialMediaButtons text="Service exports in Africa in 2019" url="https://unctad.org/publication/economic-development-africa-report-2022" image="pic.twitter.com/F6fwsoC98v" />
       </figure>
       <div className="content_container">
         <p>Some countries have made progress in diversifying their services. In 2005–2019, the top three services sectors represented less than 70% of total exports in services in five countries: Burkina Faso, Kenya, Malawi, Senegal and Sierra Leone.</p>
@@ -54,7 +54,7 @@ function Chapter({ domain }) {
         <h3>Traditional services lead even in African countries making diversification progress</h3>
         <img className="content_image full" src={graphic3} alt="Graphic: Traditional services lead even in African countries making diversification progress" />
         <figcaption>Source: UNCTAD, based on data from the Balanced Trade in Services database of the Organisation for Economic Co-operation and Development and the World Trade Organization.</figcaption>
-        <SocialMediaButtons extra_class="hidden" text="Traditional services lead even in African countries making diversification progress" url="https:'+domain+'/publication/economic-development-africa-report-2022" image="" />
+        <SocialMediaButtons text="Traditional services lead even in African countries making diversification progress" url="https://unctad.org/publication/economic-development-africa-report-2022" image="pic.twitter.com/1d53m7QWsB" />
       </figure>
       <div className="content_container">
         <p>The key factors undermining trade in services in Africa include:</p>
@@ -74,7 +74,7 @@ function Chapter({ domain }) {
         <p>But multiple barriers are constraining this potential role of African SMEs. Africa, today, has about 50 million formal SMEs, which can help diversify its exports. However, SMEs have an unmet financing need of $416 billion every year, according to the International Finance Corporation.</p>
         <p>Firms, in particular new entrants and small-scale exporting companies, need to secure external financing to cover the large costs of entering export markets.</p>
         <div className="download_section">
-          <DownloadButton href="'+domain+'/system/files/official-document/aldcafrica2022_Ch2_en.pdf" text="Download Chapter 2" />
+          <DownloadButton href="//unctad.org/system/files/official-document/aldcafrica2022_Ch2_en.pdf" text="Download Chapter 2" />
         </div>
       </div>
     </div>

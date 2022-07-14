@@ -155,7 +155,7 @@ function App() {
               <div className="title_container">
                 <h2>83% of African countries are highly dependent on commodities</h2>
                 <p>UNCTAD considers a country to be dependent on commodities when these products make up more than 60% of its total merchandise exports. Based on this definition, 83% of African countries are commodity dependent, accounting for 45% of the commodity-dependent countries worldwide.</p>
-                <SocialMediaButtons text="83% of African countries are highly dependent on commodities" url="https://unctad.org/publication/economic-development-africa-report-2022" image="pic.twitter.com/IOA9guajHC" />
+                <SocialMediaButtons text="83% of African countries are highly dependent on commodities" url="https://unctad.org/publication/economic-development-africa-report-2022" image="pic.twitter.com/vHbYkYuRaT" />
               </div>
               <div className="image_container right">
                 <figure>
@@ -178,7 +178,7 @@ function App() {
               <div className="title_container">
                 <h2>Fintech holds promise in Africa</h2>
                 <p>The recent growth of financial technology (fintech) firms in Africa is spurring more innovation and investment opportunities. Fintech has the potential to help African countries achieve financial and social inclusion.</p>
-                <SocialMediaButtons extra_class="hidden" text="Fintech holds promise in Africa" url="https://unctad.org/publication/economic-development-africa-report-2022" image="image" />
+                <SocialMediaButtons text="Fintech holds promise in Africa" url="https://unctad.org/publication/economic-development-africa-report-2022" image="pic.twitter.com/iSlJkjvG8Q" />
               </div>
             </div>
           )}
