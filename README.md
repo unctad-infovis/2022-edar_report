@@ -2,6 +2,14 @@
 
 **Live demo** https://unctad-infovis.github.io/2022-edar_report/
 
+## Used in
+
+* [Economic Development Africa Report 2022](https://unctad.org/publication/economic-development-africa-report-2022)
+
+## Useful links
+
+* https://freebies.fluxes.com/blog/best-free-handwriting-fonts-from-google-fonts/
+
 ## Rights of usage
 
 Contact Teemo Tebest.
