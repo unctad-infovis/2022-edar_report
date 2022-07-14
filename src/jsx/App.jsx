@@ -99,6 +99,11 @@ function App() {
       });
     }, 200);
 
+    document.querySelectorAll('.chapter_selection').forEach(el => {
+      el.classList.remove('nohover');
+      el.classList.remove('hover');
+    });
+
     if (typeof analytics !== 'undefined') {
       analytics('event', 'Navigation Click', {
         event_category: '2022-edar_report',
