@@ -19,6 +19,8 @@ import DownloadButton from './helpers/DownloadButton.jsx';
 
 const domain = window.location.href.includes('unctad.org') ? '/' : '//unctad.org/';
 
+const analytics = window.gtag || undefined;
+
 function App() {
   // import graphic1 from '../../assets/img/graphs/EDAR-2022-Most_African_countries_are_highly_dependent_on_commodities.png';
   const graphic1 = `${domain}sites/default/files/2022-07/EDAR-2022-Most_African_countries_are_highly_dependent_on_commodities.png`;
@@ -75,7 +77,6 @@ function App() {
       el.current.style.visibility = 'hidden';
       el.current.style.position = 'absolute';
     });
-
     document.querySelectorAll('.button_container').forEach(el => el.classList.remove('selected'));
     document.querySelectorAll(`.button_container_${i}`).forEach(el => el.classList.add('selected'));
 
@@ -83,7 +84,6 @@ function App() {
     sectionRefs[i].current.style.visibility = 'visible';
     sectionRefs[i].current.style.height = 'auto';
     sectionRefs[i].current.style.opacity = 1;
-
     setTimeout(() => {
       scrollIntoView(sectionRefs[i].current, {
         align: {
@@ -98,7 +98,14 @@ function App() {
         time: 500
       });
     }, 200);
-    // sectionRefs[i].current.scrollIntoView({ behavior: 'smooth' });
+
+    if (typeof analytics !== 'undefined') {
+      analytics('event', 'Navigation Click', {
+        event_category: 'EDAR Publication Page 2022',
+        event_label: `Chapter ${i + 1}`,
+        transport_type: 'beacon'
+      });
+    }
   };
 
   return (
