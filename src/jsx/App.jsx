@@ -65,6 +65,7 @@ function App() {
   useEffect(() => {
     if (document.querySelector('.navbar-nav.ml-auto') !== null) {
       addNavBarItems('//unctad.org/webflyer/economic-development-africa-report-2022', 'Downloads');
+      addNavBarItems('//unctad.org/system/files/official-document/aldcafrica2022-summary_fr.pdf', 'Summary in French');
       addNavBarItems('//unctad.org/topic/africa/economic-development-in-africa-report', 'Full series');
     }
   }, []);
