@@ -20,17 +20,12 @@ import DownloadButton from './helpers/DownloadButton.jsx';
 const analytics = window.gtag || undefined;
 
 function App() {
-  // import graphic1 from '../../assets/img/graphs/EDAR-2022-Most_African_countries_are_highly_dependent_on_commodities.png';
   const graphic1 = 'https://storage.unctad.org/2022-edar_report/assets/img/graphs/EDAR-2022-Most_African_countries_are_highly_dependent_on_commodities.png';
-  // import graphic2 from '../../assets/img/graphs/EDAR-2022-The_promise_of_fintech.png';
   const graphic2 = 'https://storage.unctad.org/2022-edar_report/assets/img/graphs/EDAR-2022-The_promise_of_fintech.png';
 
-  // import banner_img from '../../assets/img/EDAR-2022-banner.png';
   const banner_img = 'https://storage.unctad.org/2022-edar_report/assets/img/EDAR-2022-banner.png';
-  // import banner_img_square from '../../assets/img/EDAR-2022-banner_square.png';
   const banner_img_square = 'https://storage.unctad.org/2022-edar_report/assets/img/EDAR-2022-banner_square.png';
 
-  // import photo1 from '../../assets/img/photos/EDAR-2022-summary_photo1.jpg';
   const photo1 = 'https://storage.unctad.org/2022-edar_report/assets/img/photos/EDAR-2022-summary_photo1.jpg';
 
   // Data states.
