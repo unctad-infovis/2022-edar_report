@@ -5,8 +5,7 @@ import DownloadButton from './helpers/DownloadButton.jsx';
 
 let animated = false;
 function Chapter(anchorClicked) {
-  // import photo1 from '../../assets/img/photos/EDAR-2022-chapter4_photo1.jpg';
-  const photo1 = '//unctad.org/sites/default/files/2022-07/EDAR-2022-chapter4_photo1.jpg';
+  const photo1 = 'https://storage.unctad.org/2022-edar_report/assets/img/photos/EDAR-2022-chapter4_photo1.jpg';
 
   const showElements = () => {
     if (animated === false) {

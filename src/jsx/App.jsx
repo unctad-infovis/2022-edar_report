@@ -17,23 +17,21 @@ import PageNavigation from './PageNavigation.jsx';
 import SocialMediaButtons from './helpers/SocialMediaButtons.jsx';
 import DownloadButton from './helpers/DownloadButton.jsx';
 
-const domain = window.location.href.includes('unctad.org') ? '/' : '//unctad.org/';
-
 const analytics = window.gtag || undefined;
 
 function App() {
   // import graphic1 from '../../assets/img/graphs/EDAR-2022-Most_African_countries_are_highly_dependent_on_commodities.png';
-  const graphic1 = `${domain}sites/default/files/2022-07/EDAR-2022-Most_African_countries_are_highly_dependent_on_commodities.png`;
+  const graphic1 = 'https://storage.unctad.org/2022-edar_report/assets/img/graphs/EDAR-2022-Most_African_countries_are_highly_dependent_on_commodities.png';
   // import graphic2 from '../../assets/img/graphs/EDAR-2022-The_promise_of_fintech.png';
-  const graphic2 = `${domain}sites/default/files/2022-07/EDAR-2022-The_promise_of_fintech.png`;
+  const graphic2 = 'https://storage.unctad.org/2022-edar_report/assets/img/graphs/EDAR-2022-The_promise_of_fintech.png';
 
   // import banner_img from '../../assets/img/EDAR-2022-banner.png';
-  const banner_img = `${domain}sites/default/files/2022-07/EDAR-2022-banner.png`;
+  const banner_img = 'https://storage.unctad.org/2022-edar_report/assets/img/EDAR-2022-banner.png';
   // import banner_img_square from '../../assets/img/EDAR-2022-banner_square.png';
-  const banner_img_square = `${domain}sites/default/files/2022-07/EDAR-2022-banner_square.png`;
+  const banner_img_square = 'https://storage.unctad.org/2022-edar_report/assets/img/EDAR-2022-banner_square.png';
 
   // import photo1 from '../../assets/img/photos/EDAR-2022-summary_photo1.jpg';
-  const photo1 = `${domain}sites/default/files/2022-07/EDAR-2022-summary_photo1.jpg`;
+  const photo1 = 'https://storage.unctad.org/2022-edar_report/assets/img/photos/EDAR-2022-summary_photo1.jpg';
 
   // Data states.
   const sectionRefs = [useRef(null), useRef(null), useRef(null), useRef(null)];
@@ -63,7 +61,9 @@ function App() {
   };
 
   useEffect(() => {
-    if (document.querySelector('.navbar-nav.ml-auto') !== null) {
+    if (document.querySelector('.navbar-nav.ml-auto') !== null && window.location.href.includes('/publication/')) {
+      document.querySelector('[href*="/data-visualization/economic-development-africa-report-2022"]').style.display = 'none';
+
       addNavBarItems('//unctad.org/webflyer/economic-development-africa-report-2022', 'Downloads');
       addNavBarItems('//unctad.org/system/files/official-document/aldcafrica2022-summary_fr.pdf', 'Summary in French');
       addNavBarItems('//unctad.org/topic/africa/economic-development-in-africa-report', 'Full series');
@@ -218,15 +218,15 @@ function App() {
         </div>
         <ChapterNavigation anchorClick={anchorClick} />
         <div className="chapter_container" id="section1" ref={sectionRefs[0]}>
-          <Chapter1 domain={domain} />
+          <Chapter1 />
           <PageNavigation anchorClick={anchorClick} />
         </div>
         <div className="chapter_container" id="section2" ref={sectionRefs[1]}>
-          <Chapter2 domain={domain} />
+          <Chapter2 />
           <PageNavigation anchorClick={anchorClick} />
         </div>
         <div className="chapter_container" id="section3" ref={sectionRefs[2]}>
-          <Chapter3 domain={domain} />
+          <Chapter3 />
           <PageNavigation anchorClick={anchorClick} />
         </div>
         <div className="chapter_container" id="section4" ref={sectionRefs[3]}>

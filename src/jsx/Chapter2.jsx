@@ -1,19 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import SocialMediaButtons from './helpers/SocialMediaButtons.jsx';
 import DownloadButton from './helpers/DownloadButton.jsx';
 
-function Chapter({ domain }) {
-  // import graphic1 from '../../assets/img/graphs/EDAR-2022-Service_exports_in_Africa_in_2005.png';
-  const graphic1 = `${domain}sites/default/files/2022-07/EDAR-2022-Service_exports_in_Africa_in_2005.png`;
-  // import graphic2 from '../../assets/img/graphs/EDAR-2022-Service_exports_in_Africa_in_2019.png';
-  const graphic2 = `${domain}sites/default/files/2022-07/EDAR-2022-Service_exports_in_Africa_in_2019.png`;
-  // import graphic3 from '../../assets/img/graphs/EDAR-2022-Traditional_services_leading_even_in_countries_making_diversification_progress.png';
-  const graphic3 = `${domain}sites/default/files/2022-07/EDAR-2022-Traditional_services_leading_even_in_countries_making_diversification_progress.png`;
+function Chapter() {
+  const graphic1 = 'https://storage.unctad.org/2022-edar_report/assets/img/graphs/EDAR-2022-Service_exports_in_Africa_in_2005.png';
+  const graphic2 = 'https://storage.unctad.org/2022-edar_report/assets/img/graphs/EDAR-2022-Service_exports_in_Africa_in_2019.png';
+  const graphic3 = 'https://storage.unctad.org/2022-edar_report/assets/img/graphs/EDAR-2022-Traditional_services_leading_even_in_countries_making_diversification_progress.png';
 
-  // import photo1 from '../../assets/img/photos/EDAR-2022-chapter2_photo1.jpg';
-  const photo1 = `${domain}sites/default/files/2022-07/EDAR-2022-chapter2_photo1.jpg`;
+  const photo1 = 'https://storage.unctad.org/2022-edar_report/assets/img/photos/EDAR-2022-chapter2_photo1.jpg';
 
   return (
     <div>
@@ -80,9 +75,5 @@ function Chapter({ domain }) {
     </div>
   );
 }
-
-Chapter.propTypes = {
-  domain: PropTypes.string.isRequired
-};
 
 export default Chapter;
