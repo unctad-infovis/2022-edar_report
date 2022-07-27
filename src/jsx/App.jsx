@@ -54,12 +54,16 @@ function App() {
     anchor.append(text);
     anchor.href = href;
     li_item.append(anchor);
-    document.querySelector(`${appID} .navbar-nav.ml-auto:not(.right-menu)`).append(li_item);
+    try {
+      document.querySelector('.navbar-nav.ml-auto:not(.right-menu)').append(li_item);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   useEffect(() => {
     if (document.querySelector('.navbar-nav.ml-auto') !== null && window.location.href.includes('/publication/')) {
-      document.querySelector('[href*="/data-visualization/economic-development-africa-report-2022"]').style.display = 'none';
+      // document.querySelector('[href*="/data-visualization/economic-development-africa-report-2022"]').style.display = 'none';
 
       addNavBarItems('//unctad.org/webflyer/economic-development-africa-report-2022', 'Downloads');
       addNavBarItems('//unctad.org/system/files/official-document/aldcafrica2022-summary_fr.pdf', 'Summary in French');
