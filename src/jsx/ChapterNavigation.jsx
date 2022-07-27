@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function ChapterNavigation({ anchorClick }) {
+function ChapterNavigation({ anchorClick, appID }) {
   const onMouseOverChapter = (event) => {
-    document.querySelectorAll('.chapter_selection').forEach(el => {
+    document.querySelectorAll(`${appID} .chapter_selection`).forEach(el => {
       el.classList.add('nohover');
       el.classList.remove('hover');
     });
@@ -11,7 +11,7 @@ function ChapterNavigation({ anchorClick }) {
     event.target.classList.remove('nohover');
   };
   const onMouseLeaveChapter = () => {
-    document.querySelectorAll('.chapter_selection').forEach(el => {
+    document.querySelectorAll(`${appID} .chapter_selection`).forEach(el => {
       el.classList.remove('nohover');
       el.classList.remove('hover');
     });
@@ -58,7 +58,8 @@ function ChapterNavigation({ anchorClick }) {
   );
 }
 ChapterNavigation.propTypes = {
-  anchorClick: PropTypes.func.isRequired
+  anchorClick: PropTypes.func.isRequired,
+  appID: PropTypes.string.isRequired
 };
 
 export default ChapterNavigation;

@@ -1,23 +1,25 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import IsVisible from 'react-is-visible';
 
 import DownloadButton from './helpers/DownloadButton.jsx';
 
 let animated = false;
-function Chapter(anchorClicked) {
+function Chapter({ anchorClicked, appID }) {
   const photo1 = 'https://storage.unctad.org/2022-edar_report/assets/img/photos/EDAR-2022-chapter4_photo1.jpg';
 
   const showElements = () => {
     if (animated === false) {
       setTimeout(() => {
         animated = true;
-        const recommendation_count = document.querySelectorAll('.recommendation_container').length;
+        const recommendation_count = document.querySelectorAll(`${appID} .recommendation_container`).length;
         let i = 1;
         const interval = setInterval(() => {
           if (i >= recommendation_count) {
             clearInterval(interval);
           }
-          document.querySelector(`.recommendation_container_${i}`).style.opacity = 1;
+          document.querySelector(`${appID} .recommendation_container_${i}`).style.opacity = 1;
           i++;
         }, 1000);
       }, 300);
@@ -78,5 +80,10 @@ function Chapter(anchorClicked) {
     </div>
   );
 }
+
+Chapter.propTypes = {
+  anchorClicked: PropTypes.number.isRequired,
+  appID: PropTypes.string.isRequired
+};
 
 export default Chapter;

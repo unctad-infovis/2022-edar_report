@@ -19,6 +19,8 @@ import DownloadButton from './helpers/DownloadButton.jsx';
 
 const analytics = window.gtag || undefined;
 
+const appID = '#app-root-2022-edar_report';
+
 function App() {
   const graphic1 = 'https://storage.unctad.org/2022-edar_report/assets/img/graphs/EDAR-2022-Most_African_countries_are_highly_dependent_on_commodities.png';
   const graphic2 = 'https://storage.unctad.org/2022-edar_report/assets/img/graphs/EDAR-2022-The_promise_of_fintech.png';
@@ -31,7 +33,7 @@ function App() {
   // Data states.
   const sectionRefs = [useRef(null), useRef(null), useRef(null), useRef(null)];
   const [y, setY] = useState(window.scrollY);
-  const [anchorClicked, setAnchorClicked] = useState(false);
+  const [anchorClicked, setAnchorClicked] = useState(0);
   // const [data, setData] = useState(false);
 
   useEffect(() => {
@@ -52,7 +54,7 @@ function App() {
     anchor.append(text);
     anchor.href = href;
     li_item.append(anchor);
-    document.querySelector('.navbar-nav.ml-auto:not(.right-menu)').append(li_item);
+    document.querySelector(`${appID} .navbar-nav.ml-auto:not(.right-menu)`).append(li_item);
   };
 
   useEffect(() => {
@@ -73,8 +75,8 @@ function App() {
       el.current.style.visibility = 'hidden';
       el.current.style.position = 'absolute';
     });
-    document.querySelectorAll('.button_container').forEach(el => el.classList.remove('selected'));
-    document.querySelectorAll(`.button_container_${i}`).forEach(el => el.classList.add('selected'));
+    document.querySelectorAll(`${appID} .button_container`).forEach(el => el.classList.remove('selected'));
+    document.querySelectorAll(`${appID} .button_container_${i}`).forEach(el => el.classList.add('selected'));
 
     sectionRefs[i].current.style.position = 'static';
     sectionRefs[i].current.style.visibility = 'visible';
@@ -95,7 +97,7 @@ function App() {
       });
     }, 200);
 
-    document.querySelectorAll('.chapter_selection').forEach(el => {
+    document.querySelectorAll(`${appID} .chapter_selection`).forEach(el => {
       el.classList.remove('nohover');
       el.classList.remove('hover');
     });
@@ -211,21 +213,21 @@ function App() {
           <h1>Dive deeper into the chapters</h1>
           <h2>The report has four chapters. Choose a chapter to read an excerpt, see visuals and download the full chapter.</h2>
         </div>
-        <ChapterNavigation anchorClick={anchorClick} />
+        <ChapterNavigation anchorClick={anchorClick} appID={appID} />
         <div className="chapter_container" id="section1" ref={sectionRefs[0]}>
-          <Chapter1 />
+          <Chapter1 appID={appID} />
           <PageNavigation anchorClick={anchorClick} />
         </div>
         <div className="chapter_container" id="section2" ref={sectionRefs[1]}>
-          <Chapter2 />
+          <Chapter2 appID={appID} />
           <PageNavigation anchorClick={anchorClick} />
         </div>
         <div className="chapter_container" id="section3" ref={sectionRefs[2]}>
-          <Chapter3 />
+          <Chapter3 appID={appID} />
           <PageNavigation anchorClick={anchorClick} />
         </div>
         <div className="chapter_container" id="section4" ref={sectionRefs[3]}>
-          <Chapter4 />
+          <Chapter4 appID={appID} anchorClicked={anchorClicked} />
           <PageNavigation anchorClick={anchorClick} anchorClicked={anchorClicked} />
         </div>
       </div>
