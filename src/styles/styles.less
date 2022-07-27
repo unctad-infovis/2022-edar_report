@@ -247,9 +247,9 @@
       vertical-align: middle;
       &.graphic_container {
         align-items: center;
-        margin: 50px auto;
-        justify-content: space-between;
         flex-direction: row;
+        justify-content: space-between;
+        margin: 50px auto;
         @media all and (max-width: 800px) {
           background-color: rgba(255, 255, 255, 0.75);
           flex-direction: column;
@@ -292,8 +292,8 @@
         padding: 30px 40px 20px 40px;
         width: 60%;
         &.left {
-          text-align: left;
           padding-right: 40px;
+          text-align: left;
         }
         &.right {
           padding-left: 40px;
@@ -313,9 +313,9 @@
         figure {
           padding: 0;
           img {
-            padding: 20px 0;
             box-sizing: border-box;
             max-width: 600px;
+            padding: 20px 0;
             @media all and (max-width: 800px) {
               max-width: 700px;
               padding: 0 20px;
@@ -356,6 +356,13 @@
           background-image: url("https://storage.unctad.org/2022-edar_report/assets/img/photos/EDAR-2022-benedict_oramah.png");
         }
         h3 {
+          color: #009EDB;
+          margin-bottom: 5px;
+          max-width: 450px;
+          padding-left: 85px;
+          position: relative;
+          text-align: left;
+          z-index: 2;
           &:before {
             background-size: 100%;            
             content: '';
@@ -364,13 +371,6 @@
             position: absolute;
             width: 75px;
           }
-          color: #009EDB;
-          margin-bottom: 5px;
-          max-width: 450px;
-          padding-left: 85px;
-          position: relative;
-          text-align: left;
-          z-index: 2;
         }
         p {
           font-family: Kalam;
