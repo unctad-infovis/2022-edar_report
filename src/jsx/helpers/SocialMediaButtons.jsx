@@ -15,7 +15,7 @@ function SocialMediaButtons({
       Share on
       {' '}
       <a href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&hashtags=${encodeURIComponent('UNCTAD,EDAR')}&text=${encodeURIComponent(`${text} ${image}`)}`} target="_blank" onClick={(event) => shareButtonClick(event)} rel="noreferrer">
-        <img src="https://unctad.org/themes/custom/newyork/images/inline-images/sn6.png" alt="" />
+        <img src="https://unctad.org/themes/custom/newyork/images/inline-images/sn2.png" alt="" />
         Twitter
       </a>
     </div>
