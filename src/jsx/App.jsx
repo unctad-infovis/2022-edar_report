@@ -145,7 +145,7 @@ function App() {
           <p>The report shows that effectively addressing barriers to services trade under the African Continental Free Trade Area will be key to unleashing the transformative role of services in enhancing the diversity and complexity of African economies.</p>
           <IsVisible once>
             {(isVisible) => (
-              <div className={`iframe_container full ${(isVisible && y > 200) ? 'visible' : 'not_seen'} ${anchorClicked !== false ? 'notransition' : ''}`}>
+              <div className={`iframe_container full ${(isVisible && y > 200) ? 'visible' : 'not_seen'} ${anchorClicked !== 0 ? 'notransition' : ''}`}>
                 <iframe title="The Weekly Tradecast by UNCTAD" allowtransparency="true" height="150" width="100%" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=44n6n-12718d8-pb&btn-skin=009EDB&download=1&font-color=000000&fonts=Verdana&from=pb6admin&logo_link=none&rtl=0&share=1&size=240&skin=ffffff" allowFullScreen="" />
               </div>
             )}
@@ -156,7 +156,7 @@ function App() {
         <IsVisible once>
           {(isVisible) => (
             <div className="content_container">
-              <div className={`iframe_container video_container ${(isVisible && y > 200) ? 'visible' : 'not_seen'} ${anchorClicked !== false ? 'notransition' : ''}`}>
+              <div className={`iframe_container video_container ${(isVisible && y > 200) ? 'visible' : 'not_seen'} ${anchorClicked !== 0 ? 'notransition' : ''}`}>
                 <iframe width="100%" height="315" src="https://www.youtube.com/embed/cWBmZWPKtZ8" title="Economic Development in Africa Report 2022" className="youtube_video" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
               </div>
             </div>
@@ -164,7 +164,7 @@ function App() {
         </IsVisible>
         <IsVisible once>
           {(isVisible) => (
-            <div className={`graphic_container ${(isVisible && y > 200) ? 'visible' : 'not_seen'} ${anchorClicked !== false ? 'notransition' : ''}`}>
+            <div className={`graphic_container ${(isVisible && y > 200) ? 'visible' : 'not_seen'} ${anchorClicked !== 0 ? 'notransition' : ''}`}>
               <div className="extra_background" />
               <div className="title_container">
                 <h2>83% of African countries are highly dependent on commodities</h2>
@@ -182,7 +182,7 @@ function App() {
         </IsVisible>
         <IsVisible once>
           {(isVisible) => (
-            <div className={`graphic_container graphic_left ${(isVisible && y > 200) ? 'visible' : 'not_seen'} ${anchorClicked !== false ? 'notransition' : ''}`} style={{ backgroundColor: '#fff' }}>
+            <div className={`graphic_container graphic_left ${(isVisible && y > 200) ? 'visible' : 'not_seen'} ${anchorClicked !== 0 ? 'notransition' : ''}`} style={{ backgroundColor: '#fff' }}>
               <div className="image_container left">
                 <figure>
                   <img src={graphic2} alt="Infographic: Fintech holds promise in Africa" />
@@ -199,7 +199,7 @@ function App() {
         </IsVisible>
         <IsVisible once>
           {(isVisible) => (
-            <div className={`quotes_container ${(isVisible && y > 200) ? 'visible' : 'not_seen'} ${anchorClicked !== false ? 'notransition' : ''}`}>
+            <div className={`quotes_container ${(isVisible && y > 200) ? 'visible' : 'not_seen'} ${anchorClicked !== 0 ? 'notransition' : ''}`}>
               <div className="quote_container quote_container_1">
                 <p>The Economic Development in Africa Report 2022 serves Africa’s effective integration into high-end global value chains. I hope that this report will prove a valuable guide to policymakers to drive the export diversification of goods and services by empowering private businesses to step into new markets and thrive.</p>
                 <h3 className="name">Rebeca Grynspan</h3>
