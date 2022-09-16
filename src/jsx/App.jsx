@@ -66,7 +66,7 @@ function App() {
       // document.querySelector('[href*="/data-visualization/economic-development-africa-report-2022"]').style.display = 'none';
 
       addNavBarItems('//unctad.org/webflyer/economic-development-africa-report-2022', 'Downloads');
-      addNavBarItems('//unctad.org/system/files/official-document/aldcafrica2022-summary_fr.pdf', 'Summary in French');
+      addNavBarItems('//unctad.org/fr/webflyer/rapport-2022-sur-le-developpement-economique-en-afrique', 'In French');
       addNavBarItems('//unctad.org/topic/africa/economic-development-in-africa-report', 'Full series');
     }
   }, []);
