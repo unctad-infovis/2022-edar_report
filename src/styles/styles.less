@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Kalam:300.css');
 
 @import 'colors.less';
-@import 'drupal_resets.less';
+@import 'site_overrides.less';
 
 #app-root-2022-edar_report .app {
   counter-reset: section recommendation;
@@ -87,7 +87,7 @@
       a {
         background-color: transparent;
         border-radius: 4px;
-        border: 1px solid #009edb;
+        border: 1px solid @unblue;
         box-sizing: border-box;
         color: #454545;
         cursor: pointer;
@@ -102,7 +102,7 @@
         text-decoration: none;
         text-transform: uppercase;
         &:hover {
-          background-color: #EBEAE6;
+          background-color: #ebeae6;
         }
       }
     }
@@ -121,7 +121,7 @@
       padding: 0;
     }
     h2 {
-      color: #009EDB;
+      color: @unbluetext;
       font-family: "Roboto Serif";
       font-size: 18px;
       line-height: 22px;
@@ -156,7 +156,7 @@
       }
       figcaption {
         .clear_both;
-        color: #7C7067;
+        color: @ungreytext;
         font-size: 14px;
         margin-bottom: 20px;
         div {
@@ -204,7 +204,7 @@
           }
         }
         .highlight {
-          color: #009EDB;
+          color: @unbluetext;
         }
       }
       .video_container {
@@ -356,7 +356,7 @@
           background-image: url("https://storage.unctad.org/2022-edar_report/assets/img/photos/EDAR-2022-benedict_oramah.png");
         }
         h3 {
-          color: #009EDB;
+          color: @unbluetext;
           margin-bottom: 5px;
           max-width: 450px;
           padding-left: 85px;

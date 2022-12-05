@@ -1,7 +1,7 @@
 .chapter_container {
   height: 0;
   margin-top: 200px;
-  max-height: 999999999px;
+  max-height: 9999px;
   opacity: 0;
   overflow: hidden;
   position: absolute;
@@ -12,7 +12,7 @@
   .content_container {
     margin-bottom: 20px;
     .infobox {
-      background-color: #EBEAE6;
+      background-color: #ebeae6;
       box-sizing: border-box;
       padding: 20px;
     }
@@ -28,7 +28,7 @@
         &:before {
           background-color: #fff;
           border-radius: 50px;
-          color: #009EDB;
+          color: @unbluetext;
           content: counter(recommendation);
           counter-increment: recommendation;
           font-family: "Roboto Serif";
@@ -41,7 +41,7 @@
           width: 50px;
         }
         align-content: center;
-        background: #72BF44;
+        background: @ungreen;
         border-radius: 10px;
         box-sizing: border-box;
         color: #fff;
