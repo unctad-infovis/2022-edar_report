@@ -47,29 +47,29 @@ function App() {
     };
   }, [y]);
 
-  const addNavBarItems = (href, text) => {
-    const li_item = document.createElement('li');
-    li_item.classList.add('nav-item');
-    const anchor = document.createElement('a');
-    anchor.append(text);
-    anchor.href = href;
-    li_item.append(anchor);
-    try {
-      document.querySelector('.navbar-nav.ml-auto:not(.right-menu)').append(li_item);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // const addNavBarItems = (href, text) => {
+  //   const li_item = document.createElement('li');
+  //   li_item.classList.add('nav-item');
+  //   const anchor = document.createElement('a');
+  //   anchor.append(text);
+  //   anchor.href = href;
+  //   li_item.append(anchor);
+  //   try {
+  //     document.querySelector('.navbar-nav.ml-auto:not(.right-menu)').append(li_item);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
-  useEffect(() => {
-    if (document.querySelector('.navbar-nav.ml-auto') !== null && window.location.href.includes('/publication/')) {
-      // document.querySelector('[href*="/data-visualization/economic-development-africa-report-2022"]').style.display = 'none';
+  // useEffect(() => {
+  //   if (document.querySelector('.navbar-nav.ml-auto') !== null && window.location.href.includes('/publication/') && window.location.href.includes('/edar2022/')) {
+  //     // document.querySelector('[href*="/data-visualization/economic-development-africa-report-2022"]').style.display = 'none';
 
-      addNavBarItems('//unctad.org/webflyer/economic-development-africa-report-2022', 'Downloads');
-      addNavBarItems('//unctad.org/fr/webflyer/rapport-2022-sur-le-developpement-economique-en-afrique', 'In French');
-      addNavBarItems('//unctad.org/topic/africa/economic-development-in-africa-report', 'Full series');
-    }
-  }, []);
+  //     addNavBarItems('//unctad.org/webflyer/economic-development-africa-report-2022', 'Downloads');
+  //     addNavBarItems('//unctad.org/fr/webflyer/rapport-2022-sur-le-developpement-economique-en-afrique', 'In French');
+  //     addNavBarItems('//unctad.org/topic/africa/economic-development-in-africa-report', 'Full series');
+  //   }
+  // }, []);
 
   const anchorClick = (i) => {
     setAnchorClicked(i);
@@ -131,8 +131,9 @@ function App() {
             <h2>Soaring food and energy prices are hitting African countries especially hard as they struggle with the impact of the COVID-19 pandemic, climate change and the war in Ukraine.</h2>
             <h2>To cope with current crises and insulate itself against future shocks, Africa must diversify its economies. The continent of 1.4 billion people is among the least diversified regions in the world with regard to exports.</h2>
             <div className="download_section">
-              <DownloadButton href="//unctad.org/system/files/official-document/aldcafrica2022_en.pdf" text="Download the full report" />
-              <DownloadButton href="//unctad.org/system/files/official-document/aldcafrica2022-summary_en.pdf" text="Download the executive summary" />
+              <DownloadButton href="//unctad.org/webflyer/economic-development-africa-report-2022" text="Download the full report" />
+              <DownloadButton href="//unctad.org/fr/webflyer/rapport-2022-sur-le-developpement-economique-en-afrique" text="In French" />
+              <DownloadButton href="//unctad.org/topic/africa/economic-development-in-africa-report" text="Full series" />
             </div>
           </div>
         </div>
