@@ -131,8 +131,8 @@ function App() {
             <h2>Soaring food and energy prices are hitting African countries especially hard as they struggle with the impact of the COVID-19 pandemic, climate change and the war in Ukraine.</h2>
             <h2>To cope with current crises and insulate itself against future shocks, Africa must diversify its economies. The continent of 1.4 billion people is among the least diversified regions in the world with regard to exports.</h2>
             <div className="download_section">
-              <DownloadButton href="//unctad.org/webflyer/economic-development-africa-report-2022" text="Download the full report" />
-              <DownloadButton href="//unctad.org/fr/webflyer/rapport-2022-sur-le-developpement-economique-en-afrique" text="In French" />
+              <DownloadButton href="https://unctad.org/publication/economic-development-africa-report-2022" text="Download the full report" />
+              <DownloadButton href="https://unctad.org/fr/publication/rapport-2022-sur-le-developpement-economique-en-afrique" text="In French" />
               <DownloadButton href="//unctad.org/topic/africa/economic-development-in-africa-report" text="Full series" />
             </div>
           </div>
