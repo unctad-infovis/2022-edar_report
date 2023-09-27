@@ -124,6 +124,7 @@ function App() {
           <img className="banner_image_square" src={banner_img_square} alt="" />
         </div>
         <PageNavigation anchorClick={anchorClick} />
+        <div className="download_button"><a href="https://unctad.org/edar2023">See the Economic Development in Africa Report 2023</a></div>
         <div className="heading_container">
           <img className="content_image right" src={photo1} alt="" />
           <div className="content">
