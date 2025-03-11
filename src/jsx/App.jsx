@@ -124,7 +124,6 @@ function App() {
           <img className="banner_image_square" src={banner_img_square} alt="" />
         </div>
         <PageNavigation anchorClick={anchorClick} />
-        <div className="download_button"><a href="https://unctad.org/edar2023">See the Economic Development in Africa Report 2023</a></div>
         <div className="heading_container">
           <img className="content_image right" src={photo1} alt="" />
           <div className="content">
@@ -148,7 +147,7 @@ function App() {
           <IsVisible once>
             {(isVisible) => (
               <div className={`iframe_container full ${(isVisible && y > 200) ? 'visible' : 'not_seen'} ${anchorClicked !== 0 ? 'notransition' : ''}`}>
-                <iframe title="The Weekly Tradecast by UNCTAD" allowtransparency="true" height="150" width="100%" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=44n6n-12718d8-pb&btn-skin=009EDB&download=1&font-color=000000&fonts=Verdana&from=pb6admin&logo_link=none&rtl=0&share=1&size=240&skin=ffffff" allowFullScreen="" />
+                <iframe title="The Weekly Tradecast by UNCTAD" height="150" width="100%" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=44n6n-12718d8-pb&btn-skin=009EDB&download=1&font-color=000000&fonts=Verdana&from=pb6admin&logo_link=none&rtl=0&share=1&size=240&skin=ffffff" allowFullScreen="" />
               </div>
             )}
           </IsVisible>
