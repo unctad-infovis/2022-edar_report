@@ -70,7 +70,7 @@ function App() {
   //     addNavBarItems('//unctad.org/topic/africa/economic-development-in-africa-report', 'Full series');
   //   }
   // }, []);
-  
+
   const analytics = window.gtag || undefined;
   const track = useCallback((label_event = false, value_event = false) => {
     if (typeof analytics !== 'undefined' && label_event !== false && value_event !== false) {
