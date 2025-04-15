@@ -1,4 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, {
+  useState, useEffect, useRef, useCallback
+} from 'react';
 import '../styles/styles.less';
 
 // https://www.npmjs.com/package/scroll-into-view
@@ -16,8 +18,6 @@ import ChapterNavigation from './ChapterNavigation.jsx';
 import PageNavigation from './PageNavigation.jsx';
 import SocialMediaButtons from './helpers/SocialMediaButtons.jsx';
 import DownloadButton from './helpers/DownloadButton.jsx';
-
-const analytics = window.gtag || undefined;
 
 const appID = '#app-root-2022-edar_report';
 
@@ -70,6 +70,17 @@ function App() {
   //     addNavBarItems('//unctad.org/topic/africa/economic-development-in-africa-report', 'Full series');
   //   }
   // }, []);
+  const analytics = window.gtag || undefined;
+  const track = useCallback((label_event = false, value_event = false) => {
+    if (typeof analytics !== 'undefined' && label_event !== false && value_event !== false) {
+      analytics('event', 'project_interaction', {
+        label: label_event,
+        project_name: '2022-edar_report',
+        transport_type: 'beacon',
+        value: value_event
+      });
+    }
+  }, [analytics]);
 
   const anchorClick = (i) => {
     setAnchorClicked(i);
@@ -106,13 +117,7 @@ function App() {
       el.classList.remove('hover');
     });
 
-    if (typeof analytics !== 'undefined') {
-      analytics('event', 'Navigation Click', {
-        event_category: '2022-edar_report',
-        event_label: `Chapter ${i + 1}`,
-        transport_type: 'beacon'
-      });
-    }
+    track('Navigation Click', `Chapter ${i + 1}`);
   };
 
   return (
