@@ -8,7 +8,7 @@ import scrollIntoView from 'scroll-into-view';
 
 // https://www.npmjs.com/package/react-is-visible
 import 'intersection-observer';
-import IsVisible from 'react-is-visible';
+import { useIsVisible } from 'react-is-visible';
 
 import Chapter1 from './Chapter1.jsx';
 import Chapter2 from './Chapter2.jsx';
@@ -22,6 +22,16 @@ import DownloadButton from './helpers/DownloadButton.jsx';
 const appID = '#app-root-2022-edar_report';
 
 function App() {
+  const isVisibleRef1 = useRef();
+  const isVisible1 = useIsVisible(isVisibleRef1, { once: true });
+  const isVisibleRef2 = useRef();
+  const isVisible2 = useIsVisible(isVisibleRef2, { once: true });
+  const isVisibleRef3 = useRef();
+  const isVisible3 = useIsVisible(isVisibleRef3, { once: true });
+  const isVisibleRef4 = useRef();
+  const isVisible4 = useIsVisible(isVisibleRef4, { once: true });
+  const isVisibleRef5 = useRef();
+  const isVisible5 = useIsVisible(isVisibleRef5, { once: true });
   const graphic1 = 'https://storage.unctad.org/2022-edar_report/assets/img/graphs/EDAR-2022-Most_African_countries_are_highly_dependent_on_commodities.png';
   const graphic2 = 'https://storage.unctad.org/2022-edar_report/assets/img/graphs/EDAR-2022-The_promise_of_fintech.png';
 
@@ -150,76 +160,56 @@ function App() {
             <span className="text">High knowledge-intensive services can foster diversification</span>
           </blockquote>
           <p>The report shows that effectively addressing barriers to services trade under the African Continental Free Trade Area will be key to unleashing the transformative role of services in enhancing the diversity and complexity of African economies.</p>
-          <IsVisible once>
-            {(isVisible) => (
-              <div className={`iframe_container full ${(isVisible && y > 200) ? 'visible' : 'not_seen'} ${anchorClicked !== 0 ? 'notransition' : ''}`}>
-                <iframe title="The Weekly Tradecast by UNCTAD" height="150" width="100%" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=44n6n-12718d8-pb&btn-skin=009EDB&download=1&font-color=000000&fonts=Verdana&from=pb6admin&logo_link=none&rtl=0&share=1&size=240&skin=ffffff" allowFullScreen="" />
-              </div>
-            )}
-          </IsVisible>
+          <div ref={isVisibleRef1} className={`iframe_container full ${(isVisible1 && y > 200) ? 'visible' : 'not_seen'} ${anchorClicked !== 0 ? 'notransition' : ''}`}>
+            <iframe title="The Weekly Tradecast by UNCTAD" height="150" width="100%" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=44n6n-12718d8-pb&btn-skin=009EDB&download=1&font-color=000000&fonts=Verdana&from=pb6admin&logo_link=none&rtl=0&share=1&size=240&skin=ffffff" allowFullScreen="" />
+          </div>
           <p>UNCTAD recommends that for export diversification strategies to be impactful in Africa, policies need to be in place that enhance inclusive access to innovative financing technologies, including for small and medium-sized enterprises.</p>
           <p>Leveraging high knowledge-intensive services to increase productivity and improve competitiveness in the private sector will be key to achieving higher value-added diversification and growth on the continent.</p>
         </div>
-        <IsVisible once>
-          {(isVisible) => (
-            <div className="content_container">
-              <div className={`iframe_container video_container ${(isVisible && y > 200) ? 'visible' : 'not_seen'} ${anchorClicked !== 0 ? 'notransition' : ''}`}>
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/cWBmZWPKtZ8" title="Economic Development in Africa Report 2022" className="youtube_video" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
-              </div>
-            </div>
-          )}
-        </IsVisible>
-        <IsVisible once>
-          {(isVisible) => (
-            <div className={`graphic_container ${(isVisible && y > 200) ? 'visible' : 'not_seen'} ${anchorClicked !== 0 ? 'notransition' : ''}`}>
-              <div className="extra_background" />
-              <div className="title_container">
-                <h2>83% of African countries are highly dependent on commodities</h2>
-                <p>UNCTAD considers a country to be dependent on commodities when these products make up more than 60% of its total merchandise exports. Based on this definition, 83% of African countries are commodity dependent, accounting for 45% of the commodity-dependent countries worldwide.</p>
-                <SocialMediaButtons text="83% of African countries are highly dependent on commodities" url="https://unctad.org/publication/economic-development-africa-report-2022" image="pic.twitter.com/vHbYkYuRaT" />
-              </div>
-              <div className="image_container right">
-                <figure>
-                  <img src={graphic1} alt="Graphic: Most African countries are highly dependent on commodities" />
-                  <figcaption>Source: UNCTAD, 2021a, with updated data for the year 2020</figcaption>
-                </figure>
-              </div>
-            </div>
-          )}
-        </IsVisible>
-        <IsVisible once>
-          {(isVisible) => (
-            <div className={`graphic_container graphic_left ${(isVisible && y > 200) ? 'visible' : 'not_seen'} ${anchorClicked !== 0 ? 'notransition' : ''}`} style={{ backgroundColor: '#fff' }}>
-              <div className="image_container left">
-                <figure>
-                  <img src={graphic2} alt="Infographic: Fintech holds promise in Africa" />
-                  <figcaption>Source: FinTech Global (2022)</figcaption>
-                </figure>
-              </div>
-              <div className="title_container">
-                <h2>Fintech holds promise in Africa</h2>
-                <p>The recent growth of financial technology (fintech) firms in Africa is spurring more innovation and investment opportunities. Fintech has the potential to help African countries achieve financial and social inclusion.</p>
-                <SocialMediaButtons text="Fintech holds promise in Africa" url="https://unctad.org/publication/economic-development-africa-report-2022" image="pic.twitter.com/iSlJkjvG8Q" />
-              </div>
-            </div>
-          )}
-        </IsVisible>
-        <IsVisible once>
-          {(isVisible) => (
-            <div className={`quotes_container ${(isVisible && y > 200) ? 'visible' : 'not_seen'} ${anchorClicked !== 0 ? 'notransition' : ''}`}>
-              <div className="quote_container quote_container_1">
-                <p>The Economic Development in Africa Report 2022 serves Africa’s effective integration into high-end global value chains. I hope that this report will prove a valuable guide to policymakers to drive the export diversification of goods and services by empowering private businesses to step into new markets and thrive.</p>
-                <h3 className="name">Rebeca Grynspan</h3>
-                <div className="title">Secretary-General of United Nations Conference on Trade and Development</div>
-              </div>
-              <div className="quote_container quote_container_2">
-                <p>As African countries work to rebuild their economies post COVID-19, Economic Development in Africa Report 2022 brings a new perspective on how the services sector contributes to export diversification and promotes structural change.</p>
-                <h3 className="name">Benedict O. Oramah</h3>
-                <div className="title">President and Chair, Board of Directors, African Export-Import Bank</div>
-              </div>
-            </div>
-          )}
-        </IsVisible>
+        <div ref={isVisibleRef2} className="content_container">
+          <div className={`iframe_container video_container ${(isVisible2 && y > 200) ? 'visible' : 'not_seen'} ${anchorClicked !== 0 ? 'notransition' : ''}`}>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/cWBmZWPKtZ8" title="Economic Development in Africa Report 2022" className="youtube_video" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+          </div>
+        </div>
+        <div ref={isVisibleRef3} className={`graphic_container ${(isVisible3 && y > 200) ? 'visible' : 'not_seen'} ${anchorClicked !== 0 ? 'notransition' : ''}`}>
+          <div className="extra_background" />
+          <div className="title_container">
+            <h2>83% of African countries are highly dependent on commodities</h2>
+            <p>UNCTAD considers a country to be dependent on commodities when these products make up more than 60% of its total merchandise exports. Based on this definition, 83% of African countries are commodity dependent, accounting for 45% of the commodity-dependent countries worldwide.</p>
+            <SocialMediaButtons text="83% of African countries are highly dependent on commodities" url="https://unctad.org/publication/economic-development-africa-report-2022" image="pic.twitter.com/vHbYkYuRaT" />
+          </div>
+          <div className="image_container right">
+            <figure>
+              <img src={graphic1} alt="Graphic: Most African countries are highly dependent on commodities" />
+              <figcaption>Source: UNCTAD, 2021a, with updated data for the year 2020</figcaption>
+            </figure>
+          </div>
+        </div>
+        <div ref={isVisibleRef4} className={`graphic_container graphic_left ${(isVisible4 && y > 200) ? 'visible' : 'not_seen'} ${anchorClicked !== 0 ? 'notransition' : ''}`} style={{ backgroundColor: '#fff' }}>
+          <div className="image_container left">
+            <figure>
+              <img src={graphic2} alt="Infographic: Fintech holds promise in Africa" />
+              <figcaption>Source: FinTech Global (2022)</figcaption>
+            </figure>
+          </div>
+          <div className="title_container">
+            <h2>Fintech holds promise in Africa</h2>
+            <p>The recent growth of financial technology (fintech) firms in Africa is spurring more innovation and investment opportunities. Fintech has the potential to help African countries achieve financial and social inclusion.</p>
+            <SocialMediaButtons text="Fintech holds promise in Africa" url="https://unctad.org/publication/economic-development-africa-report-2022" image="pic.twitter.com/iSlJkjvG8Q" />
+          </div>
+        </div>
+        <div ref={isVisibleRef5} className={`quotes_container ${(isVisible5 && y > 200) ? 'visible' : 'not_seen'} ${anchorClicked !== 0 ? 'notransition' : ''}`}>
+          <div className="quote_container quote_container_1">
+            <p>The Economic Development in Africa Report 2022 serves Africa’s effective integration into high-end global value chains. I hope that this report will prove a valuable guide to policymakers to drive the export diversification of goods and services by empowering private businesses to step into new markets and thrive.</p>
+            <h3 className="name">Rebeca Grynspan</h3>
+            <div className="title">Secretary-General of United Nations Conference on Trade and Development</div>
+          </div>
+          <div className="quote_container quote_container_2">
+            <p>As African countries work to rebuild their economies post COVID-19, Economic Development in Africa Report 2022 brings a new perspective on how the services sector contributes to export diversification and promotes structural change.</p>
+            <h3 className="name">Benedict O. Oramah</h3>
+            <div className="title">President and Chair, Board of Directors, African Export-Import Bank</div>
+          </div>
+        </div>
         <div className="content_container" style={{ textAlign: 'center', maxWidth: '530px' }}>
           <h1>Dive deeper into the chapters</h1>
           <h2>The report has four chapters. Choose a chapter to read an excerpt, see visuals and download the full chapter.</h2>

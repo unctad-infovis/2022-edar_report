@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 
-import IsVisible from 'react-is-visible';
+import { useIsVisible } from 'react-is-visible';
 
 import DownloadButton from './helpers/DownloadButton.jsx';
 
 let animated = false;
 function Chapter({ anchorClicked, appID }) {
+  const isVisibleRef1 = useRef();
+  const isVisible1 = useIsVisible(isVisibleRef1, { once: true });
   const photo1 = 'https://storage.unctad.org/2022-edar_report/assets/img/photos/EDAR-2022-chapter4_photo1.jpg';
 
   const showElements = () => {
@@ -40,37 +42,33 @@ function Chapter({ anchorClicked, appID }) {
       <div className="content_container">
         <p>UNCTAD recommends that African governments and businesses take the following policy actions to support effective exports diversification on the continent:</p>
         <div className="clear_both" />
-        <IsVisible once>
-          {(isVisible) => (
-            <div className={`recommendations_container ${(isVisible) ? 'visible' : 'not_seen'} ${anchorClicked !== false ? 'notransition' : ''}`}>
-              {(isVisible ? showElements() : null)}
-              <div className="recommendation_container recommendation_container_1">
-                <p>Improve the capacity of people and firms to emulate and innovate</p>
-              </div>
-              <div className="recommendation_container recommendation_container_2">
-                <p>Support firms to innovate</p>
-              </div>
-              <div className="recommendation_container recommendation_container_3">
-                <p>Expand the set of technologies and infrastructure</p>
-              </div>
-              <div className="recommendation_container recommendation_container_4">
-                <p>Reinforce linkages between industries and encourage the use of local content and suppliers by domestic firms </p>
-              </div>
-              <div className="recommendation_container recommendation_container_5">
-                <p>Enhance the access of small and medium-sized enterprises to alternative finance</p>
-              </div>
-              <div className="recommendation_container recommendation_container_6">
-                <p>Maximize the potential benefits of the African Continental Free Trade Area for export diversification</p>
-              </div>
-              <div className="recommendation_container recommendation_container_7">
-                <p>Strengthen efforts to improve trade and financial data</p>
-              </div>
-              <div className="recommendation_container recommendation_container_8">
-                <p>Put recommendations into practice</p>
-              </div>
-            </div>
-          )}
-        </IsVisible>
+        <div ref={isVisibleRef1} className={`recommendations_container ${(isVisible1) ? 'visible' : 'not_seen'} ${anchorClicked !== false ? 'notransition' : ''}`}>
+          {(isVisible1 ? showElements() : null)}
+          <div className="recommendation_container recommendation_container_1">
+            <p>Improve the capacity of people and firms to emulate and innovate</p>
+          </div>
+          <div className="recommendation_container recommendation_container_2">
+            <p>Support firms to innovate</p>
+          </div>
+          <div className="recommendation_container recommendation_container_3">
+            <p>Expand the set of technologies and infrastructure</p>
+          </div>
+          <div className="recommendation_container recommendation_container_4">
+            <p>Reinforce linkages between industries and encourage the use of local content and suppliers by domestic firms </p>
+          </div>
+          <div className="recommendation_container recommendation_container_5">
+            <p>Enhance the access of small and medium-sized enterprises to alternative finance</p>
+          </div>
+          <div className="recommendation_container recommendation_container_6">
+            <p>Maximize the potential benefits of the African Continental Free Trade Area for export diversification</p>
+          </div>
+          <div className="recommendation_container recommendation_container_7">
+            <p>Strengthen efforts to improve trade and financial data</p>
+          </div>
+          <div className="recommendation_container recommendation_container_8">
+            <p>Put recommendations into practice</p>
+          </div>
+        </div>
         <p>UNCTAD stands ready to provide cutting-edge economic research and policy analysis and data tools to support African countries in their efforts to reach export diversification and sustainable development objectives.</p>
         <p>In partnership with regional and national institutions, UNCTAD can deliver institutional and productive capacity-building programmes and offer support to build consensus on key policy and regulatory issues with a view to achieving effective structural change on the continent.</p>
         <div className="download_section">
